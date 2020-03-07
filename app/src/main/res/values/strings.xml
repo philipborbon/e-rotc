@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">E-ROTC</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+
+    <string name="nav_label_lecture">Lectures</string>
+    <string name="nav_label_assessment">Assessment</string>
+    <string name="nav_label_about">About</string>
+
+    <string name="label_search_placeholder">Keyword</string>
+    <string name="label_button_search">Translate</string>
+    <string name="label_ilocano">Ilocano:</string>
+    <string name="label_hiligaynon">Hiligaynon:</string>
+    <string name="label_version">Version %1$s</string>
+    <string name="label_definition">Meaning</string>
+    <string name="label_tagalog_example">Tagalog Example</string>
+    <string name="label_hiligaynon_example">Hiligaynon Example</string>
+    <string name="label_ilocano_example">Ilocano Example</string>
+    <string name="label_question">Question</string>
+    <string name="label_time">Time</string>
+    <string name="label_score">Points</string>
+    <string name="label_high_score">Highest Points</string>
+    <string name="label_correct_count">Correct Answers</string>
+
+    <string name="message_preparing_dictionary">Loading definitions…</string>
+    <string name="message_preparing_assessment">Loading assessment…</string>
+    <string name="message_no_results">No results found.</string>
+    <string name="message_test_your_vocabulary">Test your vocabulary.</string>
+
+    <string name="text_correct_count">%1$d ng %2$d</string>
+    <string name="text_unlock_score">You need at least %1$d points to open %2$s. Try again.</string>
+    <string name="text_play_next">Play in %1$s</string>
+    <string name="text_recent_results">Recent search results:</string>
+
+    <string name="title_activity_recent_result">Recent Search Results</string>
+    <string name="title_activity_assessment_choice">Assessment Choice</string>
+
+    <string name="button_text_next">Next</string>
+    <string name="button_text_resume">Continue</string>
+    <string name="button_text_start_again">Try again</string>
+    <string name="button_text_exit">Exit</string>
+    <string name="button_text_exit_2">Exit Assessment</string>
+
+    <string name="dialog_answer_correct_title">Your answer is correct</string>
+    <string name="dialog_answer_wrong_title">Wrong answer</string>
+    <string name="dialog_answer_message">Your Answer: %1$s \n\nCorrect Answer: %2$s </string>
+
+    <string name="dialog_times_up_title">Times Up</string>
+    <string name="dialog_times_up_message">Correct answer: %1$s</string>
+
+    <string name="dialog_quiz_paused_title">Pause</string>
+    <string name="dialog_quiz_paused_message">Assessment is created to try your knowledge .</string>
+
+    <string name="text_presented">Prepared by:</string>
+    <string name="text_presented_by">…</string>
+    <string name="text_presenter_organization">Sultan Kudarat State University\nIsulan Campus\n2019 – 2020</string>
+</resources>

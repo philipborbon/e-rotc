@@ -1,0 +1,280 @@
+[{
+    "label": "Madali",
+    "level": 1,
+    "locked": false,
+    "pointsToProceed": 2500,
+    "answerSet": "Malem, Akon, Kinkanya, Idi, Ipes, Sikayo, Kannawan, Igid, Atoy, Ngiit, Agong, Asi, Kanyam, Himuon, Aramid, Kararag, Kanyak, Guba, Kayo, Sao, Trato, Puor, Sanay, Hambal, Pisi, Onse, Okoy, Sabad, Maayo, Idamag, Itik, Ita, Iuli, Kaon, Talinga, Sud-an, Mata, Tiil, Unto, Kamot",
+    "questionEntries": [{
+            "question": "Ano sa Hiligaynon ang Aga?",
+            "answer": "Timprano"
+        },
+        {
+            "question": "Ano sa Hiligaynon ang Akin?",
+            "answer": "Akoa"
+        },
+        {
+            "question": "Ano sa Hiligaynon ang Awa?",
+            "answer": "Kaluoy"
+        }, {
+            "question": "Ano sa Hiligaynon ang Baon?",
+            "answer": "Balon"
+        }, {
+            "question": "Ano sa HIligaynon ang Kailan?",
+            "answer": "San-o"
+        }, {
+            "question": "Ano sa Hiligyanon ang Kanan?",
+            "answer": "Tuo"
+        }, {
+            "question": "Ano sa Hiligaynon ang Kanila?",
+            "answer": "Ila"
+        }, {
+            "question": "Ano sa Hiligaynon ang Kanino?",
+            "answer": "Sin-o"
+        }, {
+            "question": "Ano sa Hiligaynon ang Kayo?",
+            "answer": "Kamu"
+        }, {
+            "question": "Ano sa Hiligaynon ang Daan?",
+            "answer": "Dalan"
+        }, {
+            "question": "Ano sa Hiligaynon Dati?",
+            "answer": "Sato"
+        }, {
+            "question": "Ano sa Hiligaynon ang Dasal?",
+            "answer": "Ampo"
+        }, {
+            "question": "Ano sa Hiligaynon ang Gabi?",
+            "answer": "Gab-i"
+        }, {
+            "question": "Ano sa Hiligynon ang Galit?",
+            "answer": "Akig"
+        }, {
+            "question": "Ano sa Hiligaynon ang Gawa?",
+            "answer": "Himo"
+        }, {
+            "question": "Ano sa HIligaynon ang Gilid?",
+            "answer": "Kilid"
+        }, {
+            "question": "Ano sa Hiligaynon ang Pa-a?",
+            "answer": "Tiil"
+        }, {
+            "question": "Ano sa Hiligaynon ang Huli?",
+            "answer": "Punta"
+        }, {
+            "question": "Ano sa Hiligaynon ang Ipis?",
+            "answer": "Tanga"
+        }, {
+            "question": "Ano sa Hiligaynon ang Iyo?",
+            "answer": "Imo"
+        }, {
+            "question": "Ano sa Hiligaynon ang Ito?",
+            "answer": "Ini"
+        }, {
+            "question": "Ano sa Hiligaynon ang Lahat?",
+            "answer": "Tanan"
+        }, {
+            "question": "Ano sa Hiligaynon ang Natin?",
+            "answer": "Natun"
+        }, {
+            "question": "Ano sa Hiligaynon ang Noo?",
+            "answer": "Agtang"
+        }, {
+            "question": "Ano sa Hiligaynon ang Ngiti?",
+            "answer": "Ngirit"
+        }
+    ]
+}, {
+    "label": "Katamtaman",
+    "level": 2,
+    "locked": true,
+    "pointsToProceed": 3500,
+    "answerSet": "Bagtit, Ima, Lapayag, Isog, Talaw, Laragway, Lamesa, Bayo, Talinga, Dalok, Apyan, Orador, Pangadye, Pusod, Putok, Relo, Uni, Turay, Salas, Sali, Bulad, Uban, Wasay, Biskan, Bakol, Taya, Alkila, Usapon, Kurog, Yab-ok, Dulom, Sanag, Kuring, Anino, Damang, Lawa, Dahon",
+    "questionEntries": [{
+        "question": "Ano sa Hiligaynon ang Baliw?",
+        "answer": "Buang"
+    },
+        {
+            "question": "Ano sa Hiligaynon ang Kalahati?",
+            "answer": "Tunga"
+        },
+        {
+            "question": "Ano sa Hiligaynon ang Kamot?",
+            "answer": "Kalot"
+        }, {
+            "question": "Ano sa Hiligaynon sa Gilingin?",
+            "answer": "Gilingon"
+        }, {
+            "question": "Ano sa HIligaynon ang Kabila?",
+            "answer": "Pihak"
+        }, {
+            "question": "Ano sa Hiligaynon ang Kaibigan?",
+            "answer": "Abiyan"
+        }, {
+            "question": "Ano sa Hiligaynon Kanina?",
+            "answer": "Kagina"
+        }, {
+            "question": "Ano sa Hiligaynon ang Kasama?",
+            "answer": "Kaupod"
+        }, {
+            "question": "Ano sa Hiligaynon ang Kilay?",
+            "answer": "Milok"
+        }, {
+            "question": "Ano sa Hiligaynon ang Kimi?",
+            "answer": "Huya"
+        }, {
+            "question": "Ano sa Hiligaynon ang Daanan?",
+            "answer": "Alagyan"
+        }, {
+            "question": "Ano sa Hiligaynon ang Daungan?",
+            "answer": "Pantalan"
+        }, {
+            "question": "Ano sa Hiligaynon ang Dibdib?",
+            "answer": "Dughan"
+        }, {
+            "question": "Ano sa Hiligaynon ang Edukado?",
+            "answer": "Alam"
+        }, {
+            "question": "Ano sa Hiligaynon ang Gasgas?",
+            "answer": "Lagob"
+        }, {
+            "question": "Ano sa Hiligaynon ang Gatla?",
+            "answer": "Marka"
+        }, {
+            "question": "Ano sa Hiligaynon ang Bigat?",
+            "answer": "Kabug-at"
+        }, {
+            "question": "Ano sa Hiligaynon ang Bingi?",
+            "answer": "Bungol"
+        }, {
+            "question": "Ano sa Hiligaynon ang Kumot?",
+            "answer": "Habol"
+        }, {
+            "question": "Ano sa Hiligaynon ang Dilag?",
+            "answer": "Dalaga"
+        }, {
+            "question": "Ano sa Hiligaynon ang Dawag?",
+            "answer": "Tinik"
+        }, {
+            "question": "Ano sa Hiligaynon ang Dugtong",
+            "answer": "Sugpon"
+        }, {
+            "question": "Ano sa Hiligaynon ang Gala?",
+            "answer": "Lagaw"
+        }, {
+            "question": "Ano sa Hiligaynon ang Mulat?",
+            "answer": "Bugtaw"
+        },
+      {
+        "question": "Ano sa Hiligaynon ang Oras?",
+        "answer": "Tinion"
+      }
+    ]
+}, {
+    "label": "Mahirap",
+    "level": 3,
+    "locked": true,
+    "pointsToProceed": 4500,
+    "answerSet": "Paungiten, Ngiit, Siddaaw, Perdi, Sala, Buok, Bayo, Pitaka, Bulok, Riing, Naluom, Usto, Lansa, Itom, Hakos, Kibot, Kagat, Tikop, Sakop, Ngalay, Isol, Bibi, Itlog, Dayaon, Estilo, Imot, Balud, Dalag, Hutik, Buhos, Singgit, Atop, Atay, Ipet, Ayat, Ideppel, Maysa, Kaakig",
+    "questionEntries": [{
+        "question": "Ano sa Hiligaynon ang Galitin?",
+        "answer": "Paakigon"
+    },
+        {
+            "question": "Ano sa Hiligaynon ang Ngumiti?",
+            "answer": "Magngirit"
+        },
+        {
+            "question": "Ano sa Hiligaynon ang Dahop?",
+            "answer": "Imul"
+        },
+        {
+            "question": "Ano sa Hiligynon ang Yapakan?",
+            "answer": "Tikangan"
+        },
+        {
+            "question": "Ano sa Hiligaynon ang Pangangapa?",
+            "answer": "Kapkap"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Gayatin?",
+            "answer": "Kinihad"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Giba?",
+            "answer": "Guba"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Gising?",
+            "answer": "Bugtaw"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Guhit?",
+            "answer": "Kurit"
+        }, {
+            "question": "Ano sa Hiligaynon ang Gusutin?",
+            "answer": "Yukoton"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Hinog?",
+            "answer": "Luto"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Hithit?",
+            "answer": "Supsop"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Hiwalay",
+            "answer": "Bulagay"
+
+        }, {
+            "question": "Ano sa HIligaynon ang Husto?",
+            "answer": "Tama"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Idaing?",
+            "answer": "Relamo"
+
+        }, {
+            "question": "Ano sa HIligaynon ang Igpaw?",
+            "answer": "Lukso"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Ipunin?",
+            "answer": "Ipunon"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Ulitin?",
+            "answer": "Liwaton"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Uhog?",
+            "answer": "Sip-on"
+
+        },
+        {
+            "question": "Ano sa Hiligaynon ang Tumalon?",
+            "answer": "Maglukso"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Punit?",
+            "answer": "Gisi"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Ngunit?",
+            "answer": "Galing"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Ngamba?",
+            "answer": "Kabalaka"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Nisnis?",
+            "answer": "Punas"
+
+        }, {
+            "question": "Ano sa Hiligaynon ang Nawala?",
+            "answer": "Nadula"
+
+        }
+    ]
+}]

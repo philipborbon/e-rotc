@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/general_content_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".8"
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/large_content_padding"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/box_background">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/label_score"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/text_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_large"
+                    android:text="@string/label_score"
+                    android:textColor="@color/colorBlack"/>
+
+                <View
+                    android:layout_marginTop="@dimen/large_content_padding"
+                    android:layout_marginBottom="@dimen/large_content_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/label_high_score"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/text_high_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_large"
+                    android:text="@string/label_score"
+                    android:textColor="@color/colorBlack"/>
+
+                <View
+                    android:layout_marginTop="@dimen/large_content_padding"
+                    android:layout_marginBottom="@dimen/large_content_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryDark"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_medium"
+                    android:text="@string/label_correct_count"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/text_correct_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_large"
+                    android:text="@string/text_correct_count"
+                    android:textColor="@color/colorBlack"/>
+
+                <TextView
+                    android:id="@+id/text_unlock_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/general_content_margin"
+                    android:gravity="center"
+                    android:text="@string/text_unlock_score"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/colorRed500"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_restart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/general_content_padding"
+                android:paddingStart="@dimen/general_content_padding"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="@dimen/large_content_margin"
+                android:textColor="@color/colorWhite"
+                android:text="@string/button_text_start_again"/>
+
+            <Button
+                android:id="@+id/button_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/general_content_padding"
+                android:paddingStart="@dimen/general_content_padding"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="@dimen/large_content_margin"
+                android:textColor="@color/colorWhite"
+                android:text="@string/button_text_start_again"/>
+
+            <Button
+                android:id="@+id/button_exit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/general_content_padding"
+                android:paddingStart="@dimen/general_content_padding"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="@dimen/large_content_margin"
+                android:textColor="@color/colorWhite"
+                android:text="@string/button_text_exit_2"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"/>
+    </LinearLayout>
+
+</RelativeLayout>
