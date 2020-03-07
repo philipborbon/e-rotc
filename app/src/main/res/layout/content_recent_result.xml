@@ -8,12 +8,12 @@
     tools:context=".activity.RecentResultActivity"
     tools:showIn="@layout/activity_recent_result">
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v4.view.PagerTitleStrip
+        <androidx.viewpager.widget.PagerTitleStrip
             android:padding="@dimen/small_content_padding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,6 +21,6 @@
             style="@style/viewPagerTitleStrip"
             android:layout_gravity="top" />
 
-    </android.support.v4.view.ViewPager>
+    </androidx.viewpager.widget.ViewPager>
 
 </FrameLayout>
