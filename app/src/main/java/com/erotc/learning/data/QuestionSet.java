@@ -1,4 +1,4 @@
-package com.erotc.learning.dao;
+package com.erotc.learning.data;
 
 import com.erotc.learning.repository.DictionaryRepository;
 import com.j256.ormlite.dao.ForeignCollection;

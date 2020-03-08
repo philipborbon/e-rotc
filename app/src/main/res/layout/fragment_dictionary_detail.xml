@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tagalog"
+            android:id="@+id/text_tagalog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Result"
@@ -48,7 +48,7 @@
 
                     <TextView
                         android:layout_toRightOf="@+id/hiligaynonLabel"
-                        android:id="@+id/hiligaynon"
+                        android:id="@+id/text_hiligaynon"
                         android:layout_marginLeft="@dimen/general_content_padding"
                         android:layout_marginStart="@dimen/general_content_padding"
                         android:layout_width="wrap_content"
@@ -59,11 +59,11 @@
                         app:layout_alignSelf="center"/>
 
                     <ImageButton
-                        android:id="@+id/play_hiligaynon"
+                        android:id="@+id/text_play_hiligaynon"
                         app:srcCompat="@drawable/ic_volume"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_toRightOf="@+id/hiligaynon"
+                        android:layout_toRightOf="@+id/text_hiligaynon"
                         android:background="@null"
                         app:layout_alignSelf="flex_end"/>
                 </com.google.android.flexbox.FlexboxLayout>
@@ -98,7 +98,7 @@
                         app:layout_alignSelf="center"/>
 
                     <TextView
-                        android:id="@+id/ilocano"
+                        android:id="@+id/text_ilocano"
                         android:layout_marginLeft="@dimen/general_content_padding"
                         android:layout_marginStart="@dimen/general_content_padding"
                         android:layout_width="wrap_content"
@@ -109,7 +109,7 @@
                         app:layout_alignSelf="center"/>
 
                     <ImageButton
-                        android:id="@+id/play_ilocano"
+                        android:id="@+id/button_play_ilocano"
                         app:srcCompat="@drawable/ic_volume"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
@@ -128,7 +128,7 @@
             android:textSize="@dimen/text_small"/>
 
         <TextView
-            android:id="@+id/definition"
+            android:id="@+id/text_definition"
             android:layout_marginTop="@dimen/general_content_margin"
             android:layout_marginBottom="@dimen/general_content_margin"
             android:layout_width="match_parent"
@@ -150,7 +150,7 @@
             android:textSize="@dimen/text_small"/>
 
         <TextView
-            android:id="@+id/example_tagalog"
+            android:id="@+id/text_example_tagalog"
             android:layout_marginTop="@dimen/general_content_margin"
             android:layout_marginBottom="@dimen/general_content_margin"
             android:layout_width="match_parent"
@@ -168,7 +168,7 @@
             android:textSize="@dimen/text_small"/>
 
         <TextView
-            android:id="@+id/example_hiligaynon"
+            android:id="@+id/text_example_hiligaynon"
             android:layout_marginTop="@dimen/general_content_margin"
             android:layout_marginBottom="@dimen/general_content_margin"
             android:layout_width="match_parent"
@@ -186,7 +186,7 @@
             android:textSize="@dimen/text_small"/>
 
         <TextView
-            android:id="@+id/example_ilocano"
+            android:id="@+id/txt_example_ilocano"
             android:layout_marginTop="@dimen/general_content_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

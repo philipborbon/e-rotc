@@ -1,9 +1,9 @@
 package com.erotc.learning.database;
 
-import com.erotc.learning.dao.DictionaryEntry;
-import com.erotc.learning.dao.QuestionEntry;
-import com.erotc.learning.dao.QuestionSet;
-import com.erotc.learning.dao.RecentSearchResult;
+import com.erotc.learning.data.DictionaryEntry;
+import com.erotc.learning.data.QuestionEntry;
+import com.erotc.learning.data.QuestionSet;
+import com.erotc.learning.data.RecentSearchResult;
 import com.j256.ormlite.android.apptools.OrmLiteConfigUtil;
 
 /**

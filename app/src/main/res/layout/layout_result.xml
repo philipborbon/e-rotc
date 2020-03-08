@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tagalog"
+                android:id="@+id/text_tagalog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Result"
@@ -45,7 +45,7 @@
                     app:layout_alignSelf="center"/>
 
                 <TextView
-                    android:id="@+id/hiligaynon"
+                    android:id="@+id/text_hiligaynon"
                     android:layout_marginLeft="@dimen/general_content_padding"
                     android:layout_marginStart="@dimen/general_content_padding"
                     android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
                     app:layout_alignSelf="center"/>
 
                 <TextView
-                    android:id="@+id/ilocano"
+                    android:id="@+id/text_ilocano"
                     android:layout_marginLeft="@dimen/general_content_padding"
                     android:layout_marginStart="@dimen/general_content_padding"
                     android:layout_width="wrap_content"
