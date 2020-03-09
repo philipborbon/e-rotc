@@ -10,8 +10,8 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.erotc.learning.R
 import com.erotc.learning.fragment.AboutFragment
+import com.erotc.learning.fragment.AssessmentFragment
 import com.erotc.learning.fragment.DictionaryFragment
-import com.erotc.learning.fragment.GameFragment
 import com.erotc.learning.fragment.InitializeFragment
 import com.erotc.learning.util.ApplicationUtil
 import com.google.android.material.navigation.NavigationView
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 }
             } else if (currentFragment is AboutFragment) {
                 showSelectedFragment(R.id.nav_lecture)
-            } else if (currentFragment is GameFragment) {
+            } else if (currentFragment is AssessmentFragment) {
                 showSelectedFragment(R.id.nav_lecture)
             } else {
                 super.onBackPressed()
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 titleResourceId = R.string.nav_label_lecture
             }
             R.id.nav_assessment -> {
-                fragmentClass = GameFragment::class.java
+                fragmentClass = AssessmentFragment::class.java
                 titleResourceId = R.string.nav_label_assessment
             }
             R.id.nav_about -> {

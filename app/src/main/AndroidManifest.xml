@@ -42,7 +42,7 @@
                 android:value="com.erotc.learning.activity.MainActivity" />
         </activity>
         <activity
-            android:name="com.erotc.learning.activity.GameChoiceActivity"
+            android:name="com.erotc.learning.activity.AssessmentActivity"
             android:label="@string/title_activity_assessment_choice"
             android:parentActivityName="com.erotc.learning.activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

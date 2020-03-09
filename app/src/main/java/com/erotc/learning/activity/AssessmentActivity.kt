@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.layout_game_summary.*
 import java.util.*
 import kotlin.math.ceil
 
-class GameChoiceActivity : AppCompatActivity() {
+class AssessmentActivity : AppCompatActivity() {
     private lateinit var repository: DictionaryRepository
     private var questSetId: Long = 0
 
@@ -303,7 +303,7 @@ class GameChoiceActivity : AppCompatActivity() {
 
     private fun nextQuestionSet() {
         questionSet?.getNextLevel(repository)?.let { nextLevel ->
-            val intent = Intent(this, GameChoiceActivity::class.java)
+            val intent = Intent(this, AssessmentActivity::class.java)
             intent.putExtra(QUESTION_SET_ID, nextLevel.id)
             startActivity(intent)
             finish()
@@ -341,7 +341,7 @@ class GameChoiceActivity : AppCompatActivity() {
     }
 
     companion object {
-        private val LOG_TAG = GameChoiceActivity::class.java.simpleName
+        private val LOG_TAG = AssessmentActivity::class.java.simpleName
         private const val QUESTION_DURATION_IN_SEC = 10
         private const val QUESTION_OPTION_COUNT = 3
         const val QUESTION_SET_ID = "question-set-id"

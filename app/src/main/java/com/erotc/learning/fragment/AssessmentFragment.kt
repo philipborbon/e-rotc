@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.erotc.learning.R
-import com.erotc.learning.activity.GameChoiceActivity
+import com.erotc.learning.activity.AssessmentActivity
 import com.erotc.learning.data.QuestionSet
 import com.erotc.learning.repository.DictionaryRepository
 import com.erotc.learning.util.ApplicationUtil
@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_game.*
 /**
  * A simple [Fragment] subclass.
  */
-class GameFragment : Fragment() {
+class AssessmentFragment : Fragment() {
     private lateinit var repository: DictionaryRepository
     private var questionSets: List<QuestionSet>? = null
 
@@ -65,8 +65,8 @@ class GameFragment : Fragment() {
                 container_question_set.addView(view)
             } else {
                 val view = ApplicationUtil.inflateButton(layoutInflater, questionSet.label, View.OnClickListener {
-                    val intent = Intent(context, GameChoiceActivity::class.java)
-                    intent.putExtra(GameChoiceActivity.QUESTION_SET_ID, questionSet.id)
+                    val intent = Intent(context, AssessmentActivity::class.java)
+                    intent.putExtra(AssessmentActivity.QUESTION_SET_ID, questionSet.id)
                     startActivity(intent)
                 })
 
@@ -79,9 +79,9 @@ class GameFragment : Fragment() {
     }
 
     companion object {
-        private val LOG_TAG = GameFragment::class.java.simpleName
-        fun newInstance(): GameFragment {
-            return GameFragment()
+        private val LOG_TAG = AssessmentFragment::class.java.simpleName
+        fun newInstance(): AssessmentFragment {
+            return AssessmentFragment()
         }
     }
 }
