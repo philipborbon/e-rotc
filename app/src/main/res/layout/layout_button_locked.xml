@@ -19,7 +19,7 @@
         <ImageView
             android:layout_width="@dimen/text_large"
             android:layout_height="@dimen/text_large"
-            app:srcCompat="@drawable/ic_lock_fade_blue"/>
+            app:srcCompat="@drawable/ic_lock_fade"/>
 
         <TextView
             android:id="@+id/label"
