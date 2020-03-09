@@ -164,19 +164,21 @@ class AssessmentActivity : AppCompatActivity() {
             if (index != 0) {
                 container_choices?.addView(ApplicationUtil.createSpacer(this))
             }
-            val view = ApplicationUtil.inflateLockedButton(layoutInflater, answer)
-
-            try {
-                validateAnswer(answer, timerTime)
-            } catch (e: Exception) {
-                e.printStackTrace()
-                Log.e(LOG_TAG, Log.getStackTraceString(e))
-            }
+            val view = ApplicationUtil.inflateButton(layoutInflater, answer, View.OnClickListener {
+                try {
+                    validateAnswer(answer, timerTime)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    Log.e(LOG_TAG, Log.getStackTraceString(e))
+                }
+            })
 
             container_choices?.addView(view)
+
             if (index == randomAnswerSet.size - 1) {
                 container_choices?.addView(ApplicationUtil.createSpacer(this))
             }
+
             index++
         }
     }

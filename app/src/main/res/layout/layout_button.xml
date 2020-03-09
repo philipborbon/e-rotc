@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     app:cardCornerRadius="@dimen/card_radius"
     android:foreground="?android:attr/selectableItemBackground"
+    android:layout_weight="1"
     android:clickable="true">
 
     <LinearLayout
@@ -22,7 +23,7 @@
             android:text="Easy"
             android:textSize="@dimen/text_large"
             android:textAllCaps="false"
-            android:fontFamily="casual"
+            android:fontFamily="serif-monospace"
             android:textColor="@color/colorWhite"/>
 
     </LinearLayout>

@@ -72,7 +72,7 @@ class AssessmentFragment : Fragment() {
 
                 container_question_set.addView(view)
             }
-            if (index == questionSets.size ?: 0 - 1) {
+            if (index == questionSets.size -1) {
                 container_question_set.addView(ApplicationUtil.createSpacer(context))
             }
         }
