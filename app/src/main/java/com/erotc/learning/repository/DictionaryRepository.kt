@@ -1,64 +1,45 @@
 package com.erotc.learning.repository
 
 import android.content.Context
-import com.erotc.learning.data.DictionaryEntry
-import com.erotc.learning.data.QuestionEntry
-import com.erotc.learning.data.QuestionSet
-import com.erotc.learning.data.RecentSearchResult
-import com.erotc.learning.database.DatabaseHelper
-import com.j256.ormlite.dao.RawRowMapper
-import com.j256.ormlite.dao.RuntimeExceptionDao
-import com.j256.ormlite.misc.TransactionManager
-import java.sql.SQLException
-import java.util.*
+import androidx.room.Room
+import com.erotc.learning.data.*
+import com.erotc.learning.database.Database
 
 /**
  * Created on 11/7/2018.
  */
 class DictionaryRepository private constructor(context: Context) {
-    private val databaseHelper: DatabaseHelper = DatabaseHelper.getInstance(context)
-    private val dictionaryEntryDao: RuntimeExceptionDao<DictionaryEntry, Int>
-    private val recentSearchResultDao: RuntimeExceptionDao<RecentSearchResult?, Int>
-    private val questionSetDao: RuntimeExceptionDao<QuestionSet, Int>
-    private val questionEntryDao: RuntimeExceptionDao<QuestionEntry, Int>
+    private val database = Room.databaseBuilder(context, Database::class.java, "com.rotc.learning.database")
+            .allowMainThreadQueries()
+            .build()
 
-    @Throws(SQLException::class)
+    private val dictionaryEntryDao = database.dictionaryEntryDao()
+    private val recentSearchResultDao = database.recentSearchResultDao()
+    private val questionSetDao = database.questionSetDao()
+    private val questionEntryDao = database.questionEntryDao()
+
     fun search(keyword: String): List<DictionaryEntry> {
-        var keyword = keyword
-        keyword = "%$keyword%"
-        val builder = dictionaryEntryDao.queryBuilder()
-        builder.where()
-                .like("tagalog", keyword)
-                .or()
-                .like("hiligaynon", keyword)
-                .or()
-                .like("ilocano", keyword)
-        return builder.query()
+        return dictionaryEntryDao.search("%$keyword%")
     }
 
-    fun getDictionaryEntry(dictionaryId: Int): DictionaryEntry {
+    fun getDictionaryEntry(dictionaryId: Long): DictionaryEntry? {
         return dictionaryEntryDao.queryForId(dictionaryId)
     }
 
-    @Throws(SQLException::class)
     fun getRecentSearchResults(ascending: Boolean): List<DictionaryEntry> {
-        val builder = recentSearchResultDao.queryBuilder()
-        builder.orderBy("id", ascending)
-        val recentResults = builder.query()
-        val recentEntries: MutableList<DictionaryEntry> = ArrayList()
-        for (recentResult in recentResults) {
-            recentEntries.add(recentResult!!.entry)
-        }
-        return recentEntries
+        return recentSearchResultDao.recentSearches(ascending)
     }
 
     fun saveDictionaryEntry(dictionaryEntry: DictionaryEntry): DictionaryEntry {
-        dictionaryEntryDao.create(dictionaryEntry)
+        dictionaryEntry.id = dictionaryEntryDao.create(dictionaryEntry)
         return dictionaryEntry
     }
 
     fun saveDictionaryEntries(dictionaryEntries: List<DictionaryEntry>): List<DictionaryEntry> {
-        dictionaryEntryDao.create(dictionaryEntries)
+        dictionaryEntryDao.create(dictionaryEntries).forEachIndexed { index, value ->
+            dictionaryEntries[index].id = value
+        }
+
         return dictionaryEntries
     }
 
@@ -66,118 +47,88 @@ class DictionaryRepository private constructor(context: Context) {
         return questionSetDao.update(questionSet)
     }
 
-    @Throws(SQLException::class)
-    fun getNextLevel(questionSet: QuestionSet): QuestionSet {
+    fun getNextLevel(questionSet: QuestionSet): QuestionSet? {
         val nextLevel = questionSet.level + 1
-        val builder = questionSetDao.queryBuilder()
-        builder.where().eq("level", nextLevel)
-        return builder.queryForFirst()
+        return questionSetDao.getQuestionSetForLevel(nextLevel)
     }
 
-    @Throws(SQLException::class)
     fun unlockNextLevel(questionSet: QuestionSet): QuestionSet? {
         val nextQuestionSet = getNextLevel(questionSet)
-        if (nextQuestionSet.isLocked) {
+
+        if (nextQuestionSet?.isLocked == true) {
             nextQuestionSet.isLocked = false
             questionSetDao.update(nextQuestionSet)
         }
+
         return nextQuestionSet
     }
 
-    @Throws(SQLException::class)
-    fun saveQuestionSets(questionSets: List<QuestionSet>): List<QuestionSet> {
-        return TransactionManager.callInTransaction(databaseHelper.connectionSource) {
+    fun saveQuestionSets(questionSets: List<QuestionSetEntryList>, completion: (() -> Unit)? = null) {
+        database.runInTransaction {
             for (questionSet in questionSets) {
-                questionSetDao.create(questionSet)
-                val questionEntries = questionSet.questionArray
-                for (questionEntry in questionEntries) {
-                    questionEntry.questionSet = questionSet
-                    questionEntryDao.create(questionEntry)
+                questionSet.questionSet.id = questionSetDao.create(questionSet.questionSet)
+
+                questionSet.questionEntries?.let { questionEntries ->
+                    for (questionEntry in questionEntries) {
+                        questionEntry.questionSetId = questionSet.questionSet.id
+                        questionEntry.id = questionEntryDao.create(questionEntry)
+                    }
                 }
             }
-            questionSets
+
+            completion?.invoke()
         }
     }
 
-    @Throws(SQLException::class)
     fun saveRecent(recentSearchResult: RecentSearchResult) {
         if (recentSearchResultDao.countOf() >= RECENT_LIMIT_COUNT) {
-            val firstRecent = firstRecentEntry
-            recentSearchResultDao.delete(firstRecent)
+            firstRecentEntry?.let {
+                recentSearchResultDao.delete(it)
+            }
         }
 
-//        QueryBuilder<DictionaryEntry, Integer> dictionaryQueryBuilder = dictionaryEntryDao.queryBuilder();
-//        dictionaryQueryBuilder.where().eq("id", recentSearchResult.getEntry().getId());
-        val recentQueryBuilder = recentSearchResultDao.queryBuilder()
-        recentQueryBuilder.where().eq("entry_id", recentSearchResult.entry.id)
-        val duplicateEntry = recentQueryBuilder.query()
-        recentSearchResultDao.delete(duplicateEntry)
-        recentSearchResultDao.create(recentSearchResult)
+        recentSearchResultDao.getEntry(recentSearchResult.entryId)?.let { duplicateEntry ->
+            recentSearchResultDao.delete(duplicateEntry)
+        }
+
+        recentSearchResult.id = recentSearchResultDao.create(recentSearchResult)
     }
 
-    @get:Throws(SQLException::class)
     val firstRecentEntry: RecentSearchResult?
-        get() {
-            val builder = recentSearchResultDao.queryBuilder()
-            builder.orderBy("id", true)
-            val results = builder.query()
-            return if (results.size > 0) {
-                results[0]
-            } else null
-        }
+        get() = recentSearchResultDao.mostRecentEntry()
 
-    @get:Throws(SQLException::class)
     val questionSets: List<QuestionSet>
-        get() {
-            val builder = questionSetDao.queryBuilder()
-            builder.orderBy("level", true)
-            return builder.query()
-        }
+        get() = questionSetDao.getQuestionSets()
 
-    @Throws(SQLException::class)
     fun getRandomQuestionEntry(questionSet: QuestionSet): List<QuestionEntry> {
-        val query = "SELECT id, question, answer FROM questionentry WHERE id IN (SELECT id FROM questionentry WHERE questionSet_id = ? ORDER BY RANDOM() LIMIT $QUESTION_ENTRY_LIMIT_COUNT)"
-        val rawResults = questionEntryDao.queryRaw(query, RawRowMapper { columnNames, resultColumns ->
-            val questionEntry = QuestionEntry()
-            questionEntry.id = resultColumns[0].toInt()
-            questionEntry.question = resultColumns[1]
-            questionEntry.answer = resultColumns[2]
-            questionEntry.questionSet = questionSet
-            questionEntry
-        }, questionSet.id.toString())
-        return rawResults.results
+        return questionEntryDao.getRandomQuestionEntry(questionSet.id, QUESTION_ENTRY_LIMIT_COUNT)
     }
 
-    fun getQuestionSet(id: Int): QuestionSet {
+    fun getQuestionSet(id: Long): QuestionSet? {
         return questionSetDao.queryForId(id)
     }
 
     val isDictionaryEmpty: Boolean
-        get() = dictionaryEntryDao.countOf() == 0L
+        get() = dictionaryEntryDao.countOf() == 0
 
     val isQuestionSetEmpty: Boolean
-        get() = questionSetDao.countOf() == 0L
+        get() = questionSetDao.countOf() == 0
 
     val isRecentResultEmpty: Boolean
-        get() = recentSearchResultDao.countOf() == 0L
+        get() = recentSearchResultDao.countOf() == 0
 
     companion object {
         private const val RECENT_LIMIT_COUNT = 100
         private const val QUESTION_ENTRY_LIMIT_COUNT = 10
-        private var instance: DictionaryRepository? = null
-        @JvmStatic
-        fun getInstance(context: Context): DictionaryRepository? {
-            if (instance == null) {
-                instance = DictionaryRepository(context)
-            }
-            return instance
-        }
-    }
 
-    init {
-        dictionaryEntryDao = databaseHelper.daoDictionaryEntry
-        recentSearchResultDao = databaseHelper.daoRecentSearchResult
-        questionSetDao = databaseHelper.daoQuestionSet
-        questionEntryDao = databaseHelper.daoQuestionEntry
+        private var dictionaryRepository: DictionaryRepository? = null
+
+        fun getInstance(context: Context): DictionaryRepository {
+            if (dictionaryRepository == null) {
+                dictionaryRepository = DictionaryRepository(context)
+            }
+
+            return dictionaryRepository!!
+        }
     }
 }

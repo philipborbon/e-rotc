@@ -18,13 +18,12 @@ import com.erotc.learning.util.hourglass.Hourglass
 import kotlinx.android.synthetic.main.activity_game_choice.*
 import kotlinx.android.synthetic.main.layout_game_choice.*
 import kotlinx.android.synthetic.main.layout_game_summary.*
-import java.sql.SQLException
 import java.util.*
 import kotlin.math.ceil
 
 class GameChoiceActivity : AppCompatActivity() {
     private lateinit var repository: DictionaryRepository
-    private var questSetId = 0
+    private var questSetId: Long = 0
 
     private var questionSet: QuestionSet? = null
     private var questionEntries: List<QuestionEntry>? = null
@@ -40,7 +39,7 @@ class GameChoiceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_choice)
 
-        questSetId = intent.getIntExtra(QUESTION_SET_ID, -1)
+        questSetId = intent.getLongExtra(QUESTION_SET_ID, -1)
         repository = DictionaryRepository.getInstance(this)
 
         button_next.setOnClickListener { nextQuestionSet() }
@@ -95,15 +94,14 @@ class GameChoiceActivity : AppCompatActivity() {
     @SuppressLint("StaticFieldLeak")
     private fun initQuestionSet() {
         showGameView()
+
         object : AsyncTask<Void?, Void?, Void?>() {
             override fun doInBackground(vararg p0: Void?): Void? {
-                questionSet = repository.getQuestionSet(questSetId)
-                try {
-                    questionEntries = repository.getRandomQuestionEntry(questionSet)
-                } catch (e: SQLException) {
-                    e.printStackTrace()
-                    Log.e(LOG_TAG, Log.getStackTraceString(e))
+                repository.getQuestionSet(questSetId)?.let { it
+                    questionSet = it
+                    questionEntries = repository.getRandomQuestionEntry(it)
                 }
+
                 return null
             }
 
@@ -117,14 +115,10 @@ class GameChoiceActivity : AppCompatActivity() {
         currentIndex += 1
 
         if (currentIndex > questionEntries?.size ?: 0 - 1) {
-            try {
-                endOfQuestionSet()
-            } catch (e: SQLException) {
-                e.printStackTrace()
-                Log.e(LOG_TAG, Log.getStackTraceString(e))
-            }
+            endOfQuestionSet()
             return
         }
+
         showCountLabel()
 
         currentQuestion = questionEntries?.get(currentIndex)
@@ -139,10 +133,8 @@ class GameChoiceActivity : AppCompatActivity() {
     private fun startTimer() {
         val oneSecondTime = 1000
 
-        if (currentTimer != null) {
-            currentTimer?.stopTimer()
-            currentTimer = null
-        }
+        currentTimer?.stopTimer()
+        currentTimer = null
 
         label_time?.text = QUESTION_DURATION_IN_SEC.toString()
         currentTimer = object : Hourglass((QUESTION_DURATION_IN_SEC * oneSecondTime).toLong(), oneSecondTime.toLong()) {
@@ -172,16 +164,15 @@ class GameChoiceActivity : AppCompatActivity() {
             if (index != 0) {
                 container_choices?.addView(ApplicationUtil.createSpacer(this))
             }
-            val view = ApplicationUtil.inflateButton(layoutInflater,
-                    answer
-            ) {
-                try {
-                    validateAnswer(answer, timerTime)
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                    Log.e(LOG_TAG, Log.getStackTraceString(e))
-                }
+            val view = ApplicationUtil.inflateLockedButton(layoutInflater, answer)
+
+            try {
+                validateAnswer(answer, timerTime)
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Log.e(LOG_TAG, Log.getStackTraceString(e))
             }
+
             container_choices?.addView(view)
             if (index == randomAnswerSet.size - 1) {
                 container_choices?.addView(ApplicationUtil.createSpacer(this))
@@ -190,14 +181,12 @@ class GameChoiceActivity : AppCompatActivity() {
         }
     }
 
-    @Throws(Exception::class)
     private fun validateAnswer(_answer: String?, time: Int) {
         var answer = _answer
 
-        if (currentTimer != null) {
-            currentTimer?.stopTimer()
-            currentTimer = null
-        }
+        currentTimer?.stopTimer()
+        currentTimer = null
+
         answer = answer ?: ""
         val score: Int
         score = if (time != -1 && answer.toLowerCase() == currentQuestion?.answer?.toLowerCase()) {
@@ -268,12 +257,14 @@ class GameChoiceActivity : AppCompatActivity() {
         }
     }
 
-    @Throws(SQLException::class)
     private fun endOfQuestionSet() {
         gameFinished = true
         hideGameView()
         showGameSummary()
-        val nextLevel = questionSet?.getNextLevel(repository)
+
+        val questionSet = questionSet ?: return
+
+        val nextLevel = questionSet.getNextLevel(repository)
         text_score.text = runningScore.toString()
         var counter = 0
 
@@ -283,23 +274,23 @@ class GameChoiceActivity : AppCompatActivity() {
             }
         }
 
-        if (runningScore > questionSet?.highScore ?: 0) {
-            questionSet?.highScore = runningScore
+        if (runningScore > questionSet.highScore) {
+            questionSet.highScore = runningScore
             repository.updateQuestionSet(questionSet)
 
-            if (questionSet?.shouldUnlockNextLevel() == true && nextLevel != null) {
+            if (questionSet.shouldUnlockNextLevel() && nextLevel != null) {
                 repository.unlockNextLevel(questionSet)
             }
         }
 
-        text_high_score.text = questionSet?.highScore.toString()
+        text_high_score.text = questionSet.highScore.toString()
         text_correct_count.text = getString(R.string.text_correct_count, counter, questionEntries?.size)
 
-        if (nextLevel != null && questionSet?.highScore ?: 0 < questionSet?.pointsToProceed ?: 0) {
-            val neededScore = questionSet?.pointsToProceed ?: 0 - runningScore
+        if (nextLevel != null && questionSet.highScore < questionSet.pointsToProceed) {
+            val neededScore = questionSet.pointsToProceed - runningScore
             text_unlock_score?.text = getString(R.string.text_unlock_score, neededScore, nextLevel.label)
             text_unlock_score?.visibility = View.VISIBLE
-        } else if (nextLevel != null && questionSet?.highScore ?: 0 >= questionSet?.pointsToProceed ?: 0) {
+        } else if (nextLevel != null && questionSet.highScore >= questionSet.pointsToProceed) {
             button_next?.text = getString(R.string.text_play_next, nextLevel.label)
             button_next?.visibility = View.VISIBLE
         }
@@ -311,17 +302,11 @@ class GameChoiceActivity : AppCompatActivity() {
     }
 
     private fun nextQuestionSet() {
-        try {
-            val nextLevel = questionSet?.getNextLevel(repository)
-            if (nextLevel != null) {
-                val intent = Intent(this, GameChoiceActivity::class.java)
-                intent.putExtra(QUESTION_SET_ID, nextLevel.id)
-                startActivity(intent)
-                finish()
-            }
-        } catch (e: SQLException) {
-            e.printStackTrace()
-            Log.e(LOG_TAG, Log.getStackTraceString(e))
+        questionSet?.getNextLevel(repository)?.let { nextLevel ->
+            val intent = Intent(this, GameChoiceActivity::class.java)
+            intent.putExtra(QUESTION_SET_ID, nextLevel.id)
+            startActivity(intent)
+            finish()
         }
     }
 

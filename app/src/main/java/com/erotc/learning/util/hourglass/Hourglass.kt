@@ -76,7 +76,7 @@ abstract class Hourglass : HourglassListener {
                         if (localTime <= time) {
                             onTimerTick(time - localTime)
                             localTime += interval
-                            sendMessageDelayed(handler!!.obtainMessage(MSG), interval)
+                            sendMessageDelayed(handler?.obtainMessage(MSG), interval)
                         } else finishTimer()
                     }
                 }
@@ -92,7 +92,7 @@ abstract class Hourglass : HourglassListener {
         isRunning = true
         isPaused = false
         localTime = 0
-        handler!!.sendMessage(handler!!.obtainMessage(MSG))
+        handler?.sendMessage(handler?.obtainMessage(MSG))
     }
 
     /**
@@ -100,13 +100,13 @@ abstract class Hourglass : HourglassListener {
      */
     fun stopTimer() {
         isRunning = false
-        handler!!.removeMessages(MSG)
+        handler?.removeMessages(MSG)
         // onTimerFinish();
     }
 
     private fun finishTimer() {
         isRunning = false
-        handler!!.removeMessages(MSG)
+        handler?.removeMessages(MSG)
         onTimerFinish()
     }
 
@@ -124,7 +124,7 @@ abstract class Hourglass : HourglassListener {
     @Synchronized
     fun resumeTimer() {
         isPaused = false
-        handler!!.sendMessage(handler!!.obtainMessage(MSG))
+        handler?.sendMessage(handler?.obtainMessage(MSG))
     }
 
     /**
@@ -149,7 +149,7 @@ abstract class Hourglass : HourglassListener {
 
     /**
      * Setter for interval.
-     *
+     *+
      * @param intervalInMillis: in milliseconds
      */
     fun setInterval(intervalInMillis: Long) {

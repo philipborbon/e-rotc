@@ -121,7 +121,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun initialize() {
         val fragment = InitializeFragment.newInstance()
-        fragment.setListener { showSelectedFragment(R.id.nav_lecture) }
+        fragment.setListener(object : InitializeFragment.InitializeListener {
+            override fun onDone() {
+                showSelectedFragment(R.id.nav_lecture)
+            }
+        })
         val fragmentManager = supportFragmentManager
         fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
     }

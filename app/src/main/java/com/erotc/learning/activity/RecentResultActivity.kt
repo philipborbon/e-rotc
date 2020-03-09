@@ -1,7 +1,6 @@
 package com.erotc.learning.activity
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -13,13 +12,12 @@ import com.erotc.learning.fragment.DetailFragment
 import com.erotc.learning.repository.DictionaryRepository
 import kotlinx.android.synthetic.main.activity_recent_result.*
 import kotlinx.android.synthetic.main.content_recent_result.*
-import java.sql.SQLException
 
 class RecentResultActivity : AppCompatActivity() {
     private var pagerAdapter: PagerAdapter? = null
     private var recentResults: List<DictionaryEntry>? = null
 
-    private lateinit var mDictionaryRepository: DictionaryRepository
+    private lateinit var dictionaryRepository: DictionaryRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +25,8 @@ class RecentResultActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        mDictionaryRepository = DictionaryRepository.getInstance(this)
-
-        try {
-            recentResults = mDictionaryRepository.getRecentSearchResults(true)
-        } catch (e: SQLException) {
-            e.printStackTrace()
-            Log.e(LOG_TAG, Log.getStackTraceString(e))
-        }
+        dictionaryRepository = DictionaryRepository.getInstance(this)
+        recentResults = dictionaryRepository.getRecentSearchResults(true)
 
         pagerAdapter = ScreenSlidePagerAdapter(supportFragmentManager)
         

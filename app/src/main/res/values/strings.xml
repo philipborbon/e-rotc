@@ -22,6 +22,7 @@
     <string name="label_score">Points</string>
     <string name="label_high_score">Highest Points</string>
     <string name="label_correct_count">Correct Answers</string>
+    <string name="label_assessment">Assessment</string>
 
     <string name="message_preparing_dictionary">Loading definitions…</string>
     <string name="message_preparing_assessment">Loading assessment…</string>

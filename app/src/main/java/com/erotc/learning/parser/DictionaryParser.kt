@@ -14,20 +14,19 @@ import java.util.*
 class DictionaryParser(private val inputStream: InputStream) {
     private val reader: CsvReader = CsvReader()
 
-    @Throws(IOException::class)
     fun parse(): ArrayList<DictionaryEntry> {
         val entries = ArrayList<DictionaryEntry>()
         val parser = reader.parse(InputStreamReader(inputStream))
-        var row: CsvRow
+        var row: CsvRow?
         while (parser.nextRow().also { row = it } != null) {
             val entry = DictionaryEntry()
-            entry.tagalog = row.getField(ROW_TAGALOG)
-            entry.hiligaynon = row.getField(ROW_HILIGAYNON)
-            entry.ilocano = row.getField(ROW_ILOCANO)
-            entry.definition = row.getField(ROW_DEFINITION)
-            entry.tagalogExample = row.getField(ROW_TAGALOG_EXAMPLE)
-            entry.hiligaynonExample = row.getField(ROW_HILIGAYNON_EXAMPLE)
-            entry.ilocanoExample = row.getField(ROW_ILOCANO_EXAMPLE)
+            entry.tagalog = row?.getField(ROW_TAGALOG)
+            entry.hiligaynon = row?.getField(ROW_HILIGAYNON)
+            entry.ilocano = row?.getField(ROW_ILOCANO)
+            entry.definition = row?.getField(ROW_DEFINITION)
+            entry.tagalogExample = row?.getField(ROW_TAGALOG_EXAMPLE)
+            entry.hiligaynonExample = row?.getField(ROW_HILIGAYNON_EXAMPLE)
+            entry.ilocanoExample = row?.getField(ROW_ILOCANO_EXAMPLE)
             entries.add(entry)
         }
 

@@ -7,7 +7,6 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,7 +22,6 @@ import com.erotc.learning.data.DictionaryEntry
 import com.erotc.learning.data.RecentSearchResult
 import com.erotc.learning.repository.DictionaryRepository
 import kotlinx.android.synthetic.main.fragment_dictionary.*
-import java.sql.SQLException
 import java.util.*
 
 /**
@@ -59,6 +57,9 @@ class DictionaryFragment : Fragment() {
 
             override fun afterTextChanged(editable: Editable) {}
         })
+
+        val activity = activity ?: return
+
         dictionaryRepository = DictionaryRepository.getInstance(activity)
         initRecyclerView()
         hideNoResults()
@@ -70,8 +71,10 @@ class DictionaryFragment : Fragment() {
             override fun onClick(view: View?) {
                 view?.let {
                     val itemIndex = recycler_result_list.getChildLayoutPosition(view)
-                    val dictionaryEntry = resultList?.get(itemIndex)
-                    addAndShowRecent(dictionaryEntry)
+
+                    resultList?.get(itemIndex)?.let { dictionaryEntry ->
+                        addAndShowRecent(dictionaryEntry)
+                    }
                 }
             }
         })
@@ -90,10 +93,14 @@ class DictionaryFragment : Fragment() {
     fun onSearchClick() {
         hideKeyboard()
         input_search_key.clearFocus()
-        if (resultList?.size ?: 0 > 0) {
-            val indexOfMatch = DictionaryEntry.getIndexOfMatch(input_search_key.text.toString(), resultList)
-            val dictionaryEntry = resultList?.get(indexOfMatch)
-            addAndShowRecent(dictionaryEntry)
+
+        resultList?.let {
+            if (it.isNotEmpty()) {
+                val indexOfMatch = DictionaryEntry.getIndexOfMatch(input_search_key.text.toString(), it)
+                resultList?.get(indexOfMatch)?.let { dictionaryEntry ->
+                    addAndShowRecent(dictionaryEntry)
+                }
+            }
         }
     }
 
@@ -105,12 +112,8 @@ class DictionaryFragment : Fragment() {
 
             val task: AsyncTask<Void, Void, Void> = object : AsyncTask<Void, Void, Void>() {
                 override fun doInBackground(vararg p0: Void?): Void? {
-                    try {
-                        resultList = dictionaryRepository.getRecentSearchResults(false)
-                    } catch (e: SQLException) {
-                        e.printStackTrace()
-                        Log.e(LOG_TAG, Log.getStackTraceString(e))
-                    }
+                    resultList = dictionaryRepository.getRecentSearchResults(false)
+
                     return null
                 }
 
@@ -132,21 +135,17 @@ class DictionaryFragment : Fragment() {
 
     private fun hideKeyboard() {
         val activity = activity ?: return
+        val view = activity.currentFocus ?: return
 
-        val view = activity.currentFocus
-        if (view != null) {
-            val imm = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.hideSoftInputFromWindow(view.windowToken, 0)
-        }
+        val imm = activity.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
     @SuppressLint("StaticFieldLeak")
     fun search() {
         hideRecentLabel()
 
-        if (previousTask != null) {
-            previousTask.cancel(true)
-        }
+        previousTask?.cancel(true)
 
         val keyword = input_search_key.text.toString()
         if (keyword.isEmpty()) {
@@ -160,12 +159,7 @@ class DictionaryFragment : Fragment() {
             }
 
             override fun doInBackground(vararg p0: Void?): Void? {
-                try {
-                    resultList = dictionaryRepository.search(keyword)
-                } catch (e: SQLException) {
-                    e.printStackTrace()
-                    Log.e(LOG_TAG, Log.getStackTraceString(e))
-                }
+                resultList = dictionaryRepository.search(keyword)
 
                 return null
             }
@@ -201,15 +195,12 @@ class DictionaryFragment : Fragment() {
         label_recent_result.visibility = View.GONE
     }
 
-    private fun addAndShowRecent(dictionaryEntry: DictionaryEntry?) {
+    private fun addAndShowRecent(dictionaryEntry: DictionaryEntry) {
         val recent = RecentSearchResult()
-        recent.entry = dictionaryEntry
-        try {
-            dictionaryRepository.saveRecent(recent)
-        } catch (e: SQLException) {
-            e.printStackTrace()
-            Log.e(LOG_TAG, Log.getStackTraceString(e))
-        }
+        recent.entryId = dictionaryEntry.id
+
+        dictionaryRepository.saveRecent(recent)
+
         val intent = Intent(activity, RecentResultActivity::class.java)
         startActivity(intent)
     }
