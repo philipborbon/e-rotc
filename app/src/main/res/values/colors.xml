@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ic_launcher_background">#33691E</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
 
     <color name="colorPrimary">#1B5E20</color>
     <color name="colorPrimaryDark">#33691E</color>
@@ -12,7 +12,7 @@
     <color name="color100">#DCEDC8</color>
     <color name="colorRed500">#F44336</color>
 
-    <color name="splashBackgroundColor">#33691E</color>
+    <color name="splashBackgroundColor">#FFFFFF</color>
 
     <color name="colorGray500">#9E9E9E</color>
 </resources>

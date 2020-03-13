@@ -23,9 +23,9 @@
             android:gravity="center|top"
             android:orientation="vertical">
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:srcCompat="@drawable/ic_book_blue"/>
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:srcCompat="@drawable/ic_important"/>
 
             <TextView
                 android:layout_marginTop="20dp"
