@@ -59,7 +59,15 @@
                     android:layout_height="0dp"
                     android:layout_weight="1" />
 
-                <include layout="@layout/layout_button" />
+                <Button
+                    android:id="@+id/button_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_text_start"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="serif-monospace"
+                    />
 
                 <View
                     android:layout_width="match_parent"

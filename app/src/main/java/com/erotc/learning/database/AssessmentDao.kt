@@ -17,7 +17,7 @@ interface AssessmentDao {
     @Insert
     fun create(questions: List<Assessment>): List<Long>
 
-    @Query("SELECT COUNT(*) FROM lecture")
+    @Query("SELECT COUNT(*) FROM assessment")
     fun countOf(): Int
 
 }

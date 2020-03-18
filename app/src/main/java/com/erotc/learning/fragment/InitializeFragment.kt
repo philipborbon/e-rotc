@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.erotc.learning.R
+import com.erotc.learning.data.Assessment
 import com.erotc.learning.data.Lecture
 import com.erotc.learning.repository.LearnRepository
 import com.erotc.learning.util.ApplicationUtil
@@ -56,7 +57,7 @@ class InitializeFragment : Fragment() {
                 if (repository.isAssessmentEmpty) {
                     publishProgress(getString(R.string.message_preparing_assessment))
                     val assessmentString = ApplicationUtil.getStringFromAsset(context, ApplicationUtil.FILE_ASSESSMENT)
-                    val assessmentListType = object : TypeToken<List<Lecture>>(){}.type
+                    val assessmentListType = object : TypeToken<List<Assessment>>(){}.type
 
                     repository.saveAssessments(ApplicationUtil.gson.fromJson(assessmentString, assessmentListType))
                 }

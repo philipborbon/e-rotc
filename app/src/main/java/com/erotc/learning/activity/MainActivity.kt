@@ -80,40 +80,29 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun showSelectedFragment(menuId: Int) {
         var fragment: Fragment? = null
-        var fragmentClass: Class<*>? = null
         var titleResourceId = 0
 
         when (menuId) {
             R.id.nav_lecture -> {
-                fragmentClass = LectureFragment::class.java
+                fragment = LectureFragment.newInstance()
                 titleResourceId = R.string.nav_label_lecture
             }
             R.id.nav_assessment -> {
-                fragmentClass = AssessmentFragment::class.java
+                fragment = AssessmentFragment.newInstance()
                 titleResourceId = R.string.nav_label_assessment
             }
             R.id.nav_about -> {
-                fragmentClass = AboutFragment::class.java
+                fragment = AboutFragment.newInstance()
                 titleResourceId = R.string.nav_label_about
             }
-        }
-
-        if (fragmentClass == null) {
-            return
-        }
-
-        try {
-            fragment = fragmentClass.newInstance() as Fragment
-            currentFragment = fragment
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Log.d(LOG_TAG, Log.getStackTraceString(e))
         }
         currentFragmentId = menuId
 
         fragment?.let {
+            currentFragment = it
+
             val fragmentManager = supportFragmentManager
-            fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
+            fragmentManager.beginTransaction().replace(R.id.fragment_container, it).commit()
             nav_view.setCheckedItem(menuId)
             setTitle(titleResourceId)
         }

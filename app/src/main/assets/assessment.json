@@ -1,6 +1,32 @@
 [
   {
     "question": "Are you awesome?",
+    "type": "tof",
+    "choices": null,
+    "answer": "true"
+  },
+  {
+    "question": "Are you awesome?",
+    "type": "fill-q",
+    "choices": null,
     "answer": "Yes"
+  },
+  {
+    "question": "w3schools.jpg",
+    "type": "fill-i",
+    "choices": null,
+    "answer": "school"
+  },
+  {
+    "question": "Are you awesome?",
+    "type": "multi-q",
+    "choices": ["Yes", "No", "I don't know"],
+    "answer": "Yes"
+  },
+  {
+    "question": "w3schools.jpg",
+    "type": "multi-i",
+    "choices": ["School", "CSS", "OK"],
+    "answer": "school"
   }
 ]
