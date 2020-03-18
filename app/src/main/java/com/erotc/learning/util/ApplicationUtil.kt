@@ -4,7 +4,10 @@ import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.*
+import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.LinearLayout
+import android.widget.TextView
 import com.erotc.learning.R
 import com.erotc.learning.repository.LearnRepository
 import com.google.gson.Gson
@@ -16,6 +19,7 @@ import java.io.IOException
 object ApplicationUtil {
     private val LOG_TAG = ApplicationUtil::class.java.simpleName
 
+    const val FILE_TOPIC = "topic.json"
     const val FILE_LECTURE = "lecture.json"
     const val FILE_ASSESSMENT = "assessment.json"
 
@@ -23,7 +27,7 @@ object ApplicationUtil {
 
     fun shouldInitialize(context: Context): Boolean {
         val repository = LearnRepository.getInstance(context)
-        return repository.isLectureEmpty || repository.isAssessmentEmpty
+        return repository.isTopicEmpty || repository.isLectureEmpty || repository.isAssessmentEmpty
     }
 
     fun getStringFromAsset(context: Context, fileName: String): String? {

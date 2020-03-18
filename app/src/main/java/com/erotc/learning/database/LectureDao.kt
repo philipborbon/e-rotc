@@ -23,7 +23,7 @@ interface LectureDao {
     fun create(entry: Lecture): Long
 
     @Insert
-    fun create(entries: List<Lecture>): List<Long>
+    fun create(lectures: List<Lecture>): List<Long>
 
     @Query("SELECT * FROM lecture ORDER BY title")
     fun getAll(): List<Lecture>

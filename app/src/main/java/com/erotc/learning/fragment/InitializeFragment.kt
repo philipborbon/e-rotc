@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.erotc.learning.R
 import com.erotc.learning.data.Assessment
 import com.erotc.learning.data.Lecture
+import com.erotc.learning.data.Topic
 import com.erotc.learning.repository.LearnRepository
 import com.erotc.learning.util.ApplicationUtil
 import com.google.gson.reflect.TypeToken
@@ -45,6 +46,15 @@ class InitializeFragment : Fragment() {
         object : AsyncTask<Void?, String?, Void?>() {
             override fun doInBackground(vararg p0: Void?): Void? {
                 val repository = LearnRepository.getInstance(context)
+                if (repository.isTopicEmpty) {
+                    publishProgress(getString(R.string.message_preparing_topics))
+
+                    val topicString = ApplicationUtil.getStringFromAsset(context, ApplicationUtil.FILE_TOPIC)
+                    val topicListType = object : TypeToken<List<Topic>>(){}.type
+
+                    repository.saveTopics(ApplicationUtil.gson.fromJson(topicString, topicListType))
+                }
+
                 if (repository.isLectureEmpty) {
                     publishProgress(getString(R.string.message_preparing_lectures))
 
@@ -56,6 +66,7 @@ class InitializeFragment : Fragment() {
 
                 if (repository.isAssessmentEmpty) {
                     publishProgress(getString(R.string.message_preparing_assessment))
+
                     val assessmentString = ApplicationUtil.getStringFromAsset(context, ApplicationUtil.FILE_ASSESSMENT)
                     val assessmentListType = object : TypeToken<List<Assessment>>(){}.type
 

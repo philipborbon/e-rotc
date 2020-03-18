@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.erotc.learning.data.Assessment
 import com.erotc.learning.data.Lecture
+import com.erotc.learning.data.Topic
 import com.erotc.learning.database.Database
 
 /**
@@ -14,6 +15,7 @@ class LearnRepository private constructor(context: Context) {
             .allowMainThreadQueries()
             .build()
 
+    private val topicDao = database.topicDao()
     private val lectureDao = database.lectureDao()
     private val assessmentDao = database.assessmentDao()
 
@@ -25,7 +27,23 @@ class LearnRepository private constructor(context: Context) {
         return lectureDao.getAll()
     }
 
+    fun saveTopics(topics: List<Topic>): List<Topic> {
+        topics.forEachIndexed { index, topic ->
+            topic.order = index
+        }
+
+        topicDao.create(topics).forEachIndexed { index, value ->
+            topics[index].id = value
+        }
+
+        return topics
+    }
+
     fun saveLectures(lectures: List<Lecture>): List<Lecture> {
+        lectures.forEachIndexed { index, lecture ->
+            lecture.order = index
+        }
+
         lectureDao.create(lectures).forEachIndexed { index, value ->
             lectures[index].id = value
         }
@@ -44,6 +62,9 @@ class LearnRepository private constructor(context: Context) {
     fun getRandomQuestions(): List<Assessment> {
         return assessmentDao.getRandomQuestions(QUESTION_LIMIT_COUNT).shuffled()
     }
+
+    val isTopicEmpty: Boolean
+        get() = topicDao.countOf() == 0
 
     val isLectureEmpty: Boolean
         get() = lectureDao.countOf() == 0

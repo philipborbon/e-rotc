@@ -1,6 +1,12 @@
 [
   {
-    "title": "Sample Title",
+    "topicid": 1,
+    "title": "General Lecture 1",
+    "file": "sample.html"
+  },
+  {
+    "topicid": 2,
+    "title": "Topic Lecture 1",
     "file": "sample.html"
   }
 ]

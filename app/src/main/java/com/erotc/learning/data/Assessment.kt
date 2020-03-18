@@ -1,14 +1,23 @@
 package com.erotc.learning.data
 
 import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 /**
  * Created on 10/15/2018.
  */
-@Entity
+@Entity(foreignKeys = [
+    ForeignKey (
+            entity = Lecture::class,
+            parentColumns = ["id"],
+            childColumns = ["topicid"],
+            onDelete = ForeignKey.CASCADE
+    )
+])
 data class Assessment (
     @PrimaryKey(autoGenerate = true) var id: Long = 0,
+    var topicid: Long = 0,
     var question: String? = null,
     var type: String? = null,
     var choices: ArrayList<String>? = null,

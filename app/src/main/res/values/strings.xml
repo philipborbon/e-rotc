@@ -19,6 +19,7 @@
     <string name="label_correct_count">Correct Answers</string>
     <string name="label_assessment">Assessment</string>
 
+    <string name="message_preparing_topics">Loading topics…</string>
     <string name="message_preparing_lectures">Loading lectures…</string>
     <string name="message_preparing_assessment">Loading assessments…</string>
     <string name="message_no_results">No results found.</string>
