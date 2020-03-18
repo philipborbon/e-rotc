@@ -8,10 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.erotc.learning.R
-import com.erotc.learning.parser.DictionaryParser
-import com.erotc.learning.parser.QuestionParser
-import com.erotc.learning.repository.DictionaryRepository
+import com.erotc.learning.data.Lecture
+import com.erotc.learning.repository.LearnRepository
+import com.erotc.learning.util.ApplicationUtil
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.fragment_initialize.*
+
 
 /**
  * A simple [Fragment] subclass.
@@ -41,21 +43,22 @@ class InitializeFragment : Fragment() {
 
         object : AsyncTask<Void?, String?, Void?>() {
             override fun doInBackground(vararg p0: Void?): Void? {
-                val repository = DictionaryRepository.getInstance(context)
-                if (repository.isDictionaryEmpty) {
-                    publishProgress(getString(R.string.message_preparing_dictionary))
-                    val dictionaryParser = DictionaryParser(
-                            resources.openRawResource(R.raw.dictionary)
-                    )
-                    val entryList = dictionaryParser.parse()
-                    repository.saveDictionaryEntries(entryList)
+                val repository = LearnRepository.getInstance(context)
+                if (repository.isLectureEmpty) {
+                    publishProgress(getString(R.string.message_preparing_lectures))
+
+                    val lectureString = ApplicationUtil.getJsonDataFromAsset(context, ApplicationUtil.FILE_LECTURE)
+                    val lectureListType = object : TypeToken<List<Lecture>>(){}.type
+
+                    repository.saveLectures(ApplicationUtil.gson.fromJson(lectureString, lectureListType))
                 }
 
-                if (repository.isQuestionSetEmpty) {
+                if (repository.isAssessmentEmpty) {
                     publishProgress(getString(R.string.message_preparing_assessment))
-                    val questionParser = QuestionParser(resources.openRawResource(R.raw.questionset))
-                    val questionSetList = questionParser.parse()
-                    repository.saveQuestionSets(questionSetList)
+                    val assessmentString = ApplicationUtil.getJsonDataFromAsset(context, ApplicationUtil.FILE_ASSESSMENT)
+                    val assessmentListType = object : TypeToken<List<Lecture>>(){}.type
+
+                    repository.saveAssessments(ApplicationUtil.gson.fromJson(assessmentString, assessmentListType))
                 }
 
                 return null

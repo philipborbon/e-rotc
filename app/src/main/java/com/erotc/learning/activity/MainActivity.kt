@@ -11,8 +11,8 @@ import androidx.fragment.app.Fragment
 import com.erotc.learning.R
 import com.erotc.learning.fragment.AboutFragment
 import com.erotc.learning.fragment.AssessmentFragment
-import com.erotc.learning.fragment.DictionaryFragment
 import com.erotc.learning.fragment.InitializeFragment
+import com.erotc.learning.fragment.LectureFragment
 import com.erotc.learning.util.ApplicationUtil
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -53,13 +53,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
-            if (currentFragment is DictionaryFragment) {
-                val dictionaryFragment = currentFragment as DictionaryFragment
-                if (dictionaryFragment.isSearchEmpty) {
+            if (currentFragment is LectureFragment) {
+                val lectureFragment = currentFragment as LectureFragment
+                if (lectureFragment.isSearchEmpty) {
                     super.onBackPressed()
                 } else {
-                    dictionaryFragment.clearInputSearch()
-                    dictionaryFragment.showRecentResults()
+                    lectureFragment.clearInputSearch()
+                    lectureFragment.showAll()
                 }
             } else if (currentFragment is AboutFragment) {
                 showSelectedFragment(R.id.nav_lecture)
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         when (menuId) {
             R.id.nav_lecture -> {
-                fragmentClass = DictionaryFragment::class.java
+                fragmentClass = LectureFragment::class.java
                 titleResourceId = R.string.nav_label_lecture
             }
             R.id.nav_assessment -> {

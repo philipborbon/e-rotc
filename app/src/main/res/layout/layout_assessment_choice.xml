@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
-            android:layout_marginTop="@dimen/game_choice_header_margin"
-            android:layout_marginLeft="@dimen/game_choice_header_margin"
-            android:layout_marginRight="@dimen/game_choice_header_margin"
+            android:layout_marginTop="@dimen/assessment_choice_header_margin"
+            android:layout_marginLeft="@dimen/assessment_choice_header_margin"
+            android:layout_marginRight="@dimen/assessment_choice_header_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/general_content_margin"

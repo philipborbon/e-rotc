@@ -11,7 +11,7 @@
     <dimen name="large_content_margin">12dp</dimen>
     <dimen name="large_content_padding">12dp</dimen>
     <dimen name="small_content_padding">4dp</dimen>
-    <dimen name="game_choice_header_margin">28dp</dimen>
+    <dimen name="assessment_choice_header_margin">28dp</dimen>
     <dimen name="button_margin">12dp</dimen>
     <dimen name="widget_size">40dp</dimen>
 

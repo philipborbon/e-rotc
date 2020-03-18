@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:minHeight="48dp"
     app:cardCornerRadius="@dimen/card_radius"
     android:foreground="?android:attr/selectableItemBackground"
     android:clickable="true"
@@ -22,70 +23,15 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/text_tagalog"
+                android:id="@+id/text_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Result"
                 android:textSize="@dimen/text_large"
                 android:textColor="@color/colorBlack"/>
 
-            <com.google.android.flexbox.FlexboxLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:flexWrap="wrap"
-                app:alignItems="stretch"
-                app:alignContent="stretch" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_hiligaynon"
-                    android:textSize="@dimen/text_medium"
-                    android:textColor="@color/colorGray500"
-                    app:layout_alignSelf="center"/>
-
-                <TextView
-                    android:id="@+id/text_hiligaynon"
-                    android:layout_marginLeft="@dimen/general_content_padding"
-                    android:layout_marginStart="@dimen/general_content_padding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Result"
-                    android:textSize="@dimen/text_medium"
-                    android:textColor="@color/colorBlack"
-                    app:layout_alignSelf="flex_end"/>
-
-            </com.google.android.flexbox.FlexboxLayout>
-
-            <com.google.android.flexbox.FlexboxLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:flexWrap="wrap"
-                app:alignItems="stretch"
-                app:alignContent="stretch" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_ilocano"
-                    android:textSize="@dimen/text_medium"
-                    android:textColor="@color/colorGray500"
-                    app:layout_alignSelf="center"/>
-
-                <TextView
-                    android:id="@+id/text_ilocano"
-                    android:layout_marginLeft="@dimen/general_content_padding"
-                    android:layout_marginStart="@dimen/general_content_padding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Result"
-                    android:textSize="@dimen/text_medium"
-                    android:textColor="@color/colorBlack"
-                    app:layout_alignSelf="flex_end"/>
-
-            </com.google.android.flexbox.FlexboxLayout>
-
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

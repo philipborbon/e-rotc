@@ -24,7 +24,7 @@
             android:layout_marginTop="@dimen/general_content_margin"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/text_large"
-            android:text="@string/message_preparing_dictionary" />
+            android:text="@string/message_preparing_lectures" />
 
     </LinearLayout>
     

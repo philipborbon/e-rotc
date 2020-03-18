@@ -24,24 +24,25 @@
     <string name="label_correct_count">Correct Answers</string>
     <string name="label_assessment">Assessment</string>
 
-    <string name="message_preparing_dictionary">Loading definitions…</string>
-    <string name="message_preparing_assessment">Loading assessment…</string>
+    <string name="message_preparing_lectures">Loading lectures…</string>
+    <string name="message_preparing_assessment">Loading assessments…</string>
     <string name="message_no_results">No results found.</string>
     <string name="message_test_your_vocabulary">Test your vocabulary.</string>
 
-    <string name="text_correct_count">%1$d ng %2$d</string>
+    <string name="text_correct_count">%1$d of %2$d</string>
     <string name="text_unlock_score">You need at least %1$d points to open %2$s. Try again.</string>
     <string name="text_play_next">Play in %1$s</string>
     <string name="text_recent_results">Recent search results:</string>
 
-    <string name="title_activity_recent_result">Recent Search Results</string>
+    <string name="title_activity_view_lecture">View Lecture</string>
     <string name="title_activity_assessment_choice">Assessment Choice</string>
 
     <string name="button_text_next">Next</string>
     <string name="button_text_resume">Continue</string>
-    <string name="button_text_start_again">Try again</string>
+    <string name="button_text_try_again">Try again</string>
     <string name="button_text_exit">Exit</string>
     <string name="button_text_exit_2">Exit Assessment</string>
+    <string name="button_text_start">Start Assessment</string>
 
     <string name="dialog_answer_correct_title">Your answer is correct</string>
     <string name="dialog_answer_wrong_title">Wrong answer</string>

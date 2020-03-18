@@ -16,26 +16,24 @@ import android.widget.TextView.OnEditorActionListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.erotc.learning.R
-import com.erotc.learning.activity.RecentResultActivity
-import com.erotc.learning.adapter.ResultAdapter
-import com.erotc.learning.data.DictionaryEntry
-import com.erotc.learning.data.RecentSearchResult
-import com.erotc.learning.repository.DictionaryRepository
-import kotlinx.android.synthetic.main.fragment_dictionary.*
-import java.util.*
+import com.erotc.learning.activity.ViewLectureActivity
+import com.erotc.learning.adapter.LectureAdapter
+import com.erotc.learning.data.Lecture
+import com.erotc.learning.repository.LearnRepository
+import kotlinx.android.synthetic.main.fragment_lecture.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class DictionaryFragment : Fragment() {
-    private lateinit var dictionaryRepository: DictionaryRepository
+class LectureFragment : Fragment() {
+    private lateinit var learnRepository: LearnRepository
 
-    private var resultList: List<DictionaryEntry>? = null
-    private var resultAdapter: ResultAdapter? = null
+    private var resultList: List<Lecture>? = null
+    private var lectureAdapter: LectureAdapter? = null
     private var previousTask: AsyncTask<*, *, *>? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_dictionary, container, false)
+        return inflater.inflate(R.layout.fragment_lecture, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -60,25 +58,17 @@ class DictionaryFragment : Fragment() {
 
         val activity = activity ?: return
 
-        dictionaryRepository = DictionaryRepository.getInstance(activity)
+        learnRepository = LearnRepository.getInstance(activity)
         initRecyclerView()
         hideNoResults()
-        hideRecentLabel()
     }
 
     private fun initRecyclerView() {
-        resultAdapter = ResultAdapter(object : ResultAdapter.OnClickListener {
-            override fun onClick(view: View?) {
-                view?.let {
-                    val itemIndex = recycler_result_list.getChildLayoutPosition(view)
+        lectureAdapter = LectureAdapter {
+            show(it)
+        }
 
-                    resultList?.get(itemIndex)?.let { dictionaryEntry ->
-                        addAndShowRecent(dictionaryEntry)
-                    }
-                }
-            }
-        })
-        recycler_result_list.adapter = resultAdapter
+        recycler_result_list.adapter = lectureAdapter
         recycler_result_list.layoutManager = LinearLayoutManager(activity)
     }
 
@@ -93,44 +83,34 @@ class DictionaryFragment : Fragment() {
     fun onSearchClick() {
         hideKeyboard()
         input_search_key.clearFocus()
-
-        resultList?.let {
-            if (it.isNotEmpty()) {
-                val indexOfMatch = DictionaryEntry.getIndexOfMatch(input_search_key.text.toString(), it)
-                resultList?.get(indexOfMatch)?.let { dictionaryEntry ->
-                    addAndShowRecent(dictionaryEntry)
-                }
-            }
-        }
     }
 
     @SuppressLint("StaticFieldLeak")
-    fun showRecentResults() {
-        if (!dictionaryRepository.isRecentResultEmpty) {
-            showRecentLabel()
-            hideNoResults()
+    fun showAll() {
+        val task: AsyncTask<Void, Void, Void> = object : AsyncTask<Void, Void, Void>() {
+            override fun onPreExecute() {
+                hideNoResults()
+            }
 
-            val task: AsyncTask<Void, Void, Void> = object : AsyncTask<Void, Void, Void>() {
-                override fun doInBackground(vararg p0: Void?): Void? {
-                    resultList = dictionaryRepository.getRecentSearchResults(false)
+            override fun doInBackground(vararg p0: Void?): Void? {
+                resultList = learnRepository.getAllLecture()
 
-                    return null
-                }
+                return null
+            }
 
-                override fun onPostExecute(aVoid: Void?) {
-                    resultAdapter?.setResultList(resultList ?: arrayListOf())
-                    resultAdapter?.notifyDataSetChanged()
+            override fun onPostExecute(aVoid: Void?) {
+                lectureAdapter?.setResultList(resultList ?: arrayListOf())
+                lectureAdapter?.notifyDataSetChanged()
+
+                if (resultList?.size ?: 0 == 0) {
+                    showNoResults()
+                } else {
                     recycler_result_list.scrollToPosition(0)
                 }
             }
-
-            task.execute()
-            previousTask = task
-        } else {
-            resultList = ArrayList()
-            resultAdapter?.setResultList(resultList ?: arrayListOf())
-            resultAdapter?.notifyDataSetChanged()
         }
+        task.execute()
+        previousTask = task
     }
 
     private fun hideKeyboard() {
@@ -143,13 +123,11 @@ class DictionaryFragment : Fragment() {
 
     @SuppressLint("StaticFieldLeak")
     fun search() {
-        hideRecentLabel()
-
         previousTask?.cancel(true)
 
         val keyword = input_search_key.text.toString()
         if (keyword.isEmpty()) {
-            showRecentResults()
+            showAll()
             return
         }
 
@@ -159,14 +137,14 @@ class DictionaryFragment : Fragment() {
             }
 
             override fun doInBackground(vararg p0: Void?): Void? {
-                resultList = dictionaryRepository.search(keyword)
+                resultList = learnRepository.searchLecture(keyword)
 
                 return null
             }
 
             override fun onPostExecute(aVoid: Void?) {
-                resultAdapter?.setResultList(resultList ?: arrayListOf())
-                resultAdapter?.notifyDataSetChanged()
+                lectureAdapter?.setResultList(resultList ?: arrayListOf())
+                lectureAdapter?.notifyDataSetChanged()
 
                 if (resultList?.size ?: 0 == 0) {
                     showNoResults()
@@ -187,21 +165,10 @@ class DictionaryFragment : Fragment() {
         label_no_results.visibility = View.GONE
     }
 
-    private fun showRecentLabel() {
-        label_recent_result.visibility = View.VISIBLE
-    }
+    private fun show(lecture: Lecture) {
+        val intent = Intent(activity, ViewLectureActivity::class.java)
+        intent.putExtra(ViewLectureActivity.DATA_LECTURE, lecture)
 
-    private fun hideRecentLabel() {
-        label_recent_result.visibility = View.GONE
-    }
-
-    private fun addAndShowRecent(dictionaryEntry: DictionaryEntry) {
-        val recent = RecentSearchResult()
-        recent.entryId = dictionaryEntry.id
-
-        dictionaryRepository.saveRecent(recent)
-
-        val intent = Intent(activity, RecentResultActivity::class.java)
         startActivity(intent)
     }
 
@@ -209,14 +176,14 @@ class DictionaryFragment : Fragment() {
         super.onResume()
         val keyword = input_search_key.text.toString()
         if (keyword.isEmpty()) {
-            showRecentResults()
+            showAll()
         }
     }
 
     companion object {
-        private val LOG_TAG = DictionaryFragment::class.java.simpleName
-        fun newInstance(): DictionaryFragment {
-            return DictionaryFragment()
+        private val LOG_TAG = LectureFragment::class.java.simpleName
+        fun newInstance(): LectureFragment {
+            return LectureFragment()
         }
     }
 }

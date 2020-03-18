@@ -31,9 +31,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.erotc.learning.activity.RecentResultActivity"
+            android:name="com.erotc.learning.activity.ViewLectureActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_recent_result"
+            android:label="@string/title_activity_view_lecture"
             android:parentActivityName="com.erotc.learning.activity.MainActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.NoActionBar">

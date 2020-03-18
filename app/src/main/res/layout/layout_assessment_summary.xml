@@ -111,18 +111,7 @@
                 android:background="@color/colorPrimaryDark"
                 android:layout_marginTop="@dimen/large_content_margin"
                 android:textColor="@color/colorWhite"
-                android:text="@string/button_text_start_again"/>
-
-            <Button
-                android:id="@+id/button_next"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingEnd="@dimen/general_content_padding"
-                android:paddingStart="@dimen/general_content_padding"
-                android:background="@color/colorPrimaryDark"
-                android:layout_marginTop="@dimen/large_content_margin"
-                android:textColor="@color/colorWhite"
-                android:text="@string/button_text_start_again"/>
+                android:text="@string/button_text_try_again"/>
 
             <Button
                 android:id="@+id/button_exit"

@@ -7,10 +7,10 @@
 
     <include
         android:id="@+id/container_main"
-        layout="@layout/layout_game_choice" />
+        layout="@layout/layout_assessment_choice" />
 
     <include
         android:id="@+id/container_summary"
-        layout="@layout/layout_game_summary" />
+        layout="@layout/layout_assessment_summary" />
 
 </FrameLayout>
