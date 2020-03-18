@@ -40,7 +40,7 @@
                     android:textSize="@dimen/text_large"
                     android:background="@null"
                     android:imeOptions="actionSearch"
-                    android:hint="@string/label_search_placeholder"
+                    android:hint="@string/label_search_hint"
                     android:nextFocusUp="@id/input_search_key"
                     android:nextFocusLeft="@id/input_search_key"/>
             </LinearLayout>

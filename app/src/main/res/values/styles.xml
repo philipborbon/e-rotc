@@ -22,8 +22,4 @@
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 
-    <style name="viewPagerTitleStrip">
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">@color/colorAccent</item>
-    </style>
 </resources>

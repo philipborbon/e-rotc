@@ -42,7 +42,7 @@ class LearnRepository private constructor(context: Context) {
     }
 
     fun getRandomQuestions(): List<Assessment> {
-        return assessmentDao.getRandomQuestions(QUESTION_ENTRY_LIMIT_COUNT)
+        return assessmentDao.getRandomQuestions(QUESTION_LIMIT_COUNT).shuffled()
     }
 
     val isLectureEmpty: Boolean
@@ -52,7 +52,7 @@ class LearnRepository private constructor(context: Context) {
         get() = assessmentDao.countOf() == 0
 
     companion object {
-        private const val QUESTION_ENTRY_LIMIT_COUNT = 10
+        private const val QUESTION_LIMIT_COUNT = 5
 
         private var learnRepository: LearnRepository? = null
 

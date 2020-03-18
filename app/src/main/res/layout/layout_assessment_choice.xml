@@ -117,17 +117,52 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/label_question"
-            android:textSize="28dp"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.3"
-            android:textStyle="bold"
-            android:padding="@dimen/general_content_padding"
-            android:textColor="@color/colorBlack"
-            android:text="@string/label_assessment"
-            android:gravity="center"/>
+            android:layout_weight="0.3">
+
+            <LinearLayout
+                android:id="@+id/container_image_question"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_identify_image"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:layout_margin="8dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/image_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_launcher"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/label_question"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:padding="@dimen/general_content_padding"
+                android:textColor="@color/colorBlack"
+                android:text="@string/label_assessment"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:visibility="visible"
+                />
+
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -138,39 +173,16 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight=".05"/>
+                android:layout_weight=".05" />
 
             <LinearLayout
-                android:id="@+id/container_choices"
+                android:id="@+id/container_choice"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.9"
                 android:orientation="vertical">
-                <!--<View-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="0dp"-->
-                    <!--android:layout_weight="1" />-->
 
-                <include layout="@layout/layout_button" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <include layout="@layout/layout_button" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <include layout="@layout/layout_button" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
+                <include layout="@layout/layout_fill" />
 
             </LinearLayout>
 

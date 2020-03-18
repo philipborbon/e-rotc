@@ -30,19 +30,20 @@
                 android:orientation="vertical"
                 android:gravity="center"
                 android:background="@drawable/box_background">
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/text_medium"
+                    android:layout_height="37dp"
                     android:text="@string/label_score"
-                    android:textColor="@color/colorBlack"/>
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_medium" />
 
                 <TextView
                     android:id="@+id/text_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_large"
-                    android:text="@string/label_score"
+                    android:text="0"
                     android:textColor="@color/colorBlack"/>
 
                 <View
@@ -65,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="@dimen/text_large"
-                    android:text="@string/label_score"
+                    android:text="0"
                     android:textColor="@color/colorBlack"/>
 
                 <View
@@ -91,15 +92,6 @@
                     android:text="@string/text_correct_count"
                     android:textColor="@color/colorBlack"/>
 
-                <TextView
-                    android:id="@+id/text_unlock_score"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/general_content_margin"
-                    android:gravity="center"
-                    android:text="@string/text_unlock_score"
-                    android:textSize="@dimen/text_small"
-                    android:textColor="@color/colorRed500"/>
             </LinearLayout>
 
             <Button
@@ -109,7 +101,7 @@
                 android:paddingEnd="@dimen/general_content_padding"
                 android:paddingStart="@dimen/general_content_padding"
                 android:background="@color/colorPrimaryDark"
-                android:layout_marginTop="@dimen/large_content_margin"
+                android:layout_marginTop="32dp"
                 android:textColor="@color/colorWhite"
                 android:text="@string/button_text_try_again"/>
 
@@ -122,7 +114,8 @@
                 android:background="@color/colorPrimaryDark"
                 android:layout_marginTop="@dimen/large_content_margin"
                 android:textColor="@color/colorWhite"
-                android:text="@string/button_text_exit_2"/>
+                android:text="@string/button_text_exit_assessment"/>
+
         </LinearLayout>
 
         <View

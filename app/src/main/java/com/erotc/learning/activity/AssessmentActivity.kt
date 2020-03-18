@@ -9,8 +9,11 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.erotc.learning.R
 import com.erotc.learning.data.Assessment
+import com.erotc.learning.data.QuestionType
 import com.erotc.learning.repository.LearnRepository
+import com.erotc.learning.util.ApplicationUtil
 import com.erotc.learning.util.hourglass.Hourglass
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_assessment.*
 import kotlinx.android.synthetic.main.layout_assessment_choice.*
 import kotlinx.android.synthetic.main.layout_assessment_summary.*
@@ -26,7 +29,7 @@ class AssessmentActivity : AppCompatActivity() {
     private var runningScore = 0
     private var timerTime = 0
     private var currentTimer: Hourglass? = null
-    private var answerTracker: ArrayList<AnswerTrackerModel>? = null
+    private var answerTracker: ArrayList<AnswerTracker>? = null
     private var assessmentFinished = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +47,7 @@ class AssessmentActivity : AppCompatActivity() {
     }
 
     private fun clear() {
-        container_choices.removeAllViews()
+        container_choice.removeAllViews()
         label_score.text = ""
         label_question.text = ""
         label_time.text = ""
@@ -52,8 +55,6 @@ class AssessmentActivity : AppCompatActivity() {
         text_score.text = ""
         text_high_score.text = ""
         text_correct_count.text = getString(R.string.text_correct_count, 0, 0)
-        text_unlock_score.text = ""
-        text_unlock_score.visibility = View.GONE
 
         currentIndex = -1
         currentQuestion = null
@@ -101,7 +102,7 @@ class AssessmentActivity : AppCompatActivity() {
     private fun nextQuestion() {
         currentIndex += 1
 
-        if (currentIndex > assessments?.size ?: 0 - 1) {
+        if (currentIndex > (assessments?.size ?: 0) - 1) {
             endOfQuestionSet()
             return
         }
@@ -113,7 +114,7 @@ class AssessmentActivity : AppCompatActivity() {
 
         showCountLabel()
         showScore()
-        showChoices()
+        showQuestion()
         startTimer()
     }
 
@@ -139,36 +140,73 @@ class AssessmentActivity : AppCompatActivity() {
         currentTimer?.startTimer()
     }
 
-    private fun showChoices() {
-        // TODO: show assessment choices
-//        container_choices?.removeAllViews()
-//        val randomAnswerSet = questionSet?.getRandomAnswerSet(QUESTION_OPTION_COUNT - 1) // minus the real answer
-//        randomAnswerSet?.add(currentQuestion?.answer)
-//
-//        randomAnswerSet?.shuffle()
-//
-//        var index = 0
-//        randomAnswerSet?.forEach { answer ->
-//            if (index != 0) {
-//                container_choices?.addView(ApplicationUtil.createSpacer(this))
-//            }
-//            val view = ApplicationUtil.inflateButton(layoutInflater, answer, View.OnClickListener {
-//                try {
-//                    validateAnswer(answer, timerTime)
-//                } catch (e: Exception) {
-//                    e.printStackTrace()
-//                    Log.e(LOG_TAG, Log.getStackTraceString(e))
-//                }
-//            })
-//
-//            container_choices?.addView(view)
-//
-//            if (index == randomAnswerSet.size - 1) {
-//                container_choices?.addView(ApplicationUtil.createSpacer(this))
-//            }
-//
-//            index++
-//        }
+    private fun showQuestion() {
+        container_choice?.removeAllViews()
+
+        val question = currentQuestion ?: return
+
+        // show question or image
+        when(question.questionType) {
+            QuestionType.TRUE_OR_FALSE,
+            QuestionType.FILL_IN_BLANK_QUESTION,
+            QuestionType.MULTIPLE_CHOICE_QUESTION -> {
+                container_image_question.visibility = View.GONE
+                label_question.visibility = View.VISIBLE
+
+                label_question.text = question.question
+            }
+
+            QuestionType.FILL_IN_BLANK_IMAGE,
+            QuestionType.MULTIPLE_CHOICE_IMAGE -> {
+                container_image_question.visibility = View.VISIBLE
+                label_question.visibility = View.GONE
+
+                Picasso.with(this)
+                        .load(question.imagePath)
+                        .into(image_question)
+            }
+        }
+
+        // show question answer input
+        when(question.questionType) {
+            QuestionType.FILL_IN_BLANK_QUESTION,
+            QuestionType.FILL_IN_BLANK_IMAGE -> {
+                container_choice?.addView(ApplicationUtil.createSpacer(this))
+
+                val view = ApplicationUtil.inflateFill(layoutInflater) { answer ->
+                    validateAnswer(answer, timerTime)
+                }
+
+                container_choice?.addView(view)
+
+                container_choice?.addView(ApplicationUtil.createSpacer(this))
+            }
+
+            QuestionType.TRUE_OR_FALSE,
+            QuestionType.MULTIPLE_CHOICE_QUESTION,
+            QuestionType.MULTIPLE_CHOICE_IMAGE -> {
+                val answerSet = question.choices?.let { it ->
+                    it.shuffled()
+                } ?: arrayListOf("TRUE", "FALSE")
+
+                var index = 0
+                answerSet.forEach { answer ->
+                    container_choice?.addView(ApplicationUtil.createSpacer(this))
+
+                    val view = ApplicationUtil.inflateChoice(layoutInflater, answer, View.OnClickListener {
+                        validateAnswer(answer, timerTime)
+                    })
+
+                    container_choice?.addView(view)
+
+                    if (index == answerSet.size - 1) {
+                        container_choice?.addView(ApplicationUtil.createSpacer(this))
+                    }
+
+                    index++
+                }
+            }
+        }
     }
 
     private fun validateAnswer(_answer: String?, time: Int) {
@@ -180,11 +218,11 @@ class AssessmentActivity : AppCompatActivity() {
         answer = answer ?: ""
         val score: Int
         score = if (time != -1 && answer.toLowerCase() == currentQuestion?.answer?.toLowerCase()) {
-            // ScoreUtil.getScore(questionSet?.level ?: 0, time)
-            0 // TODO: determine score
+            1
         } else {
             0
         }
+
         val builder = AlertDialog.Builder(this)
         if (time == -1) {
             builder.setIcon(R.drawable.ic_time_up)
@@ -204,11 +242,14 @@ class AssessmentActivity : AppCompatActivity() {
         builder.setNegativeButton(R.string.button_text_try_again) { dialogInterface, i -> restart() }
         builder.setNeutralButton(R.string.button_text_exit) { dialogInterface, i -> exit() }
         builder.setCancelable(false)
-        val model = AnswerTrackerModel(currentQuestion)
+
+        val model = AnswerTracker()
         model.answer = answer
         model.score = score
+
         answerTracker?.add(model)
         runningScore += score
+
         builder.show()
     }
 
@@ -253,39 +294,17 @@ class AssessmentActivity : AppCompatActivity() {
         hideAssessmentView()
         showAssessmentSummary()
 
-        // TODO: what to show at end of assessment
-//        val questionSet = questionSet ?: return
-//
-//        val nextLevel = questionSet.getNextLevel(repository)
-//        text_score.text = runningScore.toString()
-//        var counter = 0
-//
-//        answerTracker?.forEach { answerTrackerModel ->
-//            if (answerTrackerModel.score > 0) {
-//                counter++
-//            }
-//        }
-//
-//        if (runningScore > questionSet.highScore) {
-//            questionSet.highScore = runningScore
-//            repository.updateQuestionSet(questionSet)
-//
-//            if (questionSet.shouldUnlockNextLevel() && nextLevel != null) {
-//                repository.unlockNextLevel(questionSet)
-//            }
-//        }
-//
-//        text_high_score.text = questionSet.highScore.toString()
-//        text_correct_count.text = getString(R.string.text_correct_count, counter, assessments?.size)
-//
-//        if (nextLevel != null && questionSet.highScore < questionSet.pointsToProceed) {
-//            val neededScore = questionSet.pointsToProceed - runningScore
-//            text_unlock_score?.text = getString(R.string.text_unlock_score, neededScore, nextLevel.label)
-//            text_unlock_score?.visibility = View.VISIBLE
-//        } else if (nextLevel != null && questionSet.highScore >= questionSet.pointsToProceed) {
-//            button_next?.text = getString(R.string.text_play_next, nextLevel.label)
-//            button_next?.visibility = View.VISIBLE
-//        }
+        text_score.text = runningScore.toString()
+        var counter = 0
+
+        answerTracker?.forEach { answerTrackerModel ->
+            if (answerTrackerModel.score > 0) {
+                counter++
+            }
+        }
+
+        text_high_score.text = "0" // TODO: show high score
+        text_correct_count.text = getString(R.string.text_correct_count, counter, assessments?.size)
     }
 
     private fun restart() {
@@ -318,15 +337,13 @@ class AssessmentActivity : AppCompatActivity() {
         }
     }
 
-    private class AnswerTrackerModel(val assessment: Assessment?) {
+    private class AnswerTracker {
         var answer: String? = null
         var score = 0
     }
 
     companion object {
         private val LOG_TAG = AssessmentActivity::class.java.simpleName
-        private const val QUESTION_DURATION_IN_SEC = 10
-        private const val QUESTION_OPTION_COUNT = 3
-        const val QUESTION_SET_ID = "question-set-id"
+        private const val QUESTION_DURATION_IN_SEC = 20
     }
 }

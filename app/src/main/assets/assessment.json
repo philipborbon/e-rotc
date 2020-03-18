@@ -3,7 +3,7 @@
     "question": "Are you awesome?",
     "type": "tof",
     "choices": null,
-    "answer": "true"
+    "answer": "TRUE"
   },
   {
     "question": "Are you awesome?",
@@ -15,7 +15,7 @@
     "question": "w3schools.jpg",
     "type": "fill-i",
     "choices": null,
-    "answer": "school"
+    "answer": "School"
   },
   {
     "question": "Are you awesome?",
@@ -27,6 +27,6 @@
     "question": "w3schools.jpg",
     "type": "multi-i",
     "choices": ["School", "CSS", "OK"],
-    "answer": "school"
+    "answer": "School"
   }
 ]

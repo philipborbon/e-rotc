@@ -33,4 +33,14 @@ data class Assessment (
 
             else -> QuestionType.TRUE_OR_FALSE
         }
+
+    val imagePath: String?
+        get() = when(questionType) {
+            QuestionType.TRUE_OR_FALSE,
+            QuestionType.FILL_IN_BLANK_QUESTION,
+            QuestionType.MULTIPLE_CHOICE_QUESTION -> null
+
+            QuestionType.MULTIPLE_CHOICE_IMAGE,
+            QuestionType.FILL_IN_BLANK_IMAGE -> "file:///android_asset/$question"
+        }
 }
