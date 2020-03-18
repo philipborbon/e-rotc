@@ -47,7 +47,7 @@ class InitializeFragment : Fragment() {
                 if (repository.isLectureEmpty) {
                     publishProgress(getString(R.string.message_preparing_lectures))
 
-                    val lectureString = ApplicationUtil.getJsonDataFromAsset(context, ApplicationUtil.FILE_LECTURE)
+                    val lectureString = ApplicationUtil.getStringFromAsset(context, ApplicationUtil.FILE_LECTURE)
                     val lectureListType = object : TypeToken<List<Lecture>>(){}.type
 
                     repository.saveLectures(ApplicationUtil.gson.fromJson(lectureString, lectureListType))
@@ -55,7 +55,7 @@ class InitializeFragment : Fragment() {
 
                 if (repository.isAssessmentEmpty) {
                     publishProgress(getString(R.string.message_preparing_assessment))
-                    val assessmentString = ApplicationUtil.getJsonDataFromAsset(context, ApplicationUtil.FILE_ASSESSMENT)
+                    val assessmentString = ApplicationUtil.getStringFromAsset(context, ApplicationUtil.FILE_ASSESSMENT)
                     val assessmentListType = object : TypeToken<List<Lecture>>(){}.type
 
                     repository.saveAssessments(ApplicationUtil.gson.fromJson(assessmentString, assessmentListType))

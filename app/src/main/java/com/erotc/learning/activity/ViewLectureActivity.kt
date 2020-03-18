@@ -4,7 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.erotc.learning.R
 import com.erotc.learning.data.Lecture
+import com.erotc.learning.util.ApplicationUtil
 import kotlinx.android.synthetic.main.activity_view_lecture.*
+import kotlinx.android.synthetic.main.content_view_lecture.*
 
 class ViewLectureActivity : AppCompatActivity() {
 
@@ -18,8 +20,16 @@ class ViewLectureActivity : AppCompatActivity() {
 
         lecture = intent.getParcelableExtra(DATA_LECTURE)
 
+        showLecture()
+    }
+
+    private fun showLecture(){
         title = lecture.title
-        // TODO: show lecture
+
+        lecture.file?.let {
+            val content = ApplicationUtil.getStringFromAsset(this, it)
+            web_view.loadDataWithBaseURL("file:///android_asset/", content, "text/html", "utf-8", null)
+        }
     }
 
     companion object {

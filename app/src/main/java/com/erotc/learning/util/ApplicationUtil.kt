@@ -22,7 +22,7 @@ object ApplicationUtil {
         return repository.isLectureEmpty || repository.isAssessmentEmpty
     }
 
-    fun getJsonDataFromAsset(context: Context, fileName: String): String? {
+    fun getStringFromAsset(context: Context, fileName: String): String? {
         val jsonString: String
         try {
             jsonString = context.assets.open(fileName).bufferedReader().use { it.readText() }
