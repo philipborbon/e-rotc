@@ -18,4 +18,7 @@ interface TopicDao {
 
     @Insert
     fun create(topics: List<Topic>): List<Long>
+
+    @Query("SELECT * FROM topic ORDER BY sort")
+    fun getAll(): List<Topic>
 }

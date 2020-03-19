@@ -27,9 +27,13 @@ class LearnRepository private constructor(context: Context) {
         return lectureDao.getAll()
     }
 
+    fun getAllTopic(): List<Topic> {
+        return topicDao.getAll()
+    }
+
     fun saveTopics(topics: List<Topic>): List<Topic> {
         topics.forEachIndexed { index, topic ->
-            topic.order = index
+            topic.sort = index
         }
 
         topicDao.create(topics).forEachIndexed { index, value ->
@@ -41,7 +45,7 @@ class LearnRepository private constructor(context: Context) {
 
     fun saveLectures(lectures: List<Lecture>): List<Lecture> {
         lectures.forEachIndexed { index, lecture ->
-            lecture.order = index
+            lecture.sort = index
         }
 
         lectureDao.create(lectures).forEachIndexed { index, value ->

@@ -10,5 +10,5 @@ import androidx.room.PrimaryKey
 data class Topic (
     @PrimaryKey var id: Long = 0,
     var name: String? = null,
-    var order: Int = 0
+    var sort: Int = 0
 )

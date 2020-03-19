@@ -18,6 +18,7 @@
     <string name="label_high_score">Highest Points</string>
     <string name="label_correct_count">Correct Answers</string>
     <string name="label_assessment">Assessment</string>
+    <string name="label_unknown">Unknown</string>
 
     <string name="message_preparing_topics">Loading topics…</string>
     <string name="message_preparing_lectures">Loading lectures…</string>

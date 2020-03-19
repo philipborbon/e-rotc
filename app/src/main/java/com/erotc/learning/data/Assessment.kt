@@ -9,10 +9,10 @@ import androidx.room.PrimaryKey
  */
 @Entity(foreignKeys = [
     ForeignKey (
-            entity = Lecture::class,
-            parentColumns = ["id"],
-            childColumns = ["topicid"],
-            onDelete = ForeignKey.CASCADE
+        entity = Lecture::class,
+        parentColumns = ["id"],
+        childColumns = ["topicid"],
+        onDelete = ForeignKey.CASCADE
     )
 ])
 data class Assessment (

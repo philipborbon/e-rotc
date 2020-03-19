@@ -25,6 +25,6 @@ interface LectureDao {
     @Insert
     fun create(lectures: List<Lecture>): List<Long>
 
-    @Query("SELECT * FROM lecture ORDER BY title")
+    @Query("SELECT l.* FROM lecture l INNER JOIN topic t ON l.topicid = t.id ORDER BY t.sort, l.sort")
     fun getAll(): List<Lecture>
 }

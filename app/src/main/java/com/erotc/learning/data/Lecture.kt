@@ -23,5 +23,5 @@ data class Lecture (
     var topicid: Long = 0,
     var title: String? = null,
     var file: String? = null,
-    var order: Int = 0
+    var sort: Int = 0
 ) : Parcelable
