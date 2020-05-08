@@ -63,8 +63,8 @@ class LearnRepository private constructor(context: Context) {
         return questions
     }
 
-    fun getRandomQuestions(): List<Assessment> {
-        return assessmentDao.getRandomQuestions(QUESTION_LIMIT_COUNT).shuffled()
+    fun getRandomQuestions(topicId: Long): List<Assessment> {
+        return assessmentDao.getRandomQuestions(topicId, QUESTION_LIMIT_COUNT).shuffled()
     }
 
     val isTopicEmpty: Boolean

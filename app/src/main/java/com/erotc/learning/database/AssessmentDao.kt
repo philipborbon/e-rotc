@@ -11,8 +11,8 @@ import com.erotc.learning.data.Assessment
 @Dao
 interface AssessmentDao {
 
-    @Query("SELECT * FROM assessment WHERE id IN (SELECT id FROM assessment ORDER BY RANDOM() LIMIT :limit)")
-    fun getRandomQuestions(limit: Int): List<Assessment>
+    @Query("SELECT * FROM assessment a INNER JOIN topic t ON a.topicid = t.id WHERE a.id IN (SELECT id FROM assessment ORDER BY RANDOM() LIMIT :limit) AND t.id = :topic ORDER BY t.sort")
+    fun getRandomQuestions(topic: Long, limit: Int): List<Assessment>
 
     @Insert
     fun create(questions: List<Assessment>): List<Long>

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.erotc.learning.R
 import com.erotc.learning.data.Assessment
 import com.erotc.learning.data.QuestionType
+import com.erotc.learning.data.Topic
 import com.erotc.learning.repository.LearnRepository
 import com.erotc.learning.util.ApplicationUtil
 import com.erotc.learning.util.hourglass.Hourglass
@@ -24,7 +25,9 @@ class AssessmentActivity : AppCompatActivity() {
     private lateinit var repository: LearnRepository
 
     private var assessments: List<Assessment>? = null
-    private var currentIndex = 0
+    private var topics: List<Topic>? = null
+    private var currentTopicIndex = 0
+    private var currentQuestionIndex = 0
     private var currentQuestion: Assessment? = null
     private var runningScore = 0
     private var timerTime = 0
@@ -42,11 +45,20 @@ class AssessmentActivity : AppCompatActivity() {
         button_exit.setOnClickListener { exit() }
         button_pause.setOnClickListener { pause() }
 
-        clear()
+        topics = repository.getAllTopic()
         initAssessment()
     }
 
-    private fun clear() {
+    private fun initAssessment() {
+        currentTopicIndex = -1
+        runningScore = 0
+        answerTracker = ArrayList()
+        assessmentFinished = false
+
+        nextTopic()
+    }
+
+    private fun clearQuestionnaire() {
         container_choice.removeAllViews()
         label_score.text = ""
         label_question.text = ""
@@ -56,13 +68,11 @@ class AssessmentActivity : AppCompatActivity() {
         text_high_score.text = ""
         text_correct_count.text = getString(R.string.text_correct_count, 0, 0)
 
-        currentIndex = -1
+        currentQuestionIndex = -1
         currentQuestion = null
-        runningScore = 0
         timerTime = 0
         currentTimer = null
-        answerTracker = ArrayList()
-        assessmentFinished = false
+
         hideAssessmentView()
         hideAssessmentSummary()
     }
@@ -84,12 +94,14 @@ class AssessmentActivity : AppCompatActivity() {
     }
 
     @SuppressLint("StaticFieldLeak")
-    private fun initAssessment() {
+    private fun startAssessmentForCurrentTopic(){
         showAssessmentView()
 
         object : AsyncTask<Void?, Void?, Void?>() {
             override fun doInBackground(vararg p0: Void?): Void? {
-                assessments = repository.getRandomQuestions()
+                topics?.get(currentTopicIndex)?.let { topic ->
+                    assessments = repository.getRandomQuestions(topic.id)
+                }
                 return null
             }
 
@@ -99,17 +111,37 @@ class AssessmentActivity : AppCompatActivity() {
         }.execute()
     }
 
-    private fun nextQuestion() {
-        currentIndex += 1
+    private fun nextTopic(){
+        clearQuestionnaire()
+        currentTopicIndex += 1
 
-        if (currentIndex > (assessments?.size ?: 0) - 1) {
-            endOfQuestionSet()
+        if (currentTopicIndex > (topics?.size ?: 0) - 1) {
+            endOfAssessment()
+            return
+        }
+
+        val currentTopic = topics?.get(currentTopicIndex)
+
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle(R.string.dialog_quiz_start_title)
+        builder.setMessage(getString(R.string.dialog_quiz_start_message, currentTopic?.name))
+        builder.setPositiveButton(R.string.button_text_resume) { dialogInterface, i -> startAssessmentForCurrentTopic() }
+        builder.setNeutralButton(R.string.button_text_exit) { dialogInterface, i -> exit() }
+        builder.setOnCancelListener { resume() }
+        builder.show()
+    }
+
+    private fun nextQuestion() {
+        currentQuestionIndex += 1
+
+        if (currentQuestionIndex > (assessments?.size ?: 0) - 1) {
+            nextTopic()
             return
         }
 
         showCountLabel()
 
-        currentQuestion = assessments?.get(currentIndex)
+        currentQuestion = assessments?.get(currentQuestionIndex)
         label_question.text = currentQuestion?.question
 
         showCountLabel()
@@ -239,7 +271,6 @@ class AssessmentActivity : AppCompatActivity() {
             }
         }
         builder.setPositiveButton(R.string.button_text_next) { dialogInterface, i -> nextQuestion() }
-        builder.setNegativeButton(R.string.button_text_try_again) { dialogInterface, i -> restart() }
         builder.setNeutralButton(R.string.button_text_exit) { dialogInterface, i -> exit() }
         builder.setCancelable(false)
 
@@ -274,7 +305,6 @@ class AssessmentActivity : AppCompatActivity() {
         builder.setTitle(R.string.dialog_quiz_paused_title)
         builder.setMessage(R.string.dialog_quiz_paused_message)
         builder.setPositiveButton(R.string.button_text_resume) { dialogInterface, i -> resume() }
-        builder.setNegativeButton(R.string.button_text_try_again) { dialogInterface, i -> restart() }
         builder.setNeutralButton(R.string.button_text_exit) { dialogInterface, i -> exit() }
         builder.setOnCancelListener { resume() }
         builder.show()
@@ -289,7 +319,7 @@ class AssessmentActivity : AppCompatActivity() {
         }
     }
 
-    private fun endOfQuestionSet() {
+    private fun endOfAssessment() {
         assessmentFinished = true
         hideAssessmentView()
         showAssessmentSummary()
@@ -308,12 +338,12 @@ class AssessmentActivity : AppCompatActivity() {
     }
 
     private fun restart() {
-        clear()
+        clearQuestionnaire()
         initAssessment()
     }
 
     private fun showCountLabel() {
-        val count = currentIndex + 1
+        val count = currentQuestionIndex + 1
         val total = assessments?.size
         val countLabel = "$count/$total"
 

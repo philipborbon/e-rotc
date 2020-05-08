@@ -137,7 +137,7 @@
                     android:text="@string/label_identify_image"
                     android:textColor="@color/colorBlack"
                     android:textSize="16sp"
-                    android:layout_margin="8dp"
+                    android:layout_margin="16dp"
                     />
 
                 <ImageView
