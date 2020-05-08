@@ -7,6 +7,20 @@
     android:orientation="vertical"
     tools:context=".activity.AssessmentActivity">
 
+    <TextView
+        android:id="@+id/label_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        tools:text="Topic 1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="-16dp"
+        />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

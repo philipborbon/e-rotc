@@ -62,6 +62,8 @@ class AssessmentActivity : AppCompatActivity() {
 
     private fun clearQuestionnaire() {
         container_choice.removeAllViews()
+
+        label_topic.text = ""
         label_score.text = ""
         label_question.text = ""
         label_time.text = ""
@@ -97,13 +99,14 @@ class AssessmentActivity : AppCompatActivity() {
 
     @SuppressLint("StaticFieldLeak")
     private fun startAssessmentForCurrentTopic(){
+        val topic = topics?.get(currentTopicIndex) ?: return
+
         showAssessmentView()
+        label_topic.text = topic.name
 
         object : AsyncTask<Void?, Void?, Void?>() {
             override fun doInBackground(vararg p0: Void?): Void? {
-                topics?.get(currentTopicIndex)?.let { topic ->
-                    assessments = repository.getRandomQuestions(topic.id)
-                }
+                assessments = repository.getRandomQuestions(topic.id)
                 return null
             }
 
