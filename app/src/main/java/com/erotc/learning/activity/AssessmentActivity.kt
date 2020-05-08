@@ -34,12 +34,14 @@ class AssessmentActivity : AppCompatActivity() {
     private var currentTimer: Hourglass? = null
     private var answerTracker: ArrayList<AnswerTracker>? = null
     private var assessmentFinished = false
+    private var examinee: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_assessment)
 
         repository = LearnRepository.getInstance(this)
+        examinee = intent.getStringExtra(DATA_NAME)
 
         button_restart.setOnClickListener { restart() }
         button_exit.setOnClickListener { exit() }
@@ -324,6 +326,8 @@ class AssessmentActivity : AppCompatActivity() {
         hideAssessmentView()
         showAssessmentSummary()
 
+        repository.saveLeaderboard(examinee, runningScore)
+
         text_score.text = runningScore.toString()
         var counter = 0
 
@@ -333,7 +337,9 @@ class AssessmentActivity : AppCompatActivity() {
             }
         }
 
-        text_high_score.text = "0" // TODO: show high score
+        val highscore = repository.getHighScore()
+
+        text_high_score.text = "${highscore.score}"
         text_correct_count.text = getString(R.string.text_correct_count, counter, answerTracker?.size)
     }
 
@@ -375,5 +381,7 @@ class AssessmentActivity : AppCompatActivity() {
     companion object {
         private val LOG_TAG = AssessmentActivity::class.java.simpleName
         private const val QUESTION_DURATION_IN_SEC = 20
+
+        const val DATA_NAME = "data-name"
     }
 }

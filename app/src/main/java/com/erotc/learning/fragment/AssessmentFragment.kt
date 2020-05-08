@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.erotc.learning.R
 import com.erotc.learning.activity.AssessmentActivity
@@ -31,10 +32,24 @@ class AssessmentFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val context = context ?: return
-
         button_start.setOnClickListener {
+            startAssessment()
+        }
+    }
+
+    private fun startAssessment(){
+        val context = context ?: return
+        val name = input_name.editText?.text.toString()
+
+        if (name.isBlank()) {
+            val builder = AlertDialog.Builder(context)
+            builder.setTitle(R.string.dialog_assessment_name_required_title)
+            builder.setMessage(R.string.dialog_assessment_name_required_message)
+            builder.setPositiveButton(R.string.button_text_ok, null)
+            builder.show()
+        } else {
             val intent = Intent(context, AssessmentActivity::class.java)
+            intent.putExtra(AssessmentActivity.DATA_NAME, name)
             startActivity(intent)
         }
     }

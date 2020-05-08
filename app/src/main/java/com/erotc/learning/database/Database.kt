@@ -4,6 +4,7 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.erotc.learning.data.Assessment
+import com.erotc.learning.data.Leaderboard
 import com.erotc.learning.data.Lecture
 import com.erotc.learning.data.Topic
 
@@ -13,11 +14,13 @@ import com.erotc.learning.data.Topic
 @Database(entities = [
     Topic::class,
     Assessment::class,
-    Lecture::class
+    Lecture::class,
+    Leaderboard::class
 ], version = 1)
 @TypeConverters(Converter::class)
 abstract class Database : RoomDatabase() {
     abstract fun topicDao(): TopicDao
     abstract fun assessmentDao(): AssessmentDao
     abstract fun lectureDao(): LectureDao
+    abstract fun leaderboardDao(): LeaderboardDao
 }

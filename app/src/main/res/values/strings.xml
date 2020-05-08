@@ -24,7 +24,8 @@
     <string name="message_preparing_lectures">Loading lectures…</string>
     <string name="message_preparing_assessment">Loading assessments…</string>
     <string name="message_no_results">No results found.</string>
-    <string name="message_test_your_vocabulary">Test your vocabulary.</string>
+    <string name="message_test_your_vocabulary">Test your knowledge.</string>
+    <string name="message_enter_name">Enter your name</string>
 
     <string name="text_correct_count">%1$d of %2$d</string>
 
@@ -37,6 +38,7 @@
     <string name="button_text_exit">Exit</string>
     <string name="button_text_exit_assessment">Exit Assessment</string>
     <string name="button_text_start">Start Assessment</string>
+    <string name="button_text_ok">OK</string>
 
     <string name="dialog_answer_correct_title">Your answer is correct</string>
     <string name="dialog_answer_wrong_title">Wrong answer</string>
@@ -50,6 +52,9 @@
 
     <string name="dialog_quiz_start_title">Start Topic</string>
     <string name="dialog_quiz_start_message">Start assessment for topic %1$s.</string>
+
+    <string name="dialog_assessment_name_required_title">Enter Name</string>
+    <string name="dialog_assessment_name_required_message">Please enter your name before starting the assessment.</string>
 
     <string name="text_presented">Prepared by:</string>
     <string name="text_presented_by">…</string>

@@ -3,9 +3,11 @@ package com.erotc.learning.repository
 import android.content.Context
 import androidx.room.Room
 import com.erotc.learning.data.Assessment
+import com.erotc.learning.data.Leaderboard
 import com.erotc.learning.data.Lecture
 import com.erotc.learning.data.Topic
 import com.erotc.learning.database.Database
+import java.util.*
 
 /**
  * Created on 11/7/2018.
@@ -18,6 +20,7 @@ class LearnRepository private constructor(context: Context) {
     private val topicDao = database.topicDao()
     private val lectureDao = database.lectureDao()
     private val assessmentDao = database.assessmentDao()
+    private val leaderboardDao = database.leaderboardDao()
 
     fun searchLecture(keyword: String): List<Lecture> {
         return lectureDao.search("%$keyword%")
@@ -29,6 +32,26 @@ class LearnRepository private constructor(context: Context) {
 
     fun getAllTopic(): List<Topic> {
         return topicDao.getAll()
+    }
+
+    fun getLeaderboard(): List<Leaderboard> {
+        return leaderboardDao.getAll()
+    }
+
+    fun saveLeaderboard(name: String?, score: Int): Leaderboard {
+        val leaderboard = Leaderboard()
+        leaderboard.name = name
+        leaderboard.score = score
+        leaderboard.date = Calendar.getInstance().time
+
+        val id = leaderboardDao.create(leaderboard)
+        leaderboard.id = id
+
+        return leaderboard
+    }
+
+    fun getHighScore(): Leaderboard {
+        return leaderboardDao.getHighScore()
     }
 
     fun saveTopics(topics: List<Topic>): List<Topic> {
