@@ -7,6 +7,7 @@
     <string name="nav_label_lecture">Lectures</string>
     <string name="nav_label_assessment">Assessment</string>
     <string name="nav_label_about">About</string>
+    <string name="nav_label_leaderboard">Leaderboard</string>
 
     <string name="label_search_hint">Keyword</string>
     <string name="label_fill_hint">Enter your answer</string>
@@ -24,10 +25,12 @@
     <string name="message_preparing_lectures">Loading lectures…</string>
     <string name="message_preparing_assessment">Loading assessments…</string>
     <string name="message_no_results">No results found.</string>
+    <string name="message_no_record">No records to show.</string>
     <string name="message_test_your_vocabulary">Test your knowledge.</string>
     <string name="message_enter_name">Enter your name</string>
 
     <string name="text_correct_count">%1$d of %2$d</string>
+    <string name="text_rank">%1$d.</string>
 
     <string name="title_activity_view_lecture">View Lecture</string>
     <string name="title_activity_assessment_choice">Assessment Choice</string>
@@ -39,6 +42,7 @@
     <string name="button_text_exit_assessment">Exit Assessment</string>
     <string name="button_text_start">Start Assessment</string>
     <string name="button_text_ok">OK</string>
+    <string name="button_text_view_leaderboard">View Leaderboard</string>
 
     <string name="dialog_answer_correct_title">Your answer is correct</string>
     <string name="dialog_answer_wrong_title">Wrong answer</string>

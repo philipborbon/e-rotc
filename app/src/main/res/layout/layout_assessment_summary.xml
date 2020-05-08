@@ -95,6 +95,17 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/button_leaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/general_content_padding"
+                android:paddingStart="@dimen/general_content_padding"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/colorWhite"
+                android:text="@string/button_text_view_leaderboard"/>
+
+            <Button
                 android:id="@+id/button_restart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

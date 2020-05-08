@@ -4,22 +4,22 @@
     package="com.erotc.learning">
 
     <application
-        android:label="@string/app_name"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="com.erotc.learning.activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.erotc.learning.activity.SplashActivity"
+            android:name=".activity.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="fullSensor"
@@ -31,10 +31,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.erotc.learning.activity.ViewLectureActivity"
+            android:name=".activity.ViewLectureActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_view_lecture"
-            android:parentActivityName="com.erotc.learning.activity.MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -42,10 +42,21 @@
                 android:value="com.erotc.learning.activity.MainActivity" />
         </activity>
         <activity
-            android:name="com.erotc.learning.activity.AssessmentActivity"
+            android:name=".activity.AssessmentActivity"
             android:label="@string/title_activity_assessment_choice"
-            android:parentActivityName="com.erotc.learning.activity.MainActivity"
+            android:parentActivityName=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.erotc.learning.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.LeaderboardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/nav_label_leaderboard"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullSensor"
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.erotc.learning.activity.MainActivity" />

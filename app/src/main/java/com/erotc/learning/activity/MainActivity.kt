@@ -1,7 +1,7 @@
 package com.erotc.learning.activity
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -94,6 +94,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_about -> {
                 fragment = AboutFragment.newInstance()
                 titleResourceId = R.string.nav_label_about
+            }
+            R.id.nav_leaderboard -> {
+                val intent = Intent(this, LeaderboardActivity::class.java)
+                startActivity(intent)
+
+                return
             }
         }
         currentFragmentId = menuId

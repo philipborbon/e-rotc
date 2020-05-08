@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:id="@+id/group_internal" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_lecture"
             android:icon="@drawable/ic_folder"
@@ -16,6 +16,13 @@
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_about"
             android:title="@string/nav_label_about" />
+    </group>
+
+    <group android:id="@+id/group_launch" android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_leaderboard"
+            android:icon="@drawable/ic_leaderboard"
+            android:title="@string/nav_label_leaderboard" />
     </group>
 
 </menu>

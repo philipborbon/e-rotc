@@ -1,6 +1,7 @@
 package com.erotc.learning.activity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
@@ -46,6 +47,10 @@ class AssessmentActivity : AppCompatActivity() {
         button_restart.setOnClickListener { restart() }
         button_exit.setOnClickListener { exit() }
         button_pause.setOnClickListener { pause() }
+        button_leaderboard.setOnClickListener {
+            val intent = Intent(this, LeaderboardActivity::class.java)
+            startActivity(intent)
+        }
 
         topics = repository.getAllTopic()
         initAssessment()
