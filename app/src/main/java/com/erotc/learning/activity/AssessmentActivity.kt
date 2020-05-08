@@ -334,7 +334,7 @@ class AssessmentActivity : AppCompatActivity() {
         }
 
         text_high_score.text = "0" // TODO: show high score
-        text_correct_count.text = getString(R.string.text_correct_count, counter, assessments?.size)
+        text_correct_count.text = getString(R.string.text_correct_count, counter, answerTracker?.size)
     }
 
     private fun restart() {

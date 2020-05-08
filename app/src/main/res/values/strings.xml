@@ -14,8 +14,8 @@
     <string name="label_version">Version %1$s</string>
     <string name="label_question">Question</string>
     <string name="label_time">Time</string>
-    <string name="label_score">Points</string>
-    <string name="label_high_score">Highest Points</string>
+    <string name="label_score">Your Score</string>
+    <string name="label_high_score">Highest Score</string>
     <string name="label_correct_count">Correct Answers</string>
     <string name="label_assessment">Assessment</string>
     <string name="label_unknown">Unknown</string>
