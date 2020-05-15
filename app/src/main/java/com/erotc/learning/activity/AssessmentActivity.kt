@@ -2,6 +2,7 @@ package com.erotc.learning.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
@@ -22,6 +23,8 @@ import kotlinx.android.synthetic.main.layout_assessment_choice.*
 import kotlinx.android.synthetic.main.layout_assessment_summary.*
 import java.util.*
 import kotlin.math.ceil
+import kotlin.math.ln
+
 
 class AssessmentActivity : AppCompatActivity() {
     private lateinit var repository: LearnRepository
@@ -37,6 +40,9 @@ class AssessmentActivity : AppCompatActivity() {
     private var answerTracker: ArrayList<AnswerTracker>? = null
     private var assessmentFinished = false
     private var examinee: String? = null
+
+    private var mediaPlayer: MediaPlayer? = null
+    private var playerProgress: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -370,11 +376,22 @@ class AssessmentActivity : AppCompatActivity() {
         label_score.text = runningScore.toString()
     }
 
+    override fun onStart() {
+        super.onStart()
+
+        playerProgress?.let {
+            mediaPlayer?.seekTo(it)
+        } ?: mediaPlayer?.start()
+    }
+
     override fun onPause() {
         super.onPause()
         if (!assessmentFinished) {
             pause()
         }
+
+        mediaPlayer?.pause()
+        playerProgress = mediaPlayer?.currentPosition
     }
 
     override fun onBackPressed() {
@@ -386,9 +403,29 @@ class AssessmentActivity : AppCompatActivity() {
     private fun shouldPlayBackgroundMusic(){
         val preference = PreferenceManager.getDefaultSharedPreferences(this)
         val enableMusic = preference.getBoolean("music", false)
-        val volume = preference.getString("volume", "medium")
+        val volumeLevel = preference.getString("volume", "medium")
 
-        // TODO: should play background music base on settings
+        if (enableMusic) {
+            mediaPlayer = MediaPlayer.create(this, R.raw.assessment_melody)
+            mediaPlayer?.setOnCompletionListener {
+                mediaPlayer?.start()
+            }
+
+            when(volumeLevel) {
+                "low" -> {
+                    val volume =  (1 - (ln(MAX_VOLUME - 35) / ln(MAX_VOLUME))).toFloat()
+                    mediaPlayer?.setVolume(volume, volume)
+                }
+                "medium" -> {
+                    val volume =  (1 - (ln(MAX_VOLUME - 65) / ln(MAX_VOLUME))).toFloat()
+                    mediaPlayer?.setVolume(volume, volume)
+                }
+                "high" -> {
+                    val volume =  (1 - (ln(MAX_VOLUME - 100) / ln(MAX_VOLUME))).toFloat()
+                    mediaPlayer?.setVolume(volume, volume)
+                }
+            }
+        }
     }
 
     private class AnswerTracker {
@@ -399,6 +436,7 @@ class AssessmentActivity : AppCompatActivity() {
     companion object {
         private val LOG_TAG = AssessmentActivity::class.java.simpleName
         private const val QUESTION_DURATION_IN_SEC = 20
+        private const val MAX_VOLUME: Double = 100.0
 
         const val DATA_NAME = "data-name"
     }
