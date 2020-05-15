@@ -407,23 +407,24 @@ class AssessmentActivity : AppCompatActivity() {
 
         if (enableMusic) {
             mediaPlayer = MediaPlayer.create(this, R.raw.assessment_melody)
-            mediaPlayer?.setOnCompletionListener {
-                mediaPlayer?.start()
-            }
 
             when(volumeLevel) {
                 "low" -> {
-                    val volume =  (1 - (ln(MAX_VOLUME - 35) / ln(MAX_VOLUME))).toFloat()
+                    val volume =  (1 - (ln(MAX_VOLUME - 5) / ln(MAX_VOLUME))).toFloat()
                     mediaPlayer?.setVolume(volume, volume)
                 }
                 "medium" -> {
-                    val volume =  (1 - (ln(MAX_VOLUME - 65) / ln(MAX_VOLUME))).toFloat()
+                    val volume =  (1 - (ln(MAX_VOLUME - 30) / ln(MAX_VOLUME))).toFloat()
                     mediaPlayer?.setVolume(volume, volume)
                 }
                 "high" -> {
                     val volume =  (1 - (ln(MAX_VOLUME - 100) / ln(MAX_VOLUME))).toFloat()
                     mediaPlayer?.setVolume(volume, volume)
                 }
+            }
+
+            mediaPlayer?.setOnCompletionListener {
+                mediaPlayer?.start()
             }
         }
     }
