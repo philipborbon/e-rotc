@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.PreferenceManager
 import com.erotc.learning.R
 import com.erotc.learning.data.Assessment
 import com.erotc.learning.data.QuestionType
@@ -63,6 +64,7 @@ class AssessmentActivity : AppCompatActivity() {
         assessmentFinished = false
 
         nextTopic()
+        shouldPlayBackgroundMusic()
     }
 
     private fun clearQuestionnaire() {
@@ -379,6 +381,14 @@ class AssessmentActivity : AppCompatActivity() {
         if (!assessmentFinished) {
             pause()
         }
+    }
+
+    private fun shouldPlayBackgroundMusic(){
+        val preference = PreferenceManager.getDefaultSharedPreferences(this)
+        val enableMusic = preference.getBoolean("music", false)
+        val volume = preference.getString("volume", "medium")
+
+        // TODO: should play background music base on settings
     }
 
     private class AnswerTracker {
