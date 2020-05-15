@@ -2,6 +2,7 @@ package com.erotc.learning.fragment
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
 import android.text.Editable
@@ -15,6 +16,7 @@ import android.widget.TextView.OnEditorActionListener
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.erotc.learning.R
+import com.erotc.learning.activity.ViewTutorialActivity
 import com.erotc.learning.adapter.TutorialAdapter
 import com.erotc.learning.data.Topic
 import com.erotc.learning.data.Tutorial
@@ -199,11 +201,10 @@ class TutorialFragment : Fragment() {
     }
 
     private fun show(tutorial: Tutorial) {
-//        val intent = Intent(activity, ViewTutorialActivity::class.java)
-//        intent.putExtra(ViewTutorialActivity.DATA_TUTORIAL, tutorial)
-//
-//        startActivity(intent)
-        // TODO: start ViewTutorialActivity
+        val intent = Intent(activity, ViewTutorialActivity::class.java)
+        intent.putExtra(ViewTutorialActivity.DATA_TUTORIAL, tutorial)
+
+        startActivity(intent)
     }
 
     override fun onResume() {

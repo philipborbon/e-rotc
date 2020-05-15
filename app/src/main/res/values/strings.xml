@@ -36,6 +36,7 @@
 
     <string name="title_activity_view_lecture">View Lecture</string>
     <string name="title_activity_assessment_choice">Assessment Choice</string>
+    <string name="title_activity_view_tutorial">Tutorial</string>
 
     <string name="button_text_next">Next</string>
     <string name="button_text_resume">Continue</string>

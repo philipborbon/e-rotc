@@ -12,6 +12,7 @@ import com.erotc.learning.R
 import com.erotc.learning.repository.LearnRepository
 import com.google.gson.Gson
 import java.io.IOException
+import java.lang.reflect.Field
 
 /**
  * Created on 11/12/2018.
@@ -74,5 +75,15 @@ object ApplicationUtil {
         )
 
         return view
+    }
+
+    fun getResId(resName: String?, c: Class<*>): Int {
+        return try {
+            val idField: Field = c.getDeclaredField(resName)
+            idField.getInt(idField)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            -1
+        }
     }
 }

@@ -55,8 +55,18 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/nav_label_leaderboard"
             android:launchMode="singleTop"
-            android:screenOrientation="fullSensor"
-            android:parentActivityName=".activity.MainActivity">
+            android:parentActivityName=".activity.MainActivity"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.erotc.learning.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.ViewTutorialActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_view_tutorial"
+            android:parentActivityName=".activity.MainActivity"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.erotc.learning.activity.MainActivity" />
