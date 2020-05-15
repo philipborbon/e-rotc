@@ -16,7 +16,7 @@ interface LectureDao {
     @Query("SELECT COUNT(*) FROM lecture")
     fun countOf(): Int
 
-    @Query("SELECT * FROM lecture WHERE title LIKE :keyword")
+    @Query("SELECT * FROM lecture WHERE title LIKE :keyword ORDER BY title")
     fun search(keyword: String): List<Lecture>
 
     @Insert

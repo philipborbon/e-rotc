@@ -9,6 +9,10 @@
             android:icon="@drawable/ic_folder"
             android:title="@string/nav_label_lecture" />
         <item
+            android:id="@+id/nav_tutorial"
+            android:icon="@drawable/ic_tutorial"
+            android:title="@string/nav_label_tutorial" />
+        <item
             android:id="@+id/nav_assessment"
             android:icon="@drawable/ic_assessment"
             android:title="@string/nav_label_assessment" />

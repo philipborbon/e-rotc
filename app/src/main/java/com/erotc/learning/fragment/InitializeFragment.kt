@@ -11,6 +11,7 @@ import com.erotc.learning.R
 import com.erotc.learning.data.Assessment
 import com.erotc.learning.data.Lecture
 import com.erotc.learning.data.Topic
+import com.erotc.learning.data.Tutorial
 import com.erotc.learning.repository.LearnRepository
 import com.erotc.learning.util.ApplicationUtil
 import com.google.gson.reflect.TypeToken
@@ -62,6 +63,15 @@ class InitializeFragment : Fragment() {
                     val lectureListType = object : TypeToken<List<Lecture>>(){}.type
 
                     repository.saveLectures(ApplicationUtil.gson.fromJson(lectureString, lectureListType))
+                }
+
+                if (repository.isTutorialEmpty) {
+                    publishProgress(getString(R.string.message_preparing_tutorials))
+
+                    val tutorialString = ApplicationUtil.getStringFromAsset(context, ApplicationUtil.FILE_TUTORIAL)
+                    val tutorialListType = object : TypeToken<List<Tutorial>>(){}.type
+
+                    repository.saveTutorials(ApplicationUtil.gson.fromJson(tutorialString, tutorialListType))
                 }
 
                 if (repository.isAssessmentEmpty) {

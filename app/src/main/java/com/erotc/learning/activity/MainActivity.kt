@@ -9,10 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.erotc.learning.R
-import com.erotc.learning.fragment.AboutFragment
-import com.erotc.learning.fragment.AssessmentFragment
-import com.erotc.learning.fragment.InitializeFragment
-import com.erotc.learning.fragment.LectureFragment
+import com.erotc.learning.fragment.*
 import com.erotc.learning.util.ApplicationUtil
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -86,6 +83,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_lecture -> {
                 fragment = LectureFragment.newInstance()
                 titleResourceId = R.string.nav_label_lecture
+            }
+            R.id.nav_tutorial -> {
+                fragment = TutorialFragment.newInstance()
+                titleResourceId = R.string.nav_label_tutorial
             }
             R.id.nav_assessment -> {
                 fragment = AssessmentFragment.newInstance()

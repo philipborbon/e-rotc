@@ -21,13 +21,14 @@ object ApplicationUtil {
 
     const val FILE_TOPIC = "topic.json"
     const val FILE_LECTURE = "lecture.json"
+    const val FILE_TUTORIAL = "tutorial.json"
     const val FILE_ASSESSMENT = "assessment.json"
 
     val gson = Gson()
 
     fun shouldInitialize(context: Context): Boolean {
         val repository = LearnRepository.getInstance(context)
-        return repository.isTopicEmpty || repository.isLectureEmpty || repository.isAssessmentEmpty
+        return repository.hasMissingData
     }
 
     fun getStringFromAsset(context: Context, fileName: String): String? {

@@ -2,10 +2,7 @@ package com.erotc.learning.repository
 
 import android.content.Context
 import androidx.room.Room
-import com.erotc.learning.data.Assessment
-import com.erotc.learning.data.Leaderboard
-import com.erotc.learning.data.Lecture
-import com.erotc.learning.data.Topic
+import com.erotc.learning.data.*
 import com.erotc.learning.database.Database
 import java.util.*
 
@@ -19,6 +16,7 @@ class LearnRepository private constructor(context: Context) {
 
     private val topicDao = database.topicDao()
     private val lectureDao = database.lectureDao()
+    private val tutorialDao = database.tutorialDao()
     private val assessmentDao = database.assessmentDao()
     private val leaderboardDao = database.leaderboardDao()
 
@@ -26,8 +24,16 @@ class LearnRepository private constructor(context: Context) {
         return lectureDao.search("%$keyword%")
     }
 
+    fun searchTutorial(keyword: String): List<Tutorial> {
+        return tutorialDao.search("%$keyword%")
+    }
+
     fun getAllLecture(): List<Lecture> {
         return lectureDao.getAll()
+    }
+
+    fun getAllTutorial(): List<Tutorial> {
+        return tutorialDao.getAll()
     }
 
     fun getAllTopic(): List<Topic> {
@@ -78,6 +84,18 @@ class LearnRepository private constructor(context: Context) {
         return lectures
     }
 
+    fun saveTutorials(tutorials: List<Tutorial>): List<Tutorial> {
+        tutorials.forEachIndexed { index, lecture ->
+            lecture.sort = index
+        }
+
+        tutorialDao.create(tutorials).forEachIndexed { index, value ->
+            tutorials[index].id = value
+        }
+
+        return tutorials
+    }
+
     fun saveAssessments(questions: List<Assessment>): List<Assessment> {
         assessmentDao.create(questions).forEachIndexed { index, value ->
             questions[index].id = value
@@ -96,8 +114,14 @@ class LearnRepository private constructor(context: Context) {
     val isLectureEmpty: Boolean
         get() = lectureDao.countOf() == 0
 
+    val isTutorialEmpty: Boolean
+        get() = tutorialDao.countOf() == 0
+
     val isAssessmentEmpty: Boolean
         get() = assessmentDao.countOf() == 0
+
+    val hasMissingData: Boolean
+        get() = isTopicEmpty || isLectureEmpty || isTutorialEmpty || isAssessmentEmpty
 
     companion object {
         private const val QUESTION_LIMIT_COUNT = 5

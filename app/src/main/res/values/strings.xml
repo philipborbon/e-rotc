@@ -5,6 +5,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
 
     <string name="nav_label_lecture">Lectures</string>
+    <string name="nav_label_tutorial">Tutorial</string>
     <string name="nav_label_assessment">Assessment</string>
     <string name="nav_label_about">About</string>
     <string name="nav_label_leaderboard">Leaderboard</string>
@@ -23,6 +24,7 @@
 
     <string name="message_preparing_topics">Loading topics…</string>
     <string name="message_preparing_lectures">Loading lectures…</string>
+    <string name="message_preparing_tutorials">Loading tutorials…</string>
     <string name="message_preparing_assessment">Loading assessments…</string>
     <string name="message_no_results">No results found.</string>
     <string name="message_no_record">No records to show.</string>
