@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.LinearLayout
@@ -62,6 +63,14 @@ object ApplicationUtil {
         view.findViewById<ImageButton>(R.id.validate).setOnClickListener {
             onValidate(input.text.toString().trim())
         }
+
+        input.setOnEditorActionListener(TextView.OnEditorActionListener { textView, i, keyEvent ->
+            if (i == EditorInfo.IME_ACTION_DONE) {
+                onValidate(input.text.toString().trim())
+                return@OnEditorActionListener true
+            }
+            false
+        })
 
         return view
     }

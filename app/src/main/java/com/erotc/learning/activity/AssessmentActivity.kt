@@ -133,7 +133,7 @@ class AssessmentActivity : AppCompatActivity() {
         val currentTopic = topics?.get(currentTopicIndex)
 
         val builder = AlertDialog.Builder(this)
-        builder.setTitle(R.string.dialog_quiz_start_title)
+        builder.setTitle(getString(R.string.dialog_quiz_start_title, currentTopic?.name))
         builder.setMessage(getString(R.string.dialog_quiz_start_message, currentTopic?.name))
         builder.setPositiveButton(R.string.button_text_resume) { dialogInterface, i -> startAssessmentForCurrentTopic() }
         builder.setNeutralButton(R.string.button_text_exit) { dialogInterface, i -> exit() }

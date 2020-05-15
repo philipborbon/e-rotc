@@ -57,7 +57,7 @@
     <string name="dialog_quiz_paused_title">Pause</string>
     <string name="dialog_quiz_paused_message">Assessment is created to test your knowledge .</string>
 
-    <string name="dialog_quiz_start_title">Start Topic</string>
+    <string name="dialog_quiz_start_title">Assessment For %1$s</string>
     <string name="dialog_quiz_start_message">Start assessment for topic %1$s.</string>
 
     <string name="dialog_assessment_name_required_title">Enter Name</string>
