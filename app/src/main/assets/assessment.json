@@ -2084,5 +2084,215 @@
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
+  },
+  {
+    "topicid": 11,
+    "question": "It is a person, thing or activity from which information is originally obtained.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Source"
+  },
+  {
+    "topicid": 11,
+    "question": "is the end product resulting from the collection, evaluation, analysis, integration and interpretation of all available information.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Intelligence"
+  },
+  {
+    "topicid": 11,
+    "question": "It is to make systematic examination or to conduct an official inquiry.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Investigation"
+  },
+  {
+    "topicid": 11,
+    "question": "is any unevaluated data for every description which when processed may produce intelligence.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Information"
+  },
+  {
+    "topicid": 11,
+    "question": "Complete and accurate awareness of individual in his/her surroundings.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Observation"
+  },
+  {
+    "topicid": 11,
+    "question": "The art of questioning and examining a source to obtain a maximum amount of usable information.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Interrogation"
+  },
+  {
+    "topicid": 11,
+    "question": "Information is obtained from another person who is aware that he/she is giving information.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Interview"
+  },
+  {
+    "topicid": 11,
+    "question": "It is consisting of collection, evaluation, interpretation and dissemination of information pertaining to possible or actual enemy operation.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Military Intelligence"
+  },
+  {
+    "topicid": 11,
+    "question": "Obtaining information from a person who is unaware that he/she is providing wanted information.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Elicitation"
+  },
+  {
+    "topicid": 11,
+    "question": "Timely transmission of information and or/ intelligence in an appropriate form and by any suitable means to those who need it.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Dissemination"
+  },
+  {
+    "topicid": 11,
+    "question": "Is the knowledge of people, weather, enemy and terrain or geographical features required by a Commander in the planning and conduct of tactical operations.",
+    "type": "multi-q",
+    "choices": ["Combat Intelligence", "Strategic Intelligence", "Counterintelligence", "Military Intelligence"],
+    "answer": "Combat Intelligence"
+  },
+  {
+    "topicid": 11,
+    "question": "Is the knowledge which requiring to serve as basis for the formulation of policy and military plans at national and international level.",
+    "type": "multi-q",
+    "choices": ["Combat Intelligence", "Strategic Intelligence", "Counterintelligence", "Military Intelligence"],
+    "answer": "Strategic Intelligence"
+  },
+  {
+    "topicid": 11,
+    "question": "The aspect of military intelligence relating to all security control measures both active and passive designed to ensure safeguarding of information and materials, personnel and installation sabotage, espionage and subversive activities of foreign powers.",
+    "type": "multi-q",
+    "choices": ["Combat Intelligence", "Strategic Intelligence", "Counterintelligence", "Military Intelligence"],
+    "answer": "Counterintelligence"
+  },
+  {
+    "topicid": 11,
+    "question": "It is the product resulting from the collection, evaluation, and interpretation of information which concerns one or more aspects of foreign nations or of functional or geographic areas.",
+    "type": "multi-q",
+    "choices": ["Combat Intelligence", "Strategic Intelligence", "Counterintelligence", "Intelligence"],
+    "answer": "Intelligence"
+  },
+  {
+    "topicid": 11,
+    "question": "Is the systematic exploitation of sources of by collecting agencies of the delivery of the information obtained to the proper intelligence section.",
+    "type": "multi-q",
+    "choices": ["Collection", "Strategic Intelligence", "Source of Information", "Collection Agency"],
+    "answer": "Collection"
+  },
+  {
+    "topicid": 11,
+    "question": "Any person, unit or activity that called or process information by research, surveillance, interrogation or other exploitation of resources.",
+    "type": "multi-q",
+    "choices": ["Collection", "Strategic Intelligence", "Source of Information", "Collection Agency"],
+    "answer": "Collection Agency"
+  },
+  {
+    "topicid": 11,
+    "question": "Are persons, things or action from which information about the enemy, whether or terrain is derived.",
+    "type": "multi-q",
+    "choices": ["Collection", "Strategic Intelligence", "Source of Information", "Collection Agency"],
+    "answer": "Source of Information"
+  },
+  {
+    "topicid": 11,
+    "question": "Is the step which intelligence is created from the raw material of information.",
+    "type": "multi-q",
+    "choices": ["Collection", "Strategic Intelligence", "Processing", "Evaluation"],
+    "answer": "Processing"
+  },
+  {
+    "topicid": 11,
+    "question": "Information is of small value unless it has been analyzed to respect to its pertinence, the reliability of the officer and agency and its probable accuracy.",
+    "type": "multi-q",
+    "choices": ["Collection", "Strategic Intelligence", "Processing", "Evaluation"],
+    "answer": "Evaluation"
+  },
+  {
+    "topicid": 11,
+    "question": "Measures taken by a certain unit to protect itself from espionage, hostile observation, subversion or sabotage",
+    "type": "multi-q",
+    "choices": ["Military Cycle", "Military Information", "Military Intelligence", "Military Security"],
+    "answer": "Military Security"
+  },
+  {
+    "topicid": 11,
+    "question": "There are three (3) Types of Military Intelligence.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 11,
+    "question": "Planning the collection effort, Collection of Information, Processing Information, and Dissemination and use are the four (4) Phases of Intelligence Cycle.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 11,
+    "question": "Military Security – is consists of collection, evaluation, interpretation and dissemination of information pertaining to possible or actual enemy operation.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 11,
+    "question": "Intelligence cycle- Is a study in which phase is considered first information or intelligence can be inserted in any phase as appropriate. The intel Cycle has no beginning and no end.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 11,
+    "question": "Concealment and camouflage is one of the examples of military Security.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 11,
+    "question": "Military information- Means all facts, documents, materials, photographs, diagrams, maps, and reports of observations of any kind which increases our knowledge of a possible or actual enemy or area of operations",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 11,
+    "question": "Counter Intelligence is the knowledge which requiring to serve as basis for the formulation of policy and military plans at national and international level.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 11,
+    "question": "Information is unevaluated material of every description including that derived from observations, communications, reports, rumors, imagery, and other sources from which intelligence is produced.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 11,
+    "question": "Processing Is the step which intelligence is created from the raw material of information.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 11,
+    "question": "There are 15 fifteen examples of Military Security.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
   }
 ]
