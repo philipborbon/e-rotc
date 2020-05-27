@@ -939,7 +939,7 @@
   },
   {
     "topicid": 5,
-    "question": "single line spacing with double line spacing    between paragraph is used except when the communication is very short.",
+    "question": "single line spacing with double line spacing between paragraph is used except when the communication is very short.",
     "type": "multi-q",
     "choices": ["Line Spacing", "Paragraphing", "Dividing Paragraph", "Date"],
     "answer": "Line Spacing"
@@ -1031,6 +1031,202 @@
   {
     "topicid": 5,
     "question": "The three main elements of Letter are Heading, Body, Close (Complementary Ending).",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 6,
+    "question": "Is the process of influencing others to accomplish the mission by proving direct purpose and motivation",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Military Leadership"
+  },
+  {
+    "topicid": 6,
+    "question": "Personal qualities that are direct value to the Commander in gaining the willing obedience, conference respect and loyal cooperation of his men in accomplishing a mission.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Leadership Traits"
+  },
+  {
+    "topicid": 6,
+    "question": "Fundamental guidelines for the selection of appropriate action and orders in the proper exercise of the Command",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Leadership Principles"
+  },
+  {
+    "topicid": 6,
+    "question": "Authority which an individual in the Military service lawfully exercises over subordinates by virtue of Ranks and assignments or position.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Command"
+  },
+  {
+    "topicid": 6,
+    "question": "Refers to that process whereby an individual directs guide, influences or control the thoughts, feeling or behavior of another human being.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Leadership"
+  },
+  {
+    "topicid": 6,
+    "question": "It is the mental state and spirit of an individual unit.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Morale"
+  },
+  {
+    "topicid": 6,
+    "question": "It is the common spirit reflected by all members of a unit and provides group solidarity.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Esprit de corps"
+  },
+  {
+    "topicid": 6,
+    "question": "is the attitude that ensures prompt obedience to order and the initiatives of appropriate action in the absence of order.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Discipline"
+  },
+  {
+    "topicid": 6,
+    "question": "is the technical, tactical, and physical ability to do the job well.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Proficiency"
+  },
+  {
+    "topicid": 6,
+    "question": "A man's bearing is his general appearance, carriage, deportment and conduct.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Bearing"
+  },
+  {
+    "topicid": 6,
+    "question": "It is the promptness of making a decision in a state of clear and forceful manner.",
+    "type": "multi-q",
+    "choices": ["Judgment", "Decisiveness", "Justice", "Knowledge"],
+    "answer": "Decisiveness"
+  },
+  {
+    "topicid": 6,
+    "question": "Is a mental quality that recognize fear of danger or criticism, but enables a man to proceed in the face of it with calmness and firmness",
+    "type": "multi-q",
+    "choices": ["Courage", "Decisiveness", "Justice", "Knowledge"],
+    "answer": "Courage"
+  },
+  {
+    "topicid": 6,
+    "question": "The certainly proper performance of duty, is a quality the leader must develop.",
+    "type": "multi-q",
+    "choices": ["Courage", "Decisiveness", "Dependability", "Knowledge"],
+    "answer": "Dependability"
+  },
+  {
+    "topicid": 6,
+    "question": "The mental and physical stamina measured by the ability of withstand pain fatigue, stress and hardship is kin to courage",
+    "type": "multi-q",
+    "choices": ["Courage", "Decisiveness", "Dependability", "Endurance"],
+    "answer": "Endurance"
+  },
+  {
+    "topicid": 6,
+    "question": "Is the display of sincere interest and zeal in the performance of duties. This requires the leader to be optimistic and cheerful.",
+    "type": "multi-q",
+    "choices": ["Enthusiasm", "Decisiveness", "Dependability", "Endurance"],
+    "answer": "Enthusiasm"
+  },
+  {
+    "topicid": 6,
+    "question": "Initiative or taking action in the absence of orders, is often required of leaders.",
+    "type": "multi-q",
+    "choices": ["Enthusiasm", "Decisiveness", "Dependability", "Initiative"],
+    "answer": "Initiative"
+  },
+  {
+    "topicid": 6,
+    "question": "The uprightness and soundness of moral principles, the quality of truthfulness and honesty describe integrity.",
+    "type": "multi-q",
+    "choices": ["Enthusiasm", "Integrity", "Dependability", "Initiative"],
+    "answer": "Integrity"
+  },
+  {
+    "topicid": 6,
+    "question": "Is the ability to logically weigh facts and possible solution on which to be sound decision.",
+    "type": "multi-q",
+    "choices": ["Enthusiasm", "Integrity", "Judgement", "Initiative"],
+    "answer": "Judgement"
+  },
+  {
+    "topicid": 6,
+    "question": "Loyalty is the quality of faithfulness to country, the Army, seniors, subordinates and peers.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 6,
+    "question": "Loyalty Is the ability to deal with others in a respectful manner.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 6,
+    "question": "Unselfishness is the unselfish leader is one who avoid providing his own comfort and personal advancement at the expense of others.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 6,
+    "question": "The Basic Responsibilities of a Commander are Accomplishment of the Mission and Welfare of the men?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 6,
+    "question": "Military Leadership Is the process of influencing others to accomplish the mission by proving direct purpose and motivation",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 6,
+    "question": "Leadership Traits is a Traits of a Good Leader?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 6,
+    "question": "Leadership is an authority which an individual in the Military service lawfully exercises over subordinates by virtue of Ranks and assignments or position.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 6,
+    "question": "Morale, Esprit De Corps, Discipline, Proficiency are Leadership Indicators?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 6,
+    "question": "Self-Improvement is basic Responsibilities of a Commander",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 6,
+    "question": "Leadership is not inherent is a concept of Military Leadership",
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
