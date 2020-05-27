@@ -473,7 +473,7 @@
     "question": "Requires a band and is held in the parade ground of the unit from which the guards are detailed.",
     "type": "fill-q",
     "choices": null,
-    "answer": "FORMAL GUARD MOOUNTING"
+    "answer": "FORMAL GUARD MOUNTING"
   },
   {
     "topicid": 3,
@@ -828,6 +828,209 @@
   {
     "topicid": 4,
     "question": "Corporals are addressed as Cpl?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 5,
+    "question": "written communication whereby the AFP Transact most of its business. It concerns every subject and takes many forms.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Military Correspondence"
+  },
+  {
+    "topicid": 5,
+    "question": "It is a reply of forwarding statement added to Military letter.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Endorsement"
+  },
+  {
+    "topicid": 5,
+    "question": "It a written communication having two folds purposes (to convey information/to build goodwill).",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Correspondence"
+  },
+  {
+    "topicid": 5,
+    "question": "It is an informal communication sent through wire services to facilitate action on a certain matter.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Radio Message"
+  },
+  {
+    "topicid": 5,
+    "question": "It is an informal communication sent through wire services to facilitate one to another within headquarters.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Routing Slip"
+  },
+  {
+    "topicid": 5,
+    "question": "It is intended for use to initiate personal actions.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Personal Action Form"
+  },
+  {
+    "topicid": 5,
+    "question": "this part consists of all the materials above the first line in the body.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "HEADING"
+  },
+  {
+    "topicid": 5,
+    "question": "It is the body of military letter is those part that placed between the heading and the close.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Body"
+  },
+  {
+    "topicid": 5,
+    "question": "the close of military letter consists of the command or authority line, signature element and enclosure block.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "CLOSED"
+  },
+  {
+    "topicid": 5,
+    "question": "It is used for correspondence with the Sec. of National Defense, other government departments, civilian agencies and civilians.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Non - Military (Personal Type)"
+  },
+  {
+    "topicid": 5,
+    "question": "Top of the letterhead is normally placing 3/4 inch or in the 5th line below the top edge of the paper.",
+    "type": "multi-q",
+    "choices": ["Date", "Letterhead", "Subject", "Attention Address"],
+    "answer": "Letterhead"
+  },
+  {
+    "topicid": 5,
+    "question": "It is usual order is the day, the month and the year will the day and the year in numerical, while the month is spelled out.",
+    "type": "multi-q",
+    "choices": ["Date", "Letterhead", "Subject", "Attention Address"],
+    "answer": "Date"
+  },
+  {
+    "topicid": 5,
+    "question": "The subject of military letter should be stated briefly and directly, not exceeding 10 words.",
+    "type": "multi-q",
+    "choices": ["Date", "Letterhead", "Subject", "Attention Address"],
+    "answer": "Subject"
+  },
+  {
+    "topicid": 5,
+    "question": "To speed routing, correspondence may be addressed to the attention of an individual of the head.",
+    "type": "multi-q",
+    "choices": ["Date", "Letterhead", "Subject", "Attention Address"],
+    "answer": "Attention Address"
+  },
+  {
+    "topicid": 5,
+    "question": "identifying file references is placed at the left margin, usually two (2) spaces below the letterhead and in line with the date.",
+    "type": "multi-q",
+    "choices": ["Date", "Letterhead", "Subject", "File References"],
+    "answer": "File References"
+  },
+  {
+    "topicid": 5,
+    "question": "single line spacing with double line spacing    between paragraph is used except when the communication is very short.",
+    "type": "multi-q",
+    "choices": ["Line Spacing", "Paragraphing", "Dividing Paragraph", "Date"],
+    "answer": "Line Spacing"
+  },
+  {
+    "topicid": 5,
+    "question": "The second and succeeding lines will begin at left margin.",
+    "type": "multi-q",
+    "choices": ["Line Spacing", "Paragraphing", "Dividing Paragraph", "Margin"],
+    "answer": "Paragraphing"
+  },
+  {
+    "topicid": 5,
+    "question": "It is a paragraph of three or fewer lines will not be divided between pages.",
+    "type": "multi-q",
+    "choices": ["Line Spacing", "Paragraphing", "Dividing Paragraph", "Margin"],
+    "answer": "Dividing Paragraph"
+  },
+  {
+    "topicid": 5,
+    "question": "used in lieu of the command or authority line signature and enclosure are also included.",
+    "type": "multi-q",
+    "choices": ["Body", "Style", "Closed", "Margin"],
+    "answer": "Closed"
+  },
+  {
+    "topicid": 5,
+    "question": "Paragraphs are not numbered, single spacing is authorized when the letters contain more than 9 lines.",
+    "type": "multi-q",
+    "choices": ["Body", "Style", "Closed", "Margin"],
+    "answer": "Body"
+  },
+  {
+    "topicid": 5,
+    "question": "Style follows the same general style of civilian business letter in the following aspects. It uses a salutation, which is a part of the heading, and a complementary close, which is a part of the close.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 5,
+    "question": "Style, Body, and Closed are types of Non-Military (Personal Types) Letters",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 5,
+    "question": "The part of Margins are Top, Top, Left, Right, and Bottom.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 5,
+    "question": "Letter is generally the same as that Military (subject) letter.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 5,
+    "question": "Endorsement letter expressions forming the body of the Endorsement letter.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 5,
+    "question": "The stamped and checked It is used to forward communication without comment.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 5,
+    "question": "Correspondence written communication whereby the AFP Transact most of its business. It concerns every subject and takes many forms.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 5,
+    "question": "Personal Action Form is intended for use to initiate personal actions.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 5,
+    "question": "The three main elements of Letter are Heading, Body, Close (Complementary Ending).",
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
