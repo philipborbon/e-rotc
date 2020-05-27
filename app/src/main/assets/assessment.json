@@ -2294,5 +2294,215 @@
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
+  },
+  {
+    "topicid": 12,
+    "question": "It is the ability to outlive danger or death, the will and determination to live.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Survival"
+  },
+  {
+    "topicid": 12,
+    "question": "The advances in the development of outdoor clothing, equipment’s, emergency food and techniques have been growing rapidly.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Preparedness"
+  },
+  {
+    "topicid": 12,
+    "question": "This will protect the body from outside elements (heat, cold, rain, snow, sun, wind, etc.) and harmful insects",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Shelter"
+  },
+  {
+    "topicid": 12,
+    "question": "First-aid Kit include blanket to attend to bruises, scrapers, cuts, burns, and keep body protected.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "First-Aid"
+  },
+  {
+    "topicid": 12,
+    "question": "To make contact with possible rescuer or potential help via building a triangular fires, smoke, flashlight, bright colored clothing and other markers such as: reflective mirror, whistles, gunshot, stick, signal, and others.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Signaling"
+  },
+  {
+    "topicid": 12,
+    "question": "Always bring extra food and water especially if your is longer than anticipated.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Food and Water"
+  },
+  {
+    "topicid": 12,
+    "question": "Is the number one enemy in an emergency situation be it, lost stranded or injured.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Panic"
+  },
+  {
+    "topicid": 12,
+    "question": "it provides warmth, light, and comfort by keeping body temperature or body core heat on the average",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Knowing how to build a fire"
+  },
+  {
+    "topicid": 12,
+    "question": "All seaweeds, eggs, and reptiles are edible",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Rules of Survival"
+  },
+  {
+    "topicid": 12,
+    "question": "Panic, Boredom, Pain, Hunger, Cold, Thirst.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Enemies of Survival"
+  },
+  {
+    "topicid": 12,
+    "question": "The following are enemies of Survival except one.",
+    "type": "multi-q",
+    "choices": ["Chilin", "Cold", "Hunger", "Panic"],
+    "answer": "Chilin"
+  },
+  {
+    "topicid": 12,
+    "question": "It include blanket to attend to bruises, scrapers, cuts, burns, and keep body protected.",
+    "type": "multi-q",
+    "choices": ["Chilin", "Foods", "Shelter", "First-Aid"],
+    "answer": "Chilin"
+  },
+  {
+    "topicid": 12,
+    "question": "This will protect the body from outside elements (heat, cold, rain, snow, sun, wind, etc.) and harmful insects",
+    "type": "multi-q",
+    "choices": ["Panic", "Foods", "Shelter", "First-Aid"],
+    "answer": "Shelter"
+  },
+  {
+    "topicid": 12,
+    "question": "The following are enemies of Survival except one",
+    "type": "multi-q",
+    "choices": ["Boredom", "Fatigue", "Thirst", "happiness"],
+    "answer": "happiness"
+  },
+  {
+    "topicid": 12,
+    "question": "The following are survival Remember except one",
+    "type": "multi-q",
+    "choices": ["Act like Native, blend locally", "Learn by heart the basic survival skills", "Have fun", "Vanquish fear and panic, keep cool"],
+    "answer": "Have fun"
+  },
+  {
+    "topicid": 12,
+    "question": "It is the ability to outlive danger or death, the will and determination to live.",
+    "type": "multi-q",
+    "choices": ["Shelter", "Survival", "Thirst", "happiness"],
+    "answer": "Survival"
+  },
+  {
+    "topicid": 12,
+    "question": "Fire keeps away the harmful creatures, purify water and cook food.",
+    "type": "multi-q",
+    "choices": ["Shelter", "Survival", "Knowing how to build fire", "Signaling"],
+    "answer": "Knowing how to build fire"
+  },
+  {
+    "topicid": 12,
+    "question": "To make contact with possible rescuer or potential help via building a triangular fire, smoke, flashlight, bright colored clothing and other.",
+    "type": "multi-q",
+    "choices": ["Shelter", "Survival", "Knowing how to build fire", "Signaling"],
+    "answer": "Signaling"
+  },
+  {
+    "topicid": 12,
+    "question": "Things that can be eaten by birds and monkeys alike can be consumed by man",
+    "type": "multi-q",
+    "choices": ["Enemies of Survival", "Rules of Survival", "Survival Reminders", "Survival"],
+    "answer": "Rules of Survival"
+  },
+  {
+    "topicid": 12,
+    "question": "Fear/Panic, Pain, Cold, Thirst, Hunger, Fatigue, Loneliness/ Boredom.",
+    "type": "multi-q",
+    "choices": ["Enemies of Survival", "Rules of Survival", "Survival Reminders", "Survival"],
+    "answer": "Enemies of Survival"
+  },
+  {
+    "topicid": 12,
+    "question": "Things that can be eaten by birds and monkeys alike can be consumed by man",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 12,
+    "question": "Anything that flies, include airborne matters can be eaten.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 12,
+    "question": "Anything that swim is edible.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 12,
+    "question": "All seaweeds, eggs, and reptiles are edible.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 12,
+    "question": "All four-legged animals can be eaten",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 12,
+    "question": "Anything that creeps and crawls is edible",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 12,
+    "question": "Enjoyment is the ability to outlive danger or death, the will and determination to live.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 12,
+    "question": "There are (5) five basic survival skills needed in nearly all situations.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 12,
+    "question": "Remember and locate present position and employ skill in map reading is one of the survival reminders?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 12,
+    "question": "Survival is the advances in the development of outdoor clothing, equipment’s, emergency food and techniques have been growing rapidly.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
   }
 ]
