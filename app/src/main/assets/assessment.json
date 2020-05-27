@@ -2924,5 +2924,215 @@
     "type": "tof",
     "choices": null,
     "answer": "FALSE"
+  },
+  {
+    "topicid": 15,
+    "question": "planned activities in support to the accomplishment of the PA mission, undertaken independently or in coordination with civilian entities to gain popular support and weaken the enemy's will to fight.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "CMO"
+  },
+  {
+    "topicid": 15,
+    "question": "It is a CMO Pillar that conducts information-related activities directed to the external public to ensure clear, accurate, and timely dissemination of information to preserve security and privacy.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Public Affairs Pillar"
+  },
+  {
+    "topicid": 15,
+    "question": "Public Information is a program component of PA that conducts information activities directed to the public to ensure a clear, accurate, and timely dissemination of information.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Public Information (PI)"
+  },
+  {
+    "topicid": 15,
+    "question": "Seize, retain, and exploit the CMO initiative.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Offensive"
+  },
+  {
+    "topicid": 15,
+    "question": "The impact of CMO to a military activity can be significant if all available CMO components are used",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Mass"
+  },
+  {
+    "topicid": 15,
+    "question": "CMO must be integrated with other factors of operation to contribute to the accomplishment of the overall military mission.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Objective"
+  },
+  {
+    "topicid": 15,
+    "question": "Forbid hostile actions to acquire an unexpected advantage.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Security"
+  },
+  {
+    "topicid": 15,
+    "question": "Apply appropriate military capability prudently.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Restraint"
+  },
+  {
+    "topicid": 15,
+    "question": "Prepare for the measured, sustained application of military capability in support of government strategic aims.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Perseverance"
+  },
+  {
+    "topicid": 15,
+    "question": "It is a program component of Public Affairs that establishes and maintains constructive relationship with communities to promote the AFP objectives through information activities.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Community relations"
+  },
+  {
+    "topicid": 15,
+    "question": "It is to seek popular support to win the war.",
+    "type": "multi-q",
+    "choices": ["Legitimacy", "Population Support", "Simplicity", "Surprise"],
+    "answer": "Population Support"
+  },
+  {
+    "topicid": 15,
+    "question": "Conduct CMO at a time or place wherein the enemy is unprepared.",
+    "type": "multi-q",
+    "choices": ["Legitimacy", "Population Support", "Simplicity", "Surprise"],
+    "answer": "Surprise"
+  },
+  {
+    "topicid": 15,
+    "question": "Prepare clear, concise, and uncomplicated CMO plans and orders to ensure thorough understanding.",
+    "type": "multi-q",
+    "choices": ["Legitimacy", "Population Support", "Simplicity", "Surprise"],
+    "answer": "Simplicity"
+  },
+  {
+    "topicid": 15,
+    "question": "It is to seek unity of command and unity of effort for every CMO objective.",
+    "type": "multi-q",
+    "choices": ["Legitimacy", "Mass", "Unity of Command", "Surprise"],
+    "answer": "Unity of Command"
+  },
+  {
+    "topicid": 15,
+    "question": "It is to place the enemy in a disadvantaged position through flexible application of CMO.",
+    "type": "multi-q",
+    "choices": ["Maneuver", "Mass", "Unity of Command", "Surprise"],
+    "answer": "Maneuver"
+  },
+  {
+    "topicid": 15,
+    "question": "In conducting CMO activities, it is necessary to be guided with procedures and other essential CMO-related concepts.",
+    "type": "multi-q",
+    "choices": ["Maneuver", "CMO Imperatives", "Unity of Command", "Economy of force"],
+    "answer": "CMO Imperatives"
+  },
+  {
+    "topicid": 15,
+    "question": "It is to employ all CMO activities available in the most effective way possible; allocate minimum essential CMO components to secondary efforts.",
+    "type": "multi-q",
+    "choices": ["Maneuver", "CMO Imperatives", "Unity of Command", "Economy of force"],
+    "answer": "Economy of force"
+  },
+  {
+    "topicid": 15,
+    "question": "The following are part of Public Information (PI) except in one.",
+    "type": "multi-q",
+    "choices": ["Press release", "Media Appearances", "Unity of Command", "Public symposium"],
+    "answer": "Unity of Command"
+  },
+  {
+    "topicid": 15,
+    "question": "The following are part community relations (COMREL) except in one.",
+    "type": "multi-q",
+    "choices": ["Press release", "Counter Propaganda", "Civic Action (CIVAC)", "Civil Affairs Pillar"],
+    "answer": "Press release"
+  },
+  {
+    "topicid": 15,
+    "question": "The following are part of CMO Imperatives except in one.",
+    "type": "multi-q",
+    "choices": ["Use real-time Intelligence", "Provide protection and security measures.", "Civic Action (CIVAC)", "Maximize media utilization."],
+    "answer": "Civic Action (CIVAC)"
+  },
+  {
+    "topicid": 15,
+    "question": "The CMO pillars and its Components are Public Affairs, Public Information (PI), and Community Relations (COMREL)",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 15,
+    "question": "PA/AFP information campaign are one of the activities of Community Relations (COMREL)",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 15,
+    "question": "Deeds Psychological Operations (Deeds PsyOps) are one of the activities of Public Information (PI)",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 15,
+    "question": "Security forbid hostile actions to acquire an unexpected advantage.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 15,
+    "question": "Security sustain the acceptance by the people of the right of the government to govern or of a group or agency to make and carry out decisions.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 15,
+    "question": "Plan properly and anticipate events and requirements of CMO activities.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 15,
+    "question": "Public Affairs (PA) is a CMO Pillar that conducts information-related activities directed to the external public to ensure clear, accurate, and timely dissemination of information to preserve security and privacy.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 15,
+    "question": "Economy of Force must be used to gain support from as many people and communities as possible. This is for the people to cease supporting the enemy.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 15,
+    "question": "The Triad concept of CMO are composed of OPN, INTEL, and CMO.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 15,
+    "question": "The principles of army CMO follows what it is being outlined in FM 100-5 and AFPM 2-7.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
   }
 ]
