@@ -1230,5 +1230,229 @@
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
+  },
+  {
+    "topicid": 7,
+    "question": "Those rights, which are inherent in our nature, and without which, we cannot live as human beings.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Human Rights"
+  },
+  {
+    "topicid": 7,
+    "question": "No person, not even the state authority, has the right to take the life of a person except in the cases of heinous crimes what penalty is this?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Death Penalty"
+  },
+  {
+    "topicid": 7,
+    "question": "Whether intentional or unintentional expulsion of the fetus from the woman’s womb before the term of its viability is another violation of the right to life.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Abortion"
+  },
+  {
+    "topicid": 7,
+    "question": "\"No one shall be subjected to arbitrary or unlawful interference with his privacy, family, home or correspondence, nor to unlawful attacks on his honor and reputation.\" (Art. 17, sec. 1, covenant).",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Right to Privacy|Privacy Right"
+  },
+  {
+    "topicid": 7,
+    "question": "\"No one shall be liable to be tried or punished again for an offence for which he has already been finally convicted or acquitted in accordance with the law and penal procedure of each country.\" (art 14, sec. 7, political covenant.)",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "DOUBLE JEOPARDY"
+  },
+  {
+    "topicid": 7,
+    "question": "Bail. Is a security filed by an accused for his temporary release (rule 114, rules, of court)? An accused is entitled to bail except when he is charged of a crime punishable by life or death sentence and the evidence is strong (art. Ii, sec. 13, Philippine constitution). What right is this?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Right to Bail"
+  },
+  {
+    "topicid": 7,
+    "question": "The right of the accused to meet the witnesses face to face is intended to give the accused the opportunity to cross-examine them. The said provisions are implanted in more detail under Rule 113 of the Rules of court of the Philippines. What right is this?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Right of Confrontation"
+  },
+  {
+    "topicid": 7,
+    "question": "There are instances when any state police officer or private person, without judicial warrant, may arrest a person who, (1) has committed or is actually committing, or attempting to commit an offense in his presence (2) when an offense was committed and he has personal knowledge that the person to be arrested has committed the offense, (3) a prisoner who has escaped. (Rule 113, sec. 5, rules of court.)",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Warrantless Arrest"
+  },
+  {
+    "topicid": 7,
+    "question": "\"All persons are equal before the law and are entitled without any discrimination to the equal protection of the law\" (art. 26, political covenant).",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Equality before the Law"
+  },
+  {
+    "topicid": 7,
+    "question": "Forced or compulsory labor is not absolutely prohibited.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Exception on forced labor"
+  },
+  {
+    "topicid": 7,
+    "question": "It includes the right to freely determine their political status and to pursue their economic, social and cultural development (art. I, sec.1).",
+    "type": "multi-q",
+    "choices": ["Death Penalty", "Right of self - Determination", "Abortion", "Warrantless Arrest"],
+    "answer": "Right of self - Determination"
+  },
+  {
+    "topicid": 7,
+    "question": "While freedom gives man the right to make moral decisions, he is responsible for doing so and has to answer to his own conscience",
+    "type": "multi-q",
+    "choices": ["Man's Responsibility", "Right of self – Determination", "Abortion", "Warrantless Arrest"],
+    "answer": "Man's Responsibility"
+  },
+  {
+    "topicid": 7,
+    "question": "Human rights are supreme, inherent and inalienable rights to life, dignity and self-development.",
+    "type": "multi-q",
+    "choices": ["Death Penalty", "Right of self – Determination", "Abortion", "Philippine commission"],
+    "answer": "Philippine commission"
+  },
+  {
+    "topicid": 7,
+    "question": "The following are Basic characteristics of Human Rights except?",
+    "type": "multi-q",
+    "choices": ["Inherent", "Fundamental", "Dependent", "Indivisible"],
+    "answer": "Dependent"
+  },
+  {
+    "topicid": 7,
+    "question": "It is maintaining checkpoints are some street corners and searching a person passing or stopping a vehicle to conduct searches has been constituted as violation human rights.",
+    "type": "multi-q",
+    "choices": ["Military or police checkpoint", "Fundamental", "Dependent", "Indivisible"],
+    "answer": "Military or police checkpoint"
+  },
+  {
+    "topicid": 7,
+    "question": "It is maintaining checkpoints are some street corners and searching a person passing or stopping a vehicle to conduct searches has been constituted as violation human rights.",
+    "type": "multi-q",
+    "choices": ["Military or police checkpoint", "Fundamental", "Dependent", "Indivisible"],
+    "answer": "Military or police checkpoint"
+  },
+  {
+    "topicid": 7,
+    "question": "It is maintaining checkpoints are some street corners and searching a person passing or stopping a vehicle to conduct searches has been constituted as violation human rights.",
+    "type": "multi-q",
+    "choices": ["Military or police checkpoint", "Fundamental", "Dependent", "Indivisible"],
+    "answer": "Military or police checkpoint"
+  },
+  {
+    "topicid": 7,
+    "question": "Promulgated by the U.S supreme court in Miranda vs. Arizona, 384 U.S. 436 in (1960)?",
+    "type": "multi-q",
+    "choices": ["Military or police checkpoint", "Public Trial", "Miranda Doctrine", "Indivisible"],
+    "answer": "Miranda Doctrine"
+  },
+  {
+    "topicid": 7,
+    "question": "No one shall be subjected to arbitrary or unlawful interference with his privacy, family, home or correspondence, nor to unlawful attacks on his honor and reputation.",
+    "type": "multi-q",
+    "choices": ["Right to Bail", "Right to compensation Due to Miscarriage of Justice", "Miranda Doctrine", "Right to privacy"],
+    "answer": "Right to privacy"
+  },
+  {
+    "topicid": 7,
+    "question": "A statute which renders a previously innocent act a criminal offense, aggravates or increases the punishment for a crime or alters the rules of evidence, or deprives an accused of some protection or defense previously available.",
+    "type": "multi-q",
+    "choices": ["Ex post facto law", "Equality before the law", "Miranda Doctrine", "Right to privacy"],
+    "answer": "Ex post facto law"
+  },
+  {
+    "topicid": 7,
+    "question": "Any person arrested by police or military authorities should be informed, at the time of arrest, of the reasons of his arrest.",
+    "type": "multi-q",
+    "choices": ["Right of the arrested or detained person", "Equality before the law", "Miranda Doctrine", "Right to privacy"],
+    "answer": "Right of the arrested or detained person"
+  },
+  {
+    "topicid": 7,
+    "question": "It is the right of the accused to meet the witnesses face to face is intended to give the accused the opportunity to cross-examine them.",
+    "type": "multi-q",
+    "choices": ["Right of the arrested or detained person", "Right of Confrontation", "Right to Bail", "Right to privacy"],
+    "answer": "Right of Confrontation"
+  },
+  {
+    "topicid": 7,
+    "question": "Special procedures for juveniles IN the case of the juvenile person, the procedure shall be such as will take account of their age and the desirability of promoting their rehabilitation",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 7,
+    "question": "Ex post facto law means a statute which renders a previously innocent act a criminal offense, aggravates or increases the punishment for a crime or alters the rules of evidence, or deprives an accused of some protection or defense previously available.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 7,
+    "question": "Euthanasia-mercy killing Whether intentional or unintentional expulsion of the fetus from the woman’s womb before the term of its viability is another violation of the right to life.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 7,
+    "question": "Abortion No person, not even the state authority, has the right to take the life of a person except in the cases of heinous crimes.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 7,
+    "question": "The Basic characteristics of Human Rights Human rights are generally characterized as inherent, fundamental, inalienable, imprescriptibly, indivisible, universal and interdependent.?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 7,
+    "question": "Arbitrary arrest and detention where Everyone has the right to liberty and security of person.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 7,
+    "question": "Right to Life, Liberty and Security is the most basic human rights from which other rights flow is the right to life.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 7,
+    "question": "Prohibition of slavery and involuntary servitude. Slavery has been a legalized institution since the ancient Roman law period. Article 8 of the covenant states No one shall be held in slavery and slave trade in all forms shall be prohibited. Involuntary servitude - forced labor.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 7,
+    "question": "Right to Appeal One’s conviction of a Crime Everyone convicted of a crime shall have the right to his conviction and sentence being reviewed by a higher tribunal according to law.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 7,
+    "question": "Human rights are generally defined as those rights, which are inherent in our nature, and without which, we cannot live as human beings.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
   }
 ]
