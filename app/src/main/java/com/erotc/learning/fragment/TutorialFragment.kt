@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.erotc.learning.R
 import com.erotc.learning.activity.ViewTutorialActivity
 import com.erotc.learning.adapter.TutorialAdapter
+import com.erotc.learning.contract.Searchable
 import com.erotc.learning.data.Tutorial
 import com.erotc.learning.repository.LearnRepository
 import kotlinx.android.synthetic.main.fragment_tutorial.*
@@ -25,7 +26,7 @@ import kotlinx.android.synthetic.main.fragment_tutorial.*
 /**
  * A simple [Fragment] subclass.
  */
-class TutorialFragment : Fragment() {
+class TutorialFragment : Fragment(), Searchable {
     private lateinit var learnRepository: LearnRepository
 
     private var resultList: List<Tutorial>? = null
@@ -73,45 +74,9 @@ class TutorialFragment : Fragment() {
         recycler_result_list.layoutManager = LinearLayoutManager(activity)
     }
 
-    val isSearchEmpty: Boolean
-        get() = input_search_key.text.toString().isEmpty()
-
-    fun clearInputSearch() {
-        input_search_key.setText("")
-        input_search_key.clearFocus()
-    }
-
     fun onSearchClick() {
         hideKeyboard()
         input_search_key.clearFocus()
-    }
-
-    @SuppressLint("StaticFieldLeak")
-    fun showAll() {
-        val task: AsyncTask<Void, Void, Void> = object : AsyncTask<Void, Void, Void>() {
-            override fun onPreExecute() {
-                hideNoResults()
-            }
-
-            override fun doInBackground(vararg p0: Void?): Void? {
-                resultList = learnRepository.getAllTutorial()
-
-                return null
-            }
-
-            override fun onPostExecute(aVoid: Void?) {
-                lectureAdapter?.setDataList(resultList ?: arrayListOf())
-                lectureAdapter?.notifyDataSetChanged()
-
-                if (resultList?.size ?: 0 == 0) {
-                    showNoResults()
-                } else {
-                    recycler_result_list.scrollToPosition(0)
-                }
-            }
-        }
-        task.execute()
-        previousTask = task
     }
 
     private fun hideKeyboard() {
@@ -171,6 +136,43 @@ class TutorialFragment : Fragment() {
         intent.putExtra(ViewTutorialActivity.DATA_TUTORIAL, tutorial)
 
         startActivity(intent)
+    }
+
+    override fun isSearchEmpty(): Boolean {
+        return input_search_key.text.toString().isEmpty()
+    }
+
+    override fun clearInputSearch() {
+        input_search_key.setText("")
+        input_search_key.clearFocus()
+    }
+
+    @SuppressLint("StaticFieldLeak")
+    override fun showAll() {
+        val task: AsyncTask<Void, Void, Void> = object : AsyncTask<Void, Void, Void>() {
+            override fun onPreExecute() {
+                hideNoResults()
+            }
+
+            override fun doInBackground(vararg p0: Void?): Void? {
+                resultList = learnRepository.getAllTutorial()
+
+                return null
+            }
+
+            override fun onPostExecute(aVoid: Void?) {
+                lectureAdapter?.setDataList(resultList ?: arrayListOf())
+                lectureAdapter?.notifyDataSetChanged()
+
+                if (resultList?.size ?: 0 == 0) {
+                    showNoResults()
+                } else {
+                    recycler_result_list.scrollToPosition(0)
+                }
+            }
+        }
+        task.execute()
+        previousTask = task
     }
 
     override fun onResume() {

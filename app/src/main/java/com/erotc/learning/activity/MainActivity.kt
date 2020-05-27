@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.erotc.learning.R
+import com.erotc.learning.contract.Searchable
 import com.erotc.learning.fragment.*
 import com.erotc.learning.util.ApplicationUtil
 import com.google.android.material.navigation.NavigationView
@@ -50,9 +51,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
-            if (currentFragment is LectureFragment) {
-                val lectureFragment = currentFragment as LectureFragment
-                if (lectureFragment.isSearchEmpty) {
+            if (currentFragment is Searchable) {
+                val lectureFragment = currentFragment as Searchable
+                if (lectureFragment.isSearchEmpty()) {
                     super.onBackPressed()
                 } else {
                     lectureFragment.clearInputSearch()
@@ -130,9 +131,5 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         })
         val fragmentManager = supportFragmentManager
         fragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
-    }
-
-    companion object {
-        private val LOG_TAG = MainActivity::class.java.simpleName
     }
 }
