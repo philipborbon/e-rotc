@@ -45,6 +45,7 @@
             android:name=".activity.AssessmentActivity"
             android:label="@string/title_activity_assessment_choice"
             android:parentActivityName=".activity.MainActivity"
+            android:configChanges="orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
