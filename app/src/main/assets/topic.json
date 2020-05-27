@@ -1,10 +1,66 @@
 [
   {
     "id": 1,
-    "name": "General"
+    "name": "Legal basis"
   },
   {
     "id": 2,
-    "name": "Topic 1"
+    "name": "Military Organization"
+  },
+  {
+    "id": 3,
+    "name": "INTERIOR GUARD DUTY"
+  },
+  {
+    "id": 4,
+    "name": "MCD"
+  },
+  {
+    "id": 5,
+    "name": "MILITARY CORRESPONDENCE"
+  },
+  {
+    "id": 6,
+    "name": "MILITARY LEADERSHIP"
+  },
+  {
+    "id": 7,
+    "name": "HUMAN RIGHTS"
+  },
+  {
+    "id": 8,
+    "name": "FIRST AID"
+  },
+  {
+    "id": 9,
+    "name": "MARKMANSHIP"
+  },
+  {
+    "id": 10,
+    "name": "BASIC SIGNAL COMMUNICATION"
+  },
+  {
+    "id": 11,
+    "name": "BASIC INTELLIGENCE"
+  },
+  {
+    "id": 12,
+    "name": "BASIC SURVIVAL"
+  },
+  {
+    "id": 13,
+    "name": "HYGIENE AND SANITATION"
+  },
+  {
+    "id": 14,
+    "name": "BASIC MAP READING"
+  },
+  {
+    "id": 15,
+    "name": "CIVIL MILITARY OPERATIONS (CMO)"
+  },
+  {
+    "id": 16,
+    "name": "RIFLE 5.56 MM M16A1"
   }
 ]
