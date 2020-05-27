@@ -5,6 +5,7 @@ import android.content.Intent
 import android.media.MediaPlayer
 import android.os.AsyncTask
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
@@ -57,6 +58,7 @@ class AssessmentActivity : AppCompatActivity() {
             val intent = Intent(this, LeaderboardActivity::class.java)
             startActivity(intent)
         }
+        label_question.movementMethod = ScrollingMovementMethod()
 
         topics = repository.getAllTopic()
         

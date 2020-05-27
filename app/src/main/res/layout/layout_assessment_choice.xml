@@ -171,6 +171,7 @@
                 android:textColor="@color/colorBlack"
                 android:text="@string/label_assessment"
                 android:visibility="gone"
+                android:scrollbars = "vertical"
                 tools:visibility="visible"
                 />
 
