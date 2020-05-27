@@ -2714,5 +2714,215 @@
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
+  },
+  {
+    "topicid": 14,
+    "question": "It is a graphic representation of earth's surface or part of it, drawn or formed in scale on a plane as seen from above.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Map"
+  },
+  {
+    "topicid": 14,
+    "question": "shows only horizontal (flat position of features);",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Planimetric"
+  },
+  {
+    "topicid": 14,
+    "question": "The outer edges of the map contain information which is used to interpret the map thus, users are to examine it first.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Marginal Information"
+  },
+  {
+    "topicid": 14,
+    "question": "What color does represent the majority of cultural or manmade feature in map.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Black"
+  },
+  {
+    "topicid": 14,
+    "question": "It illustrate and identifies the symbols used to depict the more prominent features in the map",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Legend"
+  },
+  {
+    "topicid": 14,
+    "question": "found at the center of the lower margin, rules used for the determination of ground distance.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Bar Scales"
+  },
+  {
+    "topicid": 14,
+    "question": "It represent the age of the map",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Edition Number"
+  },
+  {
+    "topicid": 14,
+    "question": "Usually found at the center in the upper margin and right side of the lower margin.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Sheet Name"
+  },
+  {
+    "topicid": 14,
+    "question": "The producers and reference method of compilation, revision, old and new identity.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Credit Note"
+  },
+  {
+    "topicid": 14,
+    "question": "What Color represents as the vegetation such as woods, orchards, and vineyard in the map.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Green"
+  },
+  {
+    "topicid": 14,
+    "question": "It state the vertical distance between adjacent contour lines on the map.",
+    "type": "multi-q",
+    "choices": ["Legend", "Contour Interval", "Grid Note", "Bar Scales"],
+    "answer": "Contour Interval"
+  },
+  {
+    "topicid": 14,
+    "question": "What Color does represent the main Roads, built-up areas, and special features.",
+    "type": "multi-q",
+    "choices": ["Black", "Blue", "Red", "Green"],
+    "answer": "Red"
+  },
+  {
+    "topicid": 14,
+    "question": "map_image006.jpg",
+    "type": "multi-i",
+    "choices": ["Terrain Model", "Topographic", "Joint Operation Graphic", "Special Map"],
+    "answer": "Terrain Model"
+  },
+  {
+    "topicid": 14,
+    "question": "It is a boundaries diagram which occur within the map area as country lines state and boundaries.",
+    "type": "multi-q",
+    "choices": ["Index to Boundaries", "Grid Note", "Index to Adjoining Sheet", "legend"],
+    "answer": "Index to Boundaries"
+  },
+  {
+    "topicid": 14,
+    "question": "map_image005.jpg",
+    "type": "multi-i",
+    "choices": ["Photomosaic", "Topographic", "Photomap", "Special Map"],
+    "answer": "Special Map"
+  },
+  {
+    "topicid": 14,
+    "question": "map_image003.jpg",
+    "type": "multi-i",
+    "choices": ["Photomosaic", "Topographic", "Photomap", "Special Map"],
+    "answer": "Photomap"
+  },
+  {
+    "topicid": 14,
+    "question": "Identifying the grid zone and 100,000-meter square in which the area is represented",
+    "type": "multi-q",
+    "choices": ["Index to Boundaries", "Grid Note", "Index to Adjoining Sheet", "Grid Reference Box"],
+    "answer": "Grid Reference Box"
+  },
+  {
+    "topicid": 14,
+    "question": "Found in the right upper margin serves as reference number based on arbitrary coordinate system and directional location.",
+    "type": "multi-q",
+    "choices": ["Index to Boundaries", "Sheet Number", "Sheet Name", "Series Name and Scale"],
+    "answer": "Sheet Number"
+  },
+  {
+    "topicid": 14,
+    "question": "map_image007.jpg",
+    "type": "multi-i",
+    "choices": ["Special Maps", "Joint Operations Graphic", "Photomap", "Plastic Relief"],
+    "answer": "Joint Operations Graphic"
+  },
+  {
+    "topicid": 14,
+    "question": "Found at the upper left margin, group of similar series map on the same scale, same sheet lines format, designed to cover a particular geographical area.",
+    "type": "multi-q",
+    "choices": ["Legend", "Edition Number", "Series Name and Scales", "Bar Scales"],
+    "answer": "Series Name and Scales"
+  },
+  {
+    "topicid": 14,
+    "question": "Blue represents water features such lakes, rivers, and swamps.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 14,
+    "question": "Index to Boundaries identifies the map sheets surrounding the map guided by index.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 14,
+    "question": "Vertical Datum Note It designates the basis for all vertical control stations and elevation appearing on the map.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 14,
+    "question": "Contour Interval indicates the angular relationships of the true north, grid north, and magnetic north.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 14,
+    "question": "Special Maps for special purposes such as trafficability maps, modified to accommodate information not covered on a standard map.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 14,
+    "question": "Topographic two dimensional which present the horizontal (flat) and vertical (relief) positions of the features represented;",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 14,
+    "question": "Brown represents all relief features such as contours.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 14,
+    "question": "Photomap is an assembly of aerial photograph to form a composite picture.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 14,
+    "question": "Map Scale has (3) Three Scale this are Small Scale, medium Scale, and Large Scale.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 14,
+    "question": "Planimetric is a graphic representation of earth's surface or part of it, drawn or formed in scale on a plane as seen from above.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
   }
 ]
