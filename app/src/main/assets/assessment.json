@@ -1874,5 +1874,215 @@
     "type": "tof",
     "choices": null,
     "answer": "FALSE"
+  },
+  {
+    "topicid": 10,
+    "question": "One of the oldest and most reliable method of transmitting intelligence. This is the most secured means of communication.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Messenger"
+  },
+  {
+    "topicid": 10,
+    "question": "another means of physical communication.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Mail"
+  },
+  {
+    "topicid": 10,
+    "question": "one of the most efficient trained animals in the field of communication.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Trained Animal"
+  },
+  {
+    "topicid": 10,
+    "question": "The bulk our communications worn always are carried by telecommunication.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Telecommunication means"
+  },
+  {
+    "topicid": 10,
+    "question": "It is the principal means of communication in many tactical units.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Radio"
+  },
+  {
+    "topicid": 10,
+    "question": "one of the principal means of communication and includes the use of field wire, cable assemblies, wire laying and recovery, sound powered and battery-operated telephone, switchboard, typewriter and associated equipment.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Wire"
+  },
+  {
+    "topicid": 10,
+    "question": "This is a supplementary means of communication that is available to all units.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Sound"
+  },
+  {
+    "topicid": 10,
+    "question": "communication are means available to all units and used for transmitting (a combination of audio) as well as recognition of friendly forces among the medium use for this particular means of communication.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Visual"
+  },
+  {
+    "topicid": 10,
+    "question": "Medium by which communication is conveyed from one person or place or another.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Basic signal Communication"
+  },
+  {
+    "topicid": 10,
+    "question": "Is a method or means of conveying information from one person or place top another except by direct conversation.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Signal Communication"
+  },
+  {
+    "topicid": 10,
+    "question": "This is the though or idea that the originator wishes to express.",
+    "type": "multi-q",
+    "choices": ["Message", "Body", "Brevity", "Standing operation of Procedure"],
+    "answer": "Body"
+  },
+  {
+    "topicid": 10,
+    "question": "Is a though or idea, express in brief, in plain or secret language and prepare in a form suitable or transmission by any means of communication.",
+    "type": "multi-q",
+    "choices": ["Message", "Body", "Brevity", "Standing operation of Procedure"],
+    "answer": "Message"
+  },
+  {
+    "topicid": 10,
+    "question": "What is U in Phonetic Alphabet?",
+    "type": "multi-q",
+    "choices": ["UNIVERSITY", "UNATTENDED", "UNNIE", "UNIFORM"],
+    "answer": "UNIFORM"
+  },
+  {
+    "topicid": 10,
+    "question": "Is a set of instructions covering features of operation which lend themselves to a definite or standardized procedure.",
+    "type": "multi-q",
+    "choices": ["Message", "Body", "Brevity", "Standing operation of Procedure"],
+    "answer": "Standing operation of Procedure"
+  },
+  {
+    "topicid": 10,
+    "question": "What is F in Phonetic Alphabet?",
+    "type": "multi-q",
+    "choices": ["FRUIT", "FLAMINGO", "FOXTROT", "FAN"],
+    "answer": "FOXTROT"
+  },
+  {
+    "topicid": 10,
+    "question": "The following are advantages of Visual except one.",
+    "type": "multi-q",
+    "choices": ["suitable for short pre-arranged message", "suitable for short distance", "vulnerable to interception", "does not require sophisticated installation"],
+    "answer": "vulnerable to interception"
+  },
+  {
+    "topicid": 10,
+    "question": "What is A in the Phonetic Alphabet?",
+    "type": "multi-q",
+    "choices": ["APPLE", "ALPHA", "ABS", "ALPHE"],
+    "answer": "ALPHA"
+  },
+  {
+    "topicid": 10,
+    "question": "The following are advantages of Radio except one.",
+    "type": "multi-q",
+    "choices": ["Speed of Installation", "Integrated with wire", "Flexibility", "Least Secured"],
+    "answer": "Least Secured"
+  },
+  {
+    "topicid": 10,
+    "question": "The text of a message should be clear accurate and brief.",
+    "type": "multi-q",
+    "choices": ["Message", "Body", "Brevity", "Standing operation of Procedure"],
+    "answer": "Brevity"
+  },
+  {
+    "topicid": 10,
+    "question": "Is a facility which embraces the personnel and equipment necessary to provide signal communication by any particular means of combination thereof.",
+    "type": "multi-q",
+    "choices": ["Office of the President", "ALPHA Agency", "School Office", "Agency of signal Communication"],
+    "answer": "Agency of signal Communication"
+  },
+  {
+    "topicid": 10,
+    "question": "Transmit only when necessary or emergency. Is Part of Tactical Applications.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 10,
+    "question": "Messenger this is by mail forwarding of messages by an established postal system.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 10,
+    "question": "The word telecommunication is derived from the Greek combining far, for off or broadly, operating at a distance.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 10,
+    "question": "Signal communication Is a method or means of conveying information from one person or place top another except by direct conversation.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 10,
+    "question": "Wire They are used chiefly to attract attention, pre-arranged message, and speed alarm.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 10,
+    "question": "Messenger may be classified as to type of service into special and scheduled messenger service, as to made of transport into motor, foot, or air relative rate of speed.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 10,
+    "question": "Vulnerable to interception, subject to initiative deception, and stations depend on the line of sight location are advantages of Visual.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 10,
+    "question": "Sound signal are transmitted by WHISTLES, BUGLES, HORNS, GONGS, KLAXONS, WEAPON and other noise making devices.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 10,
+    "question": "Trained Animal one of the most efficient trained animals in the field of communication.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 10,
+    "question": "C in Phonetic Alphabet means CHARLIE.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
   }
 ]
