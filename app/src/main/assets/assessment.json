@@ -1454,5 +1454,215 @@
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
+  },
+  {
+    "topicid": 8,
+    "question": "Immediate treatment administered to a victim of injury or illness before the services of a doctor or corpsman can be obtained.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "First Aid"
+  },
+  {
+    "topicid": 8,
+    "question": "If a casualty stops breathing you must give artificial respiration immediately. This is?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Restore Breathing"
+  },
+  {
+    "topicid": 8,
+    "question": "Results from scraping (abrading) the skin. Bleeding is minimal and limited to ruptured small veins and capillaries.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Abrasions"
+  },
+  {
+    "topicid": 8,
+    "question": "Cuts, commonly caused by sharp objects the degree of bleeding depends on the deep and extent of a cut.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Incised Wound"
+  },
+  {
+    "topicid": 8,
+    "question": "Jagged, irregular or blunt breaks or tears in the skin. The destruction of tissues is greater in.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Lacerated Wound"
+  },
+  {
+    "topicid": 8,
+    "question": "irregularly caused by pointed objects such as pin, icepick, nails and splinters. - external bleeding is usually minor, but the fracturing object may penetrate deeply into the body and thus damage organs and cause severe internal bleeding.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Fracture wound"
+  },
+  {
+    "topicid": 8,
+    "question": "Involve forcible separation or tearing or tissue from the victims’ body. commonly caused by animal’s bites and accidents involving motor vehicles and heavy machinery.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Avulsions"
+  },
+  {
+    "topicid": 8,
+    "question": "It is a continuation of blood flowing from the wounds.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Bleeding"
+  },
+  {
+    "topicid": 8,
+    "question": "The healing process is delayed by infection.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Infections"
+  },
+  {
+    "topicid": 8,
+    "question": "Any break in the continuity of the skin/tissue of the body.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Wound"
+  },
+  {
+    "topicid": 8,
+    "question": "There is a break in the skin or mucus membrane.",
+    "type": "multi-q",
+    "choices": ["Close Fracture", "Open Wound", "Close Wound", "Fracture"],
+    "answer": "Open Wound"
+  },
+  {
+    "topicid": 8,
+    "question": "Involves underlying tissues without a break in the skin or mucus Membrane.",
+    "type": "multi-q",
+    "choices": ["Close Fracture", "Open Wound", "Close Wound", "Fracture"],
+    "answer": "Close Wound"
+  },
+  {
+    "topicid": 8,
+    "question": "No break in the continuity or no injury to the skin. It is free from air and infection.",
+    "type": "multi-q",
+    "choices": ["Close Fracture", "Open Wound", "Close Wound", "Fracture"],
+    "answer": "Close Fracture"
+  },
+  {
+    "topicid": 8,
+    "question": "One in which, there is wound communicating with the broken ends of the bone is broken into more than two (2) pieces.",
+    "type": "multi-q",
+    "choices": ["Close Fracture", "Open Wound", "Close Wound", "Open Fracture"],
+    "answer": "Open Fracture"
+  },
+  {
+    "topicid": 8,
+    "question": "Has elliptical eyes and leave two (2) fang marked.",
+    "type": "multi-q",
+    "choices": ["Close Fracture", "Poisonous Snake Bite", "Non- Poisonous Snake Bite", "Open Fracture"],
+    "answer": "Poisonous Snake Bite"
+  },
+  {
+    "topicid": 8,
+    "question": "Has around eyes and single fang marked.",
+    "type": "multi-q",
+    "choices": ["Close Fracture", "Poisonous Snake Bite", "Non- Poisonous Snake Bite", "Open Fracture"],
+    "answer": "Non- Poisonous Snake Bite"
+  },
+  {
+    "topicid": 8,
+    "question": "Involve the superficial layer of the skin, healing occurs rapidly. It is redness, swelling and pain.",
+    "type": "multi-q",
+    "choices": ["First Degree Burns", "Second Degree Burns", "Third Degree Burns", "Fourth Degree Burns"],
+    "answer": "First Degree Burns"
+  },
+  {
+    "topicid": 8,
+    "question": "Involve complete loss of all layers of the skin.",
+    "type": "multi-q",
+    "choices": ["First Degree Burns", "Second Degree Burns", "Third Degree Burns", "Fourth Degree Burns"],
+    "answer": "Third Degree Burns"
+  },
+  {
+    "topicid": 8,
+    "question": "Deeper than first degree burns, blister formation, considerable swelling, more painful because the nerve ending is destroyed in 3rd degree burns.",
+    "type": "multi-q",
+    "choices": ["First Degree Burns", "Second Degree Burns", "Third Degree Burns", "Fourth Degree Burns"],
+    "answer": "Second Degree Burns"
+  },
+  {
+    "topicid": 8,
+    "question": "An injury that result from heat, chemical agents or radiation.",
+    "type": "multi-q",
+    "choices": ["Fracture", "Bite", "Wounds", "Burns"],
+    "answer": "Burns"
+  },
+  {
+    "topicid": 8,
+    "question": "Poisoning is any substance solid, liquid or gas that tends to impair health and it cause death when introduced into the body.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 8,
+    "question": "Mouth to mouth (nose) method is the standard method of artificial respiration are the mouth-to-mouth, the chest pressure and back pressure arm lift methods",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 8,
+    "question": "Cardiopulmonary resuscitation this is a life-support technique that is used in a medical emergency when the victim is not breathing and when it is possible that his heart has stopped beating.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 8,
+    "question": "The mouth-to-mouth (also mouth to nose) method is considered to be more effective and reliable. In restoring to this method, a first aider should follow certain steps or procedures",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 8,
+    "question": "Hyperventilation where muscles undergo marked spasm and would totally incapacitates a swimmer because of severe pain.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 8,
+    "question": "Cramps gives excessive deep breathing of the lungs before swimming under water, the carbon dioxide concentration of the blood is lowered by the forced exhaling of air during deep breathing.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 8,
+    "question": "Drowning is an aspiration of fluids or obstruction of the airway caused by spasm of the larynx in the water.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 8,
+    "question": "There are two primary methods for administering artificial respiration.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 8,
+    "question": "Compound or Open Fracture and Simple or Close Fracture are the two classes of Fracture.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 8,
+    "question": "Mouth-to-Mouth Method the same procedure was made or should be done. But instead of mouth, close his nose with your thumb and fore finger.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
   }
 ]
