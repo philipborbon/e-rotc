@@ -18,7 +18,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.erotc.learning.R
 import com.erotc.learning.activity.ViewTutorialActivity
 import com.erotc.learning.adapter.TutorialAdapter
-import com.erotc.learning.data.Topic
 import com.erotc.learning.data.Tutorial
 import com.erotc.learning.repository.LearnRepository
 import kotlinx.android.synthetic.main.fragment_tutorial.*
@@ -28,9 +27,6 @@ import kotlinx.android.synthetic.main.fragment_tutorial.*
  */
 class TutorialFragment : Fragment() {
     private lateinit var learnRepository: LearnRepository
-
-    private lateinit var topicList: List<Topic>
-    private lateinit var topicMap: Map<Long, Topic>
 
     private var resultList: List<Tutorial>? = null
     private var lectureAdapter: TutorialAdapter? = null
@@ -63,22 +59,9 @@ class TutorialFragment : Fragment() {
         val activity = activity ?: return
 
         learnRepository = LearnRepository.getInstance(activity)
-        topicList = learnRepository.getAllTopic()
-
-        buildTopicMap()
 
         initRecyclerView()
         hideNoResults()
-    }
-
-    private fun buildTopicMap(){
-        val map = mutableMapOf<Long, Topic>()
-
-        topicList.forEach { topic ->
-            map[topic.id] = topic
-        }
-
-        topicMap = map
     }
 
     private fun initRecyclerView() {
@@ -117,7 +100,7 @@ class TutorialFragment : Fragment() {
             }
 
             override fun onPostExecute(aVoid: Void?) {
-                lectureAdapter?.setDataList(attachTopic(resultList))
+                lectureAdapter?.setDataList(resultList ?: arrayListOf())
                 lectureAdapter?.notifyDataSetChanged()
 
                 if (resultList?.size ?: 0 == 0) {
@@ -161,7 +144,7 @@ class TutorialFragment : Fragment() {
             }
 
             override fun onPostExecute(aVoid: Void?) {
-                lectureAdapter?.setDataList(attachTopic(resultList))
+                lectureAdapter?.setDataList(resultList ?: arrayListOf())
                 lectureAdapter?.notifyDataSetChanged()
 
                 if (resultList?.size ?: 0 == 0) {
@@ -173,23 +156,6 @@ class TutorialFragment : Fragment() {
         }
         task.execute()
         previousTask = task
-    }
-
-    private fun attachTopic(list: List<Tutorial>?): List<Any?> {
-        val combinedList = mutableListOf<Any?>()
-
-        var prevTopicId: Long = -1
-        list?.forEach { lecture ->
-            if (lecture.topicid != prevTopicId) {
-                prevTopicId = lecture.topicid
-                val topic = topicMap[lecture.topicid]
-                combinedList.add(topic)
-            }
-
-            combinedList.add(lecture)
-        }
-
-        return combinedList
     }
 
     private fun showNoResults() {
@@ -216,8 +182,6 @@ class TutorialFragment : Fragment() {
     }
 
     companion object {
-        private val LOG_TAG = TutorialFragment::class.java.simpleName
-
         fun newInstance(): TutorialFragment {
             return TutorialFragment()
         }

@@ -1,14 +1,10 @@
 [
   {
-    "topicid": 1,
     "title": "Sample Video 1",
-    "description": "Awesome",
     "file": "sample.mp4"
   },
   {
-    "topicid": 2,
     "title": "Sample Video 2",
-    "description":  "More Awesome description",
     "file": "sample.mp4"
   }
 ]

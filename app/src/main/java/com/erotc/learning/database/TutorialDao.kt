@@ -16,7 +16,7 @@ interface TutorialDao {
     @Query("SELECT COUNT(*) FROM tutorial")
     fun countOf(): Int
 
-    @Query("SELECT * FROM tutorial WHERE title LIKE :keyword OR description LIKE :keyword ORDER BY title")
+    @Query("SELECT * FROM tutorial WHERE title LIKE :keyword LIKE :keyword ORDER BY title")
     fun search(keyword: String): List<Tutorial>
 
     @Insert
@@ -25,6 +25,6 @@ interface TutorialDao {
     @Insert
     fun create(tutorials: List<Tutorial>): List<Long>
 
-    @Query("SELECT v.* FROM tutorial v INNER JOIN topic t ON v.topicid = t.id ORDER BY t.sort, v.sort")
+    @Query("SELECT * FROM tutorial ORDER BY sort")
     fun getAll(): List<Tutorial>
 }
