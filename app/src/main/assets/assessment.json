@@ -2241,14 +2241,14 @@
   },
   {
     "topicid": 11,
-    "question": "Military Security – is consists of collection, evaluation, interpretation and dissemination of information pertaining to possible or actual enemy operation.",
+    "question": "Military Security - is consists of collection, evaluation, interpretation and dissemination of information pertaining to possible or actual enemy operation.",
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
   },
   {
     "topicid": 11,
-    "question": "Intelligence cycle- Is a study in which phase is considered first information or intelligence can be inserted in any phase as appropriate. The intel Cycle has no beginning and no end.",
+    "question": "Intelligence cycle - is a study in which phase is considered first information or intelligence can be inserted in any phase as appropriate. The intel Cycle has no beginning and no end.",
     "type": "tof",
     "choices": null,
     "answer": "FALSE"
