@@ -208,5 +208,208 @@
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
+  },
+  {
+    "topicid": 2,
+    "question": "Uphold the sovereignty, support the Constitution and defend the territory of the country this is?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Function"
+  },
+  {
+    "topicid": 2,
+    "question": "What is the vision of the Philippine army?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Serving the people securing the Land"
+  },
+  {
+    "topicid": 2,
+    "question": "Consists of all standing forces and such number of reserve officers and reservist units.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Regular"
+  },
+  {
+    "topicid": 2,
+    "question": "Through him, the President issues orders to all AFP Commanders.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Chief of Staff of AFP"
+  },
+  {
+    "topicid": 2,
+    "question": "To defend the Republic of the Philippines, safeguards its national security, and to assist government agencies in the socio-economic development of the country.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Mission"
+  },
+  {
+    "topicid": 2,
+    "question": "This is one of AFP Major Services that protect and sustained in the sea?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Navy"
+  },
+  {
+    "topicid": 2,
+    "question": "This is one of AFP Major Services that protect and sustained in the land",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Army"
+  },
+  {
+    "topicid": 2,
+    "question": "What is the AFP Major Services?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Navy, Army, Air Force"
+  },
+  {
+    "topicid": 2,
+    "question": "Who is the Secretary of national Defense?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Sec, Delfin N Lorenzana"
+  },
+  {
+    "topicid": 2,
+    "question": "A mission to organize, train, and equip army forces for the conduct of prompt and sustained land combat?",
+    "type": "multi-q",
+    "choices": ["AFP", "PA", "PN", "PAF"],
+    "answer": "PA"
+  },
+  {
+    "topicid": 2,
+    "question": "A mission to organize, train, and equip the air combat?",
+    "type": "multi-q",
+    "choices": ["AFP", "PA", "PN", "PAF"],
+    "answer": "PAF"
+  },
+  {
+    "topicid": 2,
+    "question": "A mission to organize, train, and equip naval forces for the naval combat?",
+    "type": "multi-q",
+    "choices": ["AFP", "PA", "PN", "PAF"],
+    "answer": "PN"
+  },
+  {
+    "topicid": 2,
+    "question": "To uphold the sovereignty, support the Constitution and defend the republic against all enemies, foreign and domestic?",
+    "type": "multi-q",
+    "choices": ["AFP", "PA", "PN", "PAF"],
+    "answer": "AFP"
+  },
+  {
+    "topicid": 2,
+    "question": "A Philippine Army unit that serve for the reservist and retiree affairs?",
+    "type": "multi-q",
+    "choices": ["Combat unit", "AFP", "ARESCOM", "Philippine navy"],
+    "answer": "ARESCOM"
+  },
+  {
+    "topicid": 2,
+    "question": "Who is the Commanding General of Philippine Army?",
+    "type": "multi-q",
+    "choices": ["LIUETENANT GENERAL MACAIROG S ALBERTO AFP", "GENERAL MACAIROG S ALBERTO AFP", "LIUETENANT GENERAL MACAIROG S ALBERTO", "LIUETENANT MACAIROG S ALBERTO AFP"],
+    "answer": "LIUETENANT GENERAL MACAIROG S ALBERTO"
+  },
+  {
+    "topicid": 2,
+    "question": "What is OJ3 in joint coordinating staff of AFP?",
+    "type": "multi-q",
+    "choices": ["intelligence", "CMO", "OPERATIONS", "Logistics"],
+    "answer": "OPERATIONS"
+  },
+  {
+    "topicid": 2,
+    "question": "Which is not belong to the joint coordinating staff of AFP?",
+    "type": "multi-q",
+    "choices": ["Logistics", "ENGINEERING", "Operations", "Intelligence"],
+    "answer": "ENGINEERING"
+  },
+  {
+    "topicid": 2,
+    "question": "Who is the commander in Chief of AFP?",
+    "type": "multi-q",
+    "choices": ["RODRIGO DUTERTE", "HIS EXCELLENCY PRESIDENT RODRIGO ROA DUTERTE", "Pres, RODRIGO ROA", "PRESIDENT RODRIGO DUTERTE"],
+    "answer": "HIS EXCELLENCY PRESIDENT RODRIGO ROA DUTERTE"
+  },
+  {
+    "topicid": 2,
+    "question": "Which is not belong to AFP Major Services",
+    "type": "multi-q",
+    "choices": ["PAGASA", "PA", "PAF", "PN"],
+    "answer": "PAGASA"
+  },
+  {
+    "topicid": 2,
+    "question": "Secretary of National Defense is part of AFP Organization?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 2,
+    "question": "RCDG is known as regional Community Defense Center?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 2,
+    "question": "BRIGADEIR GENERAL BERNIE S LANGUB AFP is the commanding General of ARESCOM?",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 2,
+    "question": "Lt. Nisperos is the First Philippine Airforce Pilot?",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 2,
+    "question": "Our President Rodrigo Roa Duterte is also the Commander in Chief of the AFP?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 2,
+    "question": "LIUETENANT GENERAL MACAIROG S ALBERTO AFP is the Commanding General of Philippine Army?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 2,
+    "question": "MAJOR GENERAL JESUS B SARSAGAT AFP is the Chief of staff of AFP?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 2,
+    "question": "The Mission of AFP is Serving the people, securing the land.?",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 2,
+    "question": "To defend the Republic of the Philippines, safeguards its national security, and to assist government agencies in the socio-economic development of the country. Is the AFP Vision?",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 2,
+    "question": "Uphold the sovereignty, support the Constitution and defend the territory of the country. Is one of the Function of AFP?",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
   }
 ]
