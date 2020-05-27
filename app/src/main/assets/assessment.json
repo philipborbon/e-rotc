@@ -411,5 +411,215 @@
     "type": "tof",
     "choices": null,
     "answer": "FALSE"
+  },
+  {
+    "topicid": 3,
+    "question": "Consist of a systems patrols and fixed posts",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Main Guard"
+  },
+  {
+    "topicid": 3,
+    "question": "In order to preserve, protect property and enforce military regulations in all military installations, the interior guard system is installed by the commanders.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Interior Guard Duty"
+  },
+  {
+    "topicid": 3,
+    "question": "a secret word or sound used to answer the challenge.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Password"
+  },
+  {
+    "topicid": 3,
+    "question": "TO TAKE CHARGE OF THIS POST AND ALL GOVERNMENT PROPERTY IN VIEW. Is what GO?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "1|GO1"
+  },
+  {
+    "topicid": 3,
+    "question": "extra member of the guard.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Supernumenary"
+  },
+  {
+    "topicid": 3,
+    "question": "a special password used as a check on the countersign.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Parole"
+  },
+  {
+    "topicid": 3,
+    "question": "TO TALK TO NO ONE EXCEPT IN LINE OF DUTY. Is what GO?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "7|GO7"
+  },
+  {
+    "topicid": 3,
+    "question": "TO GIVE ALARM IN CASE OF FIRE OR DISORDER.Is what GO?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "8|GO8"
+  },
+  {
+    "topicid": 3,
+    "question": "Requires a band and is held in the parade ground of the unit from which the guards are detailed.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "FORMAL GUARD MOOUNTING"
+  },
+  {
+    "topicid": 3,
+    "question": "TO REPEAT ALL CALLS FROM POST MORE DISTANCE FROM THE GUARD HOUSE THAN MY OWN. Is what GO?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "4|GO4"
+  },
+  {
+    "topicid": 3,
+    "question": "a secret challenge and a password issued by higher headquarters to ensure scrutiny of acceptable persons to pass the lines.",
+    "type": "multi-q",
+    "choices": ["Password", "Countersign", "Challenge", "Parole"],
+    "answer": "Countersign"
+  },
+  {
+    "topicid": 3,
+    "question": "\"halt who is there\" or a secret challenge in words or sounds.",
+    "type": "multi-q",
+    "choices": ["Challenge", "Sergeant of the guard (SOG)", "Parole", "Password"],
+    "answer": "Password"
+  },
+  {
+    "topicid": 3,
+    "question": "This is held in the parade ground of the unit from which the guards are detailed.",
+    "type": "multi-q",
+    "choices": ["Special orders", "Sergeant of the guard (SOG)", "Parole", "Informal Guard Mounting"],
+    "answer": "Informal Guard Mounting"
+  },
+  {
+    "topicid": 3,
+    "question": "TO SALUTE ALL OFFICERS AND COLORS IN STANDARD NOT CASE.",
+    "type": "multi-q",
+    "choices": ["GO1", "GO11", "GO7", "GO10"],
+    "answer": "GO10"
+  },
+  {
+    "topicid": 3,
+    "question": "specified area for which the assigned guard is responsible.",
+    "type": "multi-q",
+    "choices": ["Guard’s Post", "GO11", "Parole", "Password"],
+    "answer": "Guard’s Post"
+  },
+  {
+    "topicid": 3,
+    "question": "TO REPORT ALL VIOLATION OF ORDERS I AM INSTRUCTED TO ENFORCE.",
+    "type": "multi-q",
+    "choices": ["GO11", "GO2", "GO3", "GO5"],
+    "answer": "GO3"
+  },
+  {
+    "topicid": 3,
+    "question": "an officer acting directly under the CO. he is responsible for the execution of all orders and other duties on a given day.",
+    "type": "multi-q",
+    "choices": ["Relief Commander", "Supernumenary", "Commander guard of the day", "Parole"],
+    "answer": "Commander guard of the day"
+  },
+  {
+    "topicid": 3,
+    "question": "TO WALK MY POST IN MILITARY MANNER KEEPING ALWAYS ON THE ALERT AND OBSERVING EVRYTHING THAT TAKES PLACE WITH SIGHT AND HEARING.",
+    "type": "multi-q",
+    "choices": ["GO2", "GO3", "GO6", "GO9"],
+    "answer": "GO2"
+  },
+  {
+    "topicid": 3,
+    "question": "TO CALL THE COMMANDER OF THE RELIEF IN ANY CASE NOT COVERED BY INSTRUCTION.",
+    "type": "multi-q",
+    "choices": ["GO11", "GO7", "GO4", "GO9"],
+    "answer": "GO9"
+  },
+  {
+    "topicid": 3,
+    "question": "Generally in combat zone or outside permanent military installations such as lookouts, listening post etc.",
+    "type": "multi-q",
+    "choices": ["External Guard Duty", "Main Guard", "Special Guard", "Interior Guard"],
+    "answer": "External Guard Duty"
+  },
+  {
+    "topicid": 3,
+    "question": "RELIEF COMMANDERS (RC) is the senior non-commission officer?",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 3,
+    "question": "TO BE SPECIALY WATCHFUL AT NIGHT DURING THE TIME OF CHALLENGING AND TO CHALLENGE ALL PERSONS ON OR NEAR MY POST AND TO ALLOW NO ONE TO PASS WITHOUT PROPER AUTHORITY. Is GO 11?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 3,
+    "question": "SPECIAL ORDERS – orders given to a particular guard in a particular post, orders carefully tailored for a specific post, time measured, easily off or on and for a short time.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 3,
+    "question": "TO RECEIVE, OBEY AND PASS ON THE SENTINNEL WHO RELIEFS ME ALL ORDERS FROM COMMANDING OFFICER, OFFICER OF THE DAY AND NON-COMMISSIONED OFFICER OF THE GUARD ONLY. Is GO7?",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 3,
+    "question": "SPECIAL GUARDS is for special security purposes?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 3,
+    "question": "The two types of Guard Duties are Interior Guard Duty and Main Guard?",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 3,
+    "question": "The extra member of the guard is called SUPERNUMENARY?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 3,
+    "question": "COUNTERSIGNS AND PAROLE WORDS is the CO directs this and ensure that any person in time of war who discloses the countersigns or parole to any person not entitled to received shall be punished with death or such punishment that the court-marital may direct (Military Justice Art.101)?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 3,
+    "question": "Challenge is a secret word or sound used to answer the challenge?",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 3,
+    "question": "INTERIOR GUARD DUTY in which will be the focused?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
   }
 ]
