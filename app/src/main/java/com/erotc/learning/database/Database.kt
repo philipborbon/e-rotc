@@ -14,7 +14,7 @@ import com.erotc.learning.data.*
     Tutorial::class,
     Assessment::class,
     Leaderboard::class
-], version = 2)
+], version = 3)
 @TypeConverters(Converter::class)
 abstract class Database : RoomDatabase() {
     abstract fun topicDao(): TopicDao

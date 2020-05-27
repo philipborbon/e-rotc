@@ -1,72 +1,212 @@
 [
   {
     "topicid": 1,
-    "question": "Are you awesome?",
+    "question": "An Act establishing the national service training program (NSTP) for tertiary level students?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "RA 9163"
+  },
+  {
+    "topicid": 1,
+    "question": "An act providing for the development, administration, organization, training, maintenance and utilization of the Citizen Armed Forces of the Philippines.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Reservist Act of 1991"
+  },
+  {
+    "topicid": 1,
+    "question": "To train students to teach literacy and numeracy skills to school children, out-of-school youth and other segments in society.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "LTS"
+  },
+  {
+    "topicid": 1,
+    "question": "To train students to extend services in the community in the area of health, education, environment, safety, recreation and other social welfare services.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "CWTS"
+  },
+  {
+    "topicid": 1,
+    "question": "For the Cadets to be indoctrinated and equipped with the basic knowledge on fundamentals and principles of military training in tertiary level.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "ROTC"
+  },
+  {
+    "topicid": 1,
+    "question": "Also known as the citizen armed forces of the Philippines.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "RA 7077"
+  },
+  {
+    "topicid": 1,
+    "question": "Its mission is to provide base of expansion of the AFP and perform active military, civic and auxiliary services in the areas of maintaining law, operations, peace and order and socio-economic development.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Reserve Force"
+  },
+  {
+    "topicid": 1,
+    "question": "Literacy Training Service stands for?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "LTS"
+  },
+  {
+    "topicid": 1,
+    "question": "Reserve officer Training Corps stands for?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "ROTC"
+  },
+  {
+    "topicid": 1,
+    "question": "Civic Welfare Training Service stands for?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "CWTS"
+  },
+  {
+    "topicid": 1,
+    "question": "The following are the components of NSTP except?",
+    "type": "multi-q",
+    "choices": ["ROTC", "LTS", "CWTS", "AIR FORCE"],
+    "answer": "AIR FORCE"
+  },
+  {
+    "topicid": 1,
+    "question": "For the Cadets to be indoctrinated and equipped with the basic knowledge on fundamentals and principles of military training in tertiary level.",
+    "type": "multi-q",
+    "choices": ["ROTC", "LTS", "CWTS", "Navy"],
+    "answer": "ROTC"
+  },
+  {
+    "topicid": 1,
+    "question": "To train students to extend services in the community in the area of health, education, environment, safety, recreation and other social welfare services.",
+    "type": "multi-q",
+    "choices": ["ROTC", "LTS", "CWTS", "AFP"],
+    "answer": "CWTS"
+  },
+  {
+    "topicid": 1,
+    "question": "To train students to teach literacy and numeracy skills to school children, out-of-school youth and other segments in society.",
+    "type": "multi-q",
+    "choices": ["ROTC", "LTS", "CWTS", "AFP"],
+    "answer": "LTS"
+  },
+  {
+    "topicid": 1,
+    "question": "The following are the categorization of the reserve Force except in one",
+    "type": "multi-q",
+    "choices": ["Ready Reserve", "Retired Reserve", "Standby Reserve", "For Reserve"],
+    "answer": "For Reserve"
+  },
+  {
+    "topicid": 1,
+    "question": "Aimed at enhancing civic consciousness and defense preparedness in the youth by developing the ethics of service and patriotism by undergoing.",
+    "type": "multi-q",
+    "choices": ["ROTC", "LTS", "CWTS", "NSTP"],
+    "answer": "NSTP"
+  },
+  {
+    "topicid": 1,
+    "question": "It is an Act establishing the national service training program (NSTP) for tertiary level students?",
+    "type": "multi-q",
+    "choices": ["RA 7077", "RA 4962", "RA 9163", "RA 1991"],
+    "answer": "RA 9163"
+  },
+  {
+    "topicid": 1,
+    "question": "It is an act providing for the development, administration, organization, training, maintenance and utilization of the Citizen Armed Forces of the Philippines.",
+    "type": "multi-q",
+    "choices": ["RA 7077", "RA 4962", "RA 9163", "RA 1991"],
+    "answer": "RA 1991"
+  },
+  {
+    "topicid": 1,
+    "question": "The Ranks of Members of the Reserve Force maybe upgraded if they voluntarily participate in the training or serve with the ready Reserve units.",
+    "type": "multi-q",
+    "choices": ["RA 7077", "Art V. Section 13-14 R.A 7077", "RA 9163", "RA 1991"],
+    "answer": "Art V. Section 13-14 R.A 7077"
+  },
+  {
+    "topicid": 1,
+    "question": "Its mission is to provide base of expansion of the AFP and perform active military, civic and auxiliary services.",
+    "type": "multi-q",
+    "choices": ["AFP", "NAVY", "Reserve Command", "Reserve Force"],
+    "answer": "Reserve Force"
+  },
+  {
+    "topicid": 1,
+    "question": "ROTC is one of the Components of NSTP?",
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
   },
   {
     "topicid": 1,
-    "question": "Are you awesome?",
-    "type": "fill-q",
+    "question": "26 Hours must spend off camp or activities outside the camp or training sites are on of the Regulations of NSTP Law.",
+    "type": "tof",
     "choices": null,
-    "answer": "Yes"
+    "answer": "TRUE"
   },
   {
     "topicid": 1,
-    "question": "w3schools.jpg",
-    "type": "fill-i",
+    "question": "There are three (3) Categorization in the Reserve Force.",
+    "type": "tof",
     "choices": null,
-    "answer": "School"
+    "answer": "TRUE"
   },
   {
     "topicid": 1,
-    "question": "Are you awesome?",
-    "type": "multi-q",
-    "choices": ["Yes", "No", "I don't know"],
-    "answer": "Yes"
+    "question": "Art V. Section 13-14 R.A 7077 States: The Ranks of Members of the Reserve Force maybe upgraded if they voluntarily participate in the training or serve with the ready Reserve units.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
   },
   {
     "topicid": 1,
-    "question": "w3schools.jpg",
-    "type": "multi-i",
-    "choices": ["School", "CSS", "OK"],
-    "answer": "School"
-  },
-  {
-    "topicid": 2,
-    "question": "Are you awesome?",
+    "question": "NSTP, CWTS, LTS, and ROTC are the components of NSTP",
     "type": "tof",
     "choices": null,
     "answer": "FALSE"
   },
   {
-    "topicid": 2,
-    "question": "Are you awesome?",
-    "type": "fill-q",
+    "topicid": 1,
+    "question": "ROTC to train students to teach literacy and numeracy skills to school children, out-of-school youth and other segments in society.",
+    "type": "tof",
     "choices": null,
-    "answer": "No"
+    "answer": "FALSE"
   },
   {
-    "topicid": 2,
-    "question": "w3schools.jpg",
-    "type": "fill-i",
+    "topicid": 1,
+    "question": "LTS is to train students to extend services in the community in the area of health, education, environment, safety, recreation and other social welfare services.",
+    "type": "tof",
     "choices": null,
-    "answer": "CSS"
+    "answer": "FALSE"
   },
   {
-    "topicid": 2,
-    "question": "Are you awesome?",
-    "type": "multi-q",
-    "choices": ["Yes", "No", "I don't know"],
-    "answer": "No"
+    "topicid": 1,
+    "question": "CWTS are for Cadets to be indoctrinated and equipped with the basic knowledge on fundamentals and principles of military training in tertiary level.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
   },
   {
-    "topicid": 2,
-    "question": "w3schools.jpg",
-    "type": "multi-i",
-    "choices": ["School", "CSS", "OK"],
-    "answer": "CSS"
+    "topicid": 1,
+    "question": "Army, Air Force, Navy Reserve Components, the AFP-Wide Technical Reserve and the Affiliated Reserves are the component of RA 7077",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 1,
+    "question": "NSTP Aimed at enhancing civic consciousness and defense preparedness in the youth by developing the ethics of service and patriotism by undergoing.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
   }
 ]
