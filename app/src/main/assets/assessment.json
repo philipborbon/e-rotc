@@ -3134,5 +3134,208 @@
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
+  },
+  {
+    "topicid": 16,
+    "question": "Sealing the cartridge in the chamber.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Locking"
+  },
+  {
+    "topicid": 16,
+    "question": "Unsealing the breach of the barrel.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Unlocking"
+  },
+  {
+    "topicid": 16,
+    "question": "Removing the empty cartridge from the weapon.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Extracting"
+  },
+  {
+    "topicid": 16,
+    "question": "Returning the firing mechanism to cock position.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Cocking"
+  },
+  {
+    "topicid": 16,
+    "question": "Removing the empty cartridge from the weapon.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Ejecting"
+  },
+  {
+    "topicid": 16,
+    "question": "Placing the cartridge in the receiver.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Feeding"
+  },
+  {
+    "topicid": 16,
+    "question": "Placing the cartridge in the chamber",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Chambering"
+  },
+  {
+    "topicid": 16,
+    "question": "Occurs when the firing pin strikes the primer of the cartridge",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Firing"
+  },
+  {
+    "topicid": 16,
+    "question": "Weights of Rifle without magazine",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "6.5 lbs"
+  },
+  {
+    "topicid": 16,
+    "question": "Lengths of Rifle with flash suppressor.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "39 inches"
+  },
+  {
+    "topicid": 16,
+    "question": "What is the maximum effective range of Rifle 5.56 mm M16A1?",
+    "type": "multi-q",
+    "choices": ["460 meters", "750 meters", "220 meters", "1500 meters"],
+    "answer": "460 meters"
+  },
+  {
+    "topicid": 16,
+    "question": "rifle_image001.jpg",
+    "type": "multi-i",
+    "choices": ["Stock", "Pistol Grip", "Selector Level", "Bolt Carrier"],
+    "answer": "Bolt Carrier"
+  },
+  {
+    "topicid": 16,
+    "question": "What is the Barrel without flash suppressor of rifle.",
+    "type": "multi-q",
+    "choices": ["17 inches", "20 inches", "21 inches", "25 inches"],
+    "answer": "20 inches"
+  },
+  {
+    "topicid": 16,
+    "question": "rifle_image004.jpg",
+    "type": "multi-i",
+    "choices": ["Rubber Recall Pack", "Charging Handle", "Action Spring", "Rear Sight"],
+    "answer": "Action Spring"
+  },
+  {
+    "topicid": 16,
+    "question": "rifle_image006.jpg",
+    "type": "multi-i",
+    "choices": ["Rubber Recall Pack", "Upper Receiver Group", "Sling Spring", "Rear Sight"],
+    "answer": "Upper Receiver Group"
+  },
+  {
+    "topicid": 16,
+    "question": "rifle_image007.jpg",
+    "type": "multi-i",
+    "choices": ["Rubber Recall Pack", "Upper Receiver Group", "Firing pin Retaining Pin", "Firing Pin"],
+    "answer": "Firing pin Retaining Pin"
+  },
+  {
+    "topicid": 16,
+    "question": "rifle_image009.jpg",
+    "type": "multi-i",
+    "choices": ["Retaining Pin", "Upper Receiver Group", "Firing pin Retaining Pin", "Firing Pin"],
+    "answer": "Firing Pin"
+  },
+  {
+    "topicid": 16,
+    "question": "rifle_image011.jpg",
+    "type": "multi-i",
+    "choices": ["Retaining Pin", "Bolt Cam Pin", "Firing pin Retaining Pin", "Firing Pin"],
+    "answer": "Bolt Cam Pin"
+  },
+  {
+    "topicid": 16,
+    "question": "rifle_image014.jpg",
+    "type": "multi-i",
+    "choices": ["Lower Receiver Group", "Bolt Cam Pin", "Trigger", "Pistol Grip"],
+    "answer": "Lower Receiver Group"
+  },
+  {
+    "topicid": 16,
+    "question": "The weight of Full magazine (20 rds) is 7lbs.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 16,
+    "question": "The muzzle velocity of a rifle is - 3,150 ft/sec",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 16,
+    "question": "There are eight (8) Cycle of Operation.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 16,
+    "question": "A hard rubber recoil pass is attached at the butt of the stock to partially reduce the effect of the recoil.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 16,
+    "question": "A dust cover is provided to prevent dust or dirt from getting into the rifle. This opens automatically when the rifle is fired.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 16,
+    "question": "Magazine fed, Gas operated, Shoulder weapon, Air cooled, and Semi or automatic fire are the Features of Rifle 5.56 MM M16A1.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 16,
+    "question": "Lower sling swivel is Part of Upper receiver group.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 16,
+    "question": "Flash Suppressor is part of lower receiver group.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 16,
+    "question": "The two main groups of Rifle Cal 5.56MM M16A1 are Upper receiver group and lower receiver group.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 16,
+    "question": "The rifle is equipped with a flash suppressor which can also serve as an adapter for grenade launching",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
   }
 ]
