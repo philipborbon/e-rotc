@@ -514,8 +514,8 @@
     "topicid": 3,
     "question": "specified area for which the assigned guard is responsible.",
     "type": "multi-q",
-    "choices": ["Guard’s Post", "GO11", "Parole", "Password"],
-    "answer": "Guard’s Post"
+    "choices": ["Guard's Post", "GO11", "Parole", "Password"],
+    "answer": "Guard's Post"
   },
   {
     "topicid": 3,
@@ -1247,7 +1247,7 @@
   },
   {
     "topicid": 7,
-    "question": "Whether intentional or unintentional expulsion of the fetus from the woman’s womb before the term of its viability is another violation of the right to life.",
+    "question": "Whether intentional or unintentional expulsion of the fetus from the woman's womb before the term of its viability is another violation of the right to life.",
     "type": "fill-q",
     "choices": null,
     "answer": "Abortion"
@@ -1401,7 +1401,7 @@
   },
   {
     "topicid": 7,
-    "question": "Euthanasia-mercy killing Whether intentional or unintentional expulsion of the fetus from the woman’s womb before the term of its viability is another violation of the right to life.",
+    "question": "Euthanasia-mercy killing Whether intentional or unintentional expulsion of the fetus from the woman's womb before the term of its viability is another violation of the right to life.",
     "type": "tof",
     "choices": null,
     "answer": "FALSE"
@@ -1443,7 +1443,7 @@
   },
   {
     "topicid": 7,
-    "question": "Right to Appeal One’s conviction of a Crime Everyone convicted of a crime shall have the right to his conviction and sentence being reviewed by a higher tribunal according to law.",
+    "question": "Right to Appeal One's conviction of a Crime Everyone convicted of a crime shall have the right to his conviction and sentence being reviewed by a higher tribunal according to law.",
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
@@ -1499,7 +1499,7 @@
   },
   {
     "topicid": 8,
-    "question": "Involve forcible separation or tearing or tissue from the victims’ body. commonly caused by animal’s bites and accidents involving motor vehicles and heavy machinery.",
+    "question": "Involve forcible separation or tearing or tissue from the victims' body. commonly caused by animal's bites and accidents involving motor vehicles and heavy machinery.",
     "type": "fill-q",
     "choices": null,
     "answer": "Avulsions"
@@ -2304,7 +2304,7 @@
   },
   {
     "topicid": 12,
-    "question": "The advances in the development of outdoor clothing, equipment’s, emergency food and techniques have been growing rapidly.",
+    "question": "The advances in the development of outdoor clothing, equipment's, emergency food and techniques have been growing rapidly.",
     "type": "fill-q",
     "choices": null,
     "answer": "Preparedness"
@@ -2500,9 +2500,219 @@
   },
   {
     "topicid": 12,
-    "question": "Survival is the advances in the development of outdoor clothing, equipment’s, emergency food and techniques have been growing rapidly.",
+    "question": "Survival is the advances in the development of outdoor clothing, equipment's, emergency food and techniques have been growing rapidly.",
     "type": "tof",
     "choices": null,
     "answer": "FALSE"
+  },
+  {
+    "topicid": 13,
+    "question": "It is science that deals with health and its maintenance.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Hygiene"
+  },
+  {
+    "topicid": 13,
+    "question": "It is a measure for the protection of public health.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Sanitation"
+  },
+  {
+    "topicid": 13,
+    "question": "The state of individual who enjoys physical, mental and social well-being.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Health"
+  },
+  {
+    "topicid": 13,
+    "question": "deals with these measures taken by the individual to preserve his own health.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Personal Hygiene"
+  },
+  {
+    "topicid": 13,
+    "question": "Transmitted by food and water that have been contaminated.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Internal Disease"
+  },
+  {
+    "topicid": 13,
+    "question": "Transmitted from man to man through nasal droplet of an infected individual.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Respiratory|Respiratory Disease"
+  },
+  {
+    "topicid": 13,
+    "question": "It is a sexually transmitted disease through sexual intercourse.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Venereal|Venereal Disease"
+  },
+  {
+    "topicid": 13,
+    "question": "Illness that can be transmitted from man to man or from animal to man.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Communicable|Communicable Disease"
+  },
+  {
+    "topicid": 13,
+    "question": "Transmitted from person to person by insect.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Insect Borne|Insect Borne Disease"
+  },
+  {
+    "topicid": 13,
+    "question": "Never stay in a crowded place where in you have identified a person with a disease.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Field Sanitation"
+  },
+  {
+    "topicid": 13,
+    "question": "The following are Venereal Disease that transmitted through sexual intercourse except in one.",
+    "type": "multi-q",
+    "choices": ["AIDS", "Herpes", "Gonorrhea", "Malaria"],
+    "answer": "Malaria"
+  },
+  {
+    "topicid": 13,
+    "question": "The following are carrier of Communicable Disease except in one.",
+    "type": "multi-q",
+    "choices": ["Food and Water", "Air-borne Droplet", "Gonorrhea", "Sexual Contact"],
+    "answer": "Gonorrhea"
+  },
+  {
+    "topicid": 13,
+    "question": "The following are carriers of Intestinal Disease except in one.",
+    "type": "multi-q",
+    "choices": ["Yellow Fever", "Fingers", "Foods", "Feces"],
+    "answer": "Yellow Fever"
+  },
+  {
+    "topicid": 13,
+    "question": "Transmitted from man to man through nasal droplet of an infected individual.",
+    "type": "multi-q",
+    "choices": ["Communicable Disease", "Internal Disease", "Foods", "Respiratory Disease"],
+    "answer": "Respiratory Disease"
+  },
+  {
+    "topicid": 13,
+    "question": "Deals with these measures taken by the individual to preserve his own health.",
+    "type": "multi-q",
+    "choices": ["Sanitation", "personal Hygiene", "Health", "Hygiene"],
+    "answer": "personal Hygiene"
+  },
+  {
+    "topicid": 13,
+    "question": "Transmitted from person to person by insect.",
+    "type": "multi-q",
+    "choices": ["Insect Borne Disease", "Internal Disease", "Communicable Disease", "Respiratory Disease"],
+    "answer": "Insect Borne Disease"
+  },
+  {
+    "topicid": 13,
+    "question": "Illness that can be transmitted from man to man or from animal to man.",
+    "type": "multi-q",
+    "choices": ["Insect Borne Disease", "Internal Disease", "Respiratory Disease", "Communicable Disease"],
+    "answer": "Communicable Disease"
+  },
+  {
+    "topicid": 13,
+    "question": "The following are in Field Sanitation except in one.",
+    "type": "multi-q",
+    "choices": ["Don't sail the ground with urine and feces.", "Avoid intercourse with prostitute woman.", "Don't used a mosquito net and other sleeping paraphernalia.", "Avoid contact with animal wherein sanitation is poor."],
+    "answer": "Don't used a mosquito net and other sleeping paraphernalia."
+  },
+  {
+    "topicid": 13,
+    "question": "The following are Personal Cleanliness and Care to maintain Good Health except in one.",
+    "type": "multi-q",
+    "choices": ["Cut finger nails regularly", "Washed your hand before touching any food to eat.", "Never brush your teeth every after meals.", "Whenever possible get 7-8 hours' sleep each night."],
+    "answer": "Never brush your teeth every after meals."
+  },
+  {
+    "topicid": 13,
+    "question": "It is science that deals with health and its maintenance.",
+    "type": "multi-q",
+    "choices": ["Sanitation", "personal Hygiene", "Health", "Hygiene"],
+    "answer": "Hygiene"
+  },
+  {
+    "topicid": 13,
+    "question": "The five F carriers of intestinal Disease are Foods, Files, Fingers, Fluid, Feces.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 13,
+    "question": "Contagious and Infections are Communicable Disease.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 13,
+    "question": "Malaria and yellow Fever are Insect Borne Disease.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 13,
+    "question": "AIDS, Syphilis, Herpes and Gonorrhea are Carriers of Communicable Disease.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 13,
+    "question": "Direct contact with the people, Food and Water, Sexual Contact and Insect and Animal Bites are Venereal Disease.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 13,
+    "question": "The importance of Personal Hygiene It enlightened and protects the individual or group against the spread of diseases in the environment.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 13,
+    "question": "Diseases Acquired with Poor Hygiene and Sanitation.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 13,
+    "question": "Personal Cleanliness and Care to maintain Good Health is not Important.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 13,
+    "question": "Internal Disease It is transmitted from man to man through nasal droplet of an infected individual.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 13,
+    "question": "It is important to that we have a Hygiene and Sanitation",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
   }
 ]
