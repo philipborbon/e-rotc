@@ -61,7 +61,6 @@ class AssessmentActivity : AppCompatActivity() {
         topics = repository.getAllTopic()
         
         initAssessment()
-        shouldPlayBackgroundMusic()
     }
 
     private fun initAssessment() {
@@ -71,6 +70,7 @@ class AssessmentActivity : AppCompatActivity() {
         assessmentFinished = false
 
         nextTopic()
+        shouldPlayBackgroundMusic()
     }
 
     private fun clearQuestionnaire() {
@@ -347,6 +347,7 @@ class AssessmentActivity : AppCompatActivity() {
         assessmentFinished = true
         hideAssessmentView()
         showAssessmentSummary()
+        mediaPlayer?.pause()
 
         repository.saveLeaderboard(examinee, runningScore)
 
@@ -393,6 +394,12 @@ class AssessmentActivity : AppCompatActivity() {
         if (!assessmentFinished) {
             pause()
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        mediaPlayer?.pause()
     }
 
     private fun shouldPlayBackgroundMusic(){
