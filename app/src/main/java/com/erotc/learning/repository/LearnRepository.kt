@@ -11,6 +11,7 @@ import java.util.*
  */
 class LearnRepository private constructor(context: Context) {
     private val database = Room.databaseBuilder(context, Database::class.java, "com.rotc.learning.database")
+            .fallbackToDestructiveMigration()
             .allowMainThreadQueries()
             .build()
 

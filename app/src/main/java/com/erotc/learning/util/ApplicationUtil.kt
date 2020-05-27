@@ -13,7 +13,10 @@ import com.erotc.learning.R
 import com.erotc.learning.repository.LearnRepository
 import com.google.gson.Gson
 import java.io.IOException
+import java.io.InputStream
 import java.lang.reflect.Field
+import java.nio.charset.Charset
+
 
 /**
  * Created on 11/12/2018.
@@ -35,11 +38,16 @@ object ApplicationUtil {
 
     fun getStringFromAsset(context: Context, fileName: String): String? {
         val jsonString: String
+        var input: InputStream? = null
+
         try {
-            jsonString = context.assets.open(fileName).bufferedReader().use { it.readText() }
+            input = context.assets.open(fileName)
+            jsonString = String(input.readBytes(), Charset.forName("windows-1252"))
         } catch (e: IOException) {
             Log.e(LOG_TAG, Log.getStackTraceString(e))
             return null
+        } finally {
+            input?.close()
         }
 
         return jsonString

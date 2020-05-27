@@ -65,7 +65,7 @@
     <string name="dialog_assessment_name_required_message">Please enter your name before starting the assessment.</string>
 
     <string name="text_presented">Prepared by:</string>
-    <string name="text_presented_by">…</string>
+    <string name="text_presented_by">Jessa Nisperos\nMark Hortinela</string>
     <string name="text_presenter_organization">Sultan Kudarat State University\nIsulan Campus\n2019 – 2020</string>
     <string name="title_activity_settings">Settings</string>
 

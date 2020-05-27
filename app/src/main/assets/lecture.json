@@ -1,10 +1,66 @@
 [
   {
-    "title": "General Lecture 1",
-    "file": "sample.html"
+    "title": "Legal basis",
+    "file": "Legal basis.htm"
   },
   {
-    "title": "Topic Lecture 1",
-    "file": "sample.html"
+    "title": "Military Organization",
+    "file": "Military Organization.htm"
+  },
+  {
+    "title": "INTERIOR GUARD DUTY",
+    "file": "INTERIOR GUARD DUTY.htm"
+  },
+  {
+    "title": "MCD",
+    "file": "MCD.htm"
+  },
+  {
+    "title": "MILITARY CORRESPONDENCE",
+    "file": "MILITARY CORRESPONDENCE.htm"
+  },
+  {
+    "title": "MILITARY LEADERSHIP",
+    "file": "MILITARY LEADERSHIP.htm"
+  },
+  {
+    "title": "HUMAN RIGHTS",
+    "file": "HUMAN RIGHTS.htm"
+  },
+  {
+    "title": "FIRST AID",
+    "file": "FIRST AID.htm"
+  },
+  {
+    "title": "MARKMANSHIP",
+    "file": "MARKMANSHIP.htm"
+  },
+  {
+    "title": "BASIC SIGNAL COMMUNICATION",
+    "file": "BASIC SIGNAL COMMUNICATION.htm"
+  },
+  {
+    "title": "BASIC INTELLIGENCE",
+    "file": "BASIC INTELLIGENCE.htm"
+  },
+  {
+    "title": "BASIC SURVIVAL",
+    "file": "BASIC SURVIVAL.htm"
+  },
+  {
+    "title": "HYGIENE AND SANITATION",
+    "file": "HYGIENE AND SANITATION.htm"
+  },
+  {
+    "title": "BASIC MAP READING",
+    "file": "BASIC MAP READING.htm"
+  },
+  {
+    "title": "CIVIL MILITARY OPERATIONS (CMO)",
+    "file": "CIVIL MILITARY OPERATIONS.htm"
+  },
+  {
+    "title": "RIFLE 5.56 MM M16A1",
+    "file": "RIFLE 5.htm"
   }
 ]
