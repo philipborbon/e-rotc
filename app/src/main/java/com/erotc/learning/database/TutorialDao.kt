@@ -16,7 +16,7 @@ interface TutorialDao {
     @Query("SELECT COUNT(*) FROM tutorial")
     fun countOf(): Int
 
-    @Query("SELECT * FROM tutorial WHERE title LIKE :keyword LIKE :keyword ORDER BY title")
+    @Query("SELECT * FROM tutorial WHERE title LIKE :keyword ORDER BY title")
     fun search(keyword: String): List<Tutorial>
 
     @Insert
