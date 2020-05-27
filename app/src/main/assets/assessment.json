@@ -621,5 +621,215 @@
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
+  },
+  {
+    "topicid": 4,
+    "question": "a state of order and obedience existing within a command",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Military Discipline"
+  },
+  {
+    "topicid": 4,
+    "question": "It is the highest form of military courtesy",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Salute"
+  },
+  {
+    "topicid": 4,
+    "question": "It is always associated with punishment",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "DISCIPLINE"
+  },
+  {
+    "topicid": 4,
+    "question": "wholesome relationships between juniors and seniors, between young and old, with all persons.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Military Courtesy"
+  },
+  {
+    "topicid": 4,
+    "question": "Sergeants are addressed as?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Sgt"
+  },
+  {
+    "topicid": 4,
+    "question": "Lieutenants are addressed officially as?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Lieutenants"
+  },
+  {
+    "topicid": 4,
+    "question": "A First Sergeant is addressed as",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "F/Sgt"
+  },
+  {
+    "topicid": 4,
+    "question": "JUNIORS in the organization are always expected the proper courtesy to the?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Seniors"
+  },
+  {
+    "topicid": 4,
+    "question": "Cadets are addressed as?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Cadet"
+  },
+  {
+    "topicid": 4,
+    "question": "Use of third person by an officer is of poor taste is a?",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "taboos"
+  },
+  {
+    "topicid": 4,
+    "question": "Which of the following situations a soldier is not required to salute?",
+    "type": "multi-q",
+    "choices": ["When at work", "After conversing an Officer", "When national color Passes by", "Meeting an Officer"],
+    "answer": "When at work"
+  },
+  {
+    "topicid": 4,
+    "question": "When walking with seniors, the junior stays at the-",
+    "type": "multi-q",
+    "choices": ["Right side", "Left side", "In between seniors", "Both a & c"],
+    "answer": "Left side"
+  },
+  {
+    "topicid": 4,
+    "question": "Which situation should a soldier render salute?",
+    "type": "multi-q",
+    "choices": ["Meeting opposing force Officer", "When indoors", "After conversing with an Officer", "When attending to a vehicle"],
+    "answer": "After conversing with an Officer"
+  },
+  {
+    "topicid": 4,
+    "question": "It is the state of order and obedience existing within a command-",
+    "type": "multi-q",
+    "choices": ["Military Courtesy", "Military Discipline", "Military Leadership", "Military Professionalism"],
+    "answer": "Military Discipline"
+  },
+  {
+    "topicid": 4,
+    "question": "Which is a taboo in the military service?",
+    "type": "multi-q",
+    "choices": ["Excessive indebtedness", "Calling people by name", "Entering a clubhouse", "Sleeping during vigil"],
+    "answer": "Excessive indebtedness"
+  },
+  {
+    "topicid": 4,
+    "question": "What is the courtesy rendered in entering a boat or automobile?",
+    "type": "multi-q",
+    "choices": ["Senior enters first, leaves last", "Junior enters first, leaves last", "Senior is last to enter, leaves first", "Junior last to enter, leaves first"],
+    "answer": "Senior enters first, leaves last"
+  },
+  {
+    "topicid": 4,
+    "question": "It is always associated with punishment. There are rules, however on how to use punishment.?",
+    "type": "multi-q",
+    "choices": ["Courtesy", "Discipline", "Taboos", "Military Discipline"],
+    "answer": "Discipline"
+  },
+  {
+    "topicid": 4,
+    "question": "wholesome relationships between juniors and seniors, between young and old, with all persons.",
+    "type": "multi-q",
+    "choices": ["Military Courtesy", "Military Discipline", "Military Professionalism", "Discipline"],
+    "answer": "Military Courtesy"
+  },
+  {
+    "topicid": 4,
+    "question": "Sergeant Majors are addressed as?",
+    "type": "multi-q",
+    "choices": ["Cadet", "Cpl", "Sgt Major", "F/Sgt"],
+    "answer": "Sgt Major"
+  },
+  {
+    "topicid": 4,
+    "question": "For cadets, they are addressed as?",
+    "type": "multi-q",
+    "choices": ["Cadet", "Cpl", "Pvt", "Sgt"],
+    "answer": "Cadet"
+  },
+  {
+    "topicid": 4,
+    "question": "Lieutenants are addressed officially as lieutenants?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 4,
+    "question": "There are eleven Taboos",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 4,
+    "question": "THE NATIONAL FLAG AND THE NATIONAL ANTHEM likewise requires an appropriate courtesy.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 4,
+    "question": "A person saluting looks at the person saluted.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 4,
+    "question": "Offer no excuses is part of salute",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 4,
+    "question": "SALUTE is not the highest form of military courtesy.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 4,
+    "question": "Sir will be used in addressing a female officer.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 4,
+    "question": "Covered or uncovered, salute is rendered in the usual manner.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 4,
+    "question": "Military Courtesy is a state of order and obedience existing within a command",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 4,
+    "question": "Corporals are addressed as Cpl?",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
   }
 ]
