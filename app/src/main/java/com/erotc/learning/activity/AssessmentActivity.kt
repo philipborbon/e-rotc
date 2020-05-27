@@ -260,29 +260,32 @@ class AssessmentActivity : AppCompatActivity() {
     }
 
     private fun validateAnswer(_answer: String?, time: Int) {
-        var answer = _answer
-
         currentTimer?.stopTimer()
         currentTimer = null
 
-        answer = answer ?: ""
-        val score: Int
-        score = if (time != -1 && answer.toLowerCase() == currentQuestion?.answer?.toLowerCase()) {
-            1
-        } else {
-            0
+        val correctAnswers = currentQuestion?.answer?.split("|")
+        var answer = _answer ?: ""
+        var score = 0
+
+        if (time != -1) {
+            correctAnswers?.forEach { correctAnswer ->
+                if (answer.toLowerCase() == correctAnswer.toLowerCase()) {
+                    score = 1
+                    return@forEach
+                }
+            }
         }
 
         val builder = AlertDialog.Builder(this)
         if (time == -1) {
             builder.setIcon(R.drawable.ic_time_up)
             builder.setTitle(R.string.dialog_times_up_title)
-            builder.setMessage(getString(R.string.dialog_times_up_message, currentQuestion?.answer))
+            builder.setMessage(getString(R.string.dialog_times_up_message, correctAnswers?.joinToString(" or ")))
         } else {
             if (score == 0) {
                 builder.setIcon(R.drawable.ic_wrong)
                 builder.setTitle(R.string.dialog_answer_wrong_title)
-                builder.setMessage(getString(R.string.dialog_answer_message, answer, currentQuestion?.answer))
+                builder.setMessage(getString(R.string.dialog_answer_message, answer, correctAnswers?.joinToString(" or ")))
             } else {
                 builder.setIcon(R.drawable.ic_correct)
                 builder.setTitle(R.string.dialog_answer_correct_title)
