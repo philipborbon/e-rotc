@@ -146,6 +146,7 @@ class AssessmentActivity : AppCompatActivity() {
         builder.setPositiveButton(R.string.button_text_resume) { dialogInterface, i -> startAssessmentForCurrentTopic() }
         builder.setNeutralButton(R.string.button_text_exit) { dialogInterface, i -> exit() }
         builder.setOnCancelListener { resumeTimer() }
+        builder.setCancelable(false)
         builder.show()
     }
 

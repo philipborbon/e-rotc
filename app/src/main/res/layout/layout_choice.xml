@@ -20,26 +20,18 @@
         app:cardBackgroundColor="@color/colorPrimaryDark"
         >
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/label"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_medium"
+            android:textAllCaps="false"
             android:gravity="center"
-            android:padding="@dimen/general_content_padding"
-            >
-
-            <TextView
-                android:id="@+id/label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/text_large"
-                android:textAllCaps="false"
-                android:fontFamily="serif-monospace"
-                android:textColor="@color/colorWhite"
-                tools:text="Label"
-                />
-
-        </LinearLayout>
+            android:layout_gravity="center"
+            android:fontFamily="serif-monospace"
+            android:textColor="@color/colorWhite"
+            tools:text="Label"
+            />
 
     </androidx.cardview.widget.CardView>
 </FrameLayout>
