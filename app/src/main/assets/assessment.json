@@ -1664,5 +1664,215 @@
     "type": "tof",
     "choices": null,
     "answer": "FALSE"
+  },
+  {
+    "topicid": 9,
+    "question": "It is the basic in training the soldier to employ successfully the pistol or the rifle in combat.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Marksmanship"
+  },
+  {
+    "topicid": 9,
+    "question": "It is the technique of teaching of personnel on how to fire the weapon accurately and employ it in combat.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Marksmanship Training"
+  },
+  {
+    "topicid": 9,
+    "question": "The firer is concerned with correct pointing his pistol or rifle so that the projectile will hit the target when he fires.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Aiming"
+  },
+  {
+    "topicid": 9,
+    "question": "It is obtained when the front sight and rear sight are properly aligned to the target and aiming point is the correct relationship to the front sight blade.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Sight Picture"
+  },
+  {
+    "topicid": 9,
+    "question": "It is the target on which you are aligned your sight.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Aiming Point"
+  },
+  {
+    "topicid": 9,
+    "question": "It is the independent action of the forefinger on the trigger pulling, it straight to the rear with uniformly increasing pressure until the weapon fired.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Trigger Control"
+  },
+  {
+    "topicid": 9,
+    "question": "This is the firer reaction of the anticipated recoil of the exploding round.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Flinching"
+  },
+  {
+    "topicid": 9,
+    "question": "This is an attempt by the firer to take-up the recoil just before the weapon fires by tensing his shoulder muscles and moving the shoulder forward.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Bucking"
+  },
+  {
+    "topicid": 9,
+    "question": "This is an attempt by the firer to make rifle fire at a certain time by rapidly applying pressure on the trigger.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Jerking"
+  },
+  {
+    "topicid": 9,
+    "question": "It is the continued mental and physical application of the fundamental after each round has been fired.",
+    "type": "fill-q",
+    "choices": null,
+    "answer": "Follow Through"
+  },
+  {
+    "topicid": 9,
+    "question": "The following are the factors which affect holding a rifle steady except in one.",
+    "type": "multi-q",
+    "choices": ["Relaxation", "Trigger Control", "Taking up the Slack", "Grip of the left hand"],
+    "answer": "Taking up the Slack"
+  },
+  {
+    "topicid": 9,
+    "question": "This position presents a low silhouette and easily adopted for the use of cover and support.",
+    "type": "multi-q",
+    "choices": ["Standing Position", "Prone Position", "Kneeling Position", "Foxhole"],
+    "answer": "Prone Position"
+  },
+  {
+    "topicid": 9,
+    "question": "This position is used whenever prepared positions are available.",
+    "type": "multi-q",
+    "choices": ["Standing Position", "Prone Position", "Kneeling Position", "Foxhole"],
+    "answer": "Foxhole"
+  },
+  {
+    "topicid": 9,
+    "question": "This position is used in the assault to engage surprise target and when no other position can be used.",
+    "type": "multi-q",
+    "choices": ["Standing Position", "Prone Position", "Kneeling Position", "Foxhole"],
+    "answer": "Standing Position"
+  },
+  {
+    "topicid": 9,
+    "question": "This position is suitable for use at live ground that slope gently upward.",
+    "type": "multi-q",
+    "choices": ["Standing Position", "Prone Position", "Kneeling Position", "Foxhole"],
+    "answer": "Kneeling Position"
+  },
+  {
+    "topicid": 9,
+    "question": "This position will enable the firer to fire across obstacles and low walls.",
+    "type": "multi-q",
+    "choices": ["Standing Position", "Prone Position", "Kneeling Position", "Sitting Position"],
+    "answer": "Sitting Position"
+  },
+  {
+    "topicid": 9,
+    "question": "This position is an excellent position to be used in a mud, shallow water or contaminated area.",
+    "type": "multi-q",
+    "choices": ["Standing Position", "Prone Position", "Squatting Position", "Sitting Position"],
+    "answer": "Squatting Position"
+  },
+  {
+    "topicid": 9,
+    "question": "The following are the marksmanship principles except in one.",
+    "type": "multi-q",
+    "choices": ["Controlled Breathing", "Trigger Release", "Follow Through", "Jerking"],
+    "answer": "Jerking"
+  },
+  {
+    "topicid": 9,
+    "question": "It is conducted before firing live rounds. During day firing, the soldier should practice sight alignment and placement of the aiming point.",
+    "type": "multi-q",
+    "choices": ["Aiming Practice", "Sight Picture", "Follow Through", "Aiming Point"],
+    "answer": "Aiming Practice"
+  },
+  {
+    "topicid": 9,
+    "question": "The top of the front sight blade is exactly in the center of the rear sight aperture.",
+    "type": "multi-q",
+    "choices": ["Aiming Practice", "Sight Alignment", "Follow Through", "Aiming Point"],
+    "answer": "Sight Alignment"
+  },
+  {
+    "topicid": 9,
+    "question": "The Type of trigger for rifle 5.56 mm M16A1 are Semi-automatic fire trigger control and Automatic fire trigger control.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 9,
+    "question": "Position and hold must be firm enough to support the weapon are on of the parts of Marksmanship Principles.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 9,
+    "question": "Consider the rifle or pistol LOADED at all times, even in the break areas. Never point the pistol or rifle to anyone you not want to hurt.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 9,
+    "question": "The coach and coach method of instruction is peculiarly applicable the training in marksmanship",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 9,
+    "question": "All loading and unloading are executed on the firing line with the muscle of the rifle or pistol pointing towards the target. Strictly no loading behind the firing line.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 9,
+    "question": "The elements of Correct Sight Picture are Aiming Practice and Aiming Point.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 9,
+    "question": "There are seven (7) standard Firing Position.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
+  },
+  {
+    "topicid": 9,
+    "question": "Flinching, Bucking, Jerking are indication of proper trigger control.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 9,
+    "question": "The components of integrated acts of Shooting are Aiming, and Steady Hold Factor.",
+    "type": "tof",
+    "choices": null,
+    "answer": "TRUE"
+  },
+  {
+    "topicid": 9,
+    "question": "Marksmanship Training is the basic in training the soldier to employ successfully the pistol or the rifle in combat.",
+    "type": "tof",
+    "choices": null,
+    "answer": "FALSE"
   }
 ]
