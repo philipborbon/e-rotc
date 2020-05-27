@@ -568,7 +568,7 @@
   },
   {
     "topicid": 3,
-    "question": "SPECIAL ORDERS – orders given to a particular guard in a particular post, orders carefully tailored for a specific post, time measured, easily off or on and for a short time.",
+    "question": "SPECIAL ORDERS - orders given to a particular guard in a particular post, orders carefully tailored for a specific post, time measured, easily off or on and for a short time.",
     "type": "tof",
     "choices": null,
     "answer": "TRUE"
@@ -1312,14 +1312,14 @@
     "topicid": 7,
     "question": "While freedom gives man the right to make moral decisions, he is responsible for doing so and has to answer to his own conscience",
     "type": "multi-q",
-    "choices": ["Man's Responsibility", "Right of self – Determination", "Abortion", "Warrantless Arrest"],
+    "choices": ["Man's Responsibility", "Right of self - Determination", "Abortion", "Warrantless Arrest"],
     "answer": "Man's Responsibility"
   },
   {
     "topicid": 7,
     "question": "Human rights are supreme, inherent and inalienable rights to life, dignity and self-development.",
     "type": "multi-q",
-    "choices": ["Death Penalty", "Right of self – Determination", "Abortion", "Philippine commission"],
+    "choices": ["Death Penalty", "Right of self - Determination", "Abortion", "Philippine commission"],
     "answer": "Philippine commission"
   },
   {
