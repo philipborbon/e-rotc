@@ -42,7 +42,6 @@ class AssessmentActivity : AppCompatActivity() {
     private var examinee: String? = null
 
     private var mediaPlayer: MediaPlayer? = null
-    private var playerProgress: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +59,9 @@ class AssessmentActivity : AppCompatActivity() {
         }
 
         topics = repository.getAllTopic()
+        
         initAssessment()
+        shouldPlayBackgroundMusic()
     }
 
     private fun initAssessment() {
@@ -70,7 +71,6 @@ class AssessmentActivity : AppCompatActivity() {
         assessmentFinished = false
 
         nextTopic()
-        shouldPlayBackgroundMusic()
     }
 
     private fun clearQuestionnaire() {
@@ -145,7 +145,7 @@ class AssessmentActivity : AppCompatActivity() {
         builder.setMessage(getString(R.string.dialog_quiz_start_message, currentTopic?.name))
         builder.setPositiveButton(R.string.button_text_resume) { dialogInterface, i -> startAssessmentForCurrentTopic() }
         builder.setNeutralButton(R.string.button_text_exit) { dialogInterface, i -> exit() }
-        builder.setOnCancelListener { resume() }
+        builder.setOnCancelListener { resumeTimer() }
         builder.show()
     }
 
@@ -310,11 +310,12 @@ class AssessmentActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun resume() {
+    private fun resumeTimer() {
         if (assessmentFinished) {
             return
         }
         currentTimer?.resumeTimer()
+        shouldPlayBackgroundMusic()
     }
 
     private fun pause() {
@@ -322,12 +323,14 @@ class AssessmentActivity : AppCompatActivity() {
             return
         }
         currentTimer?.pauseTimer()
+        mediaPlayer?.pause()
+
         val builder = AlertDialog.Builder(this)
         builder.setTitle(R.string.dialog_quiz_paused_title)
         builder.setMessage(R.string.dialog_quiz_paused_message)
-        builder.setPositiveButton(R.string.button_text_resume) { dialogInterface, i -> resume() }
+        builder.setPositiveButton(R.string.button_text_resume) { dialogInterface, i -> resumeTimer() }
         builder.setNeutralButton(R.string.button_text_exit) { dialogInterface, i -> exit() }
-        builder.setOnCancelListener { resume() }
+        builder.setOnCancelListener { resumeTimer() }
         builder.show()
     }
 
@@ -379,22 +382,11 @@ class AssessmentActivity : AppCompatActivity() {
         label_score.text = runningScore.toString()
     }
 
-    override fun onStart() {
-        super.onStart()
-
-        playerProgress?.let {
-            mediaPlayer?.seekTo(it)
-        } ?: mediaPlayer?.start()
-    }
-
     override fun onPause() {
         super.onPause()
         if (!assessmentFinished) {
             pause()
         }
-
-        mediaPlayer?.pause()
-        playerProgress = mediaPlayer?.currentPosition
     }
 
     override fun onBackPressed() {
@@ -409,6 +401,7 @@ class AssessmentActivity : AppCompatActivity() {
         val volumeLevel = preference.getString("volume", "medium")
 
         if (enableMusic) {
+            mediaPlayer?.pause()
             mediaPlayer = MediaPlayer.create(this, R.raw.assessment_melody)
 
             when(volumeLevel) {
@@ -429,6 +422,8 @@ class AssessmentActivity : AppCompatActivity() {
             mediaPlayer?.setOnCompletionListener {
                 mediaPlayer?.start()
             }
+
+            mediaPlayer?.start()
         }
     }
 
