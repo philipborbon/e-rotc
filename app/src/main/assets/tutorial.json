@@ -1,10 +1,62 @@
 [
   {
-    "title": "Sample Video 1",
-    "file": "sample.mp4"
+    "title": ".45 Assemble And Disassemble",
+    "file": "assemble_and_disassemble_45.mp4"
   },
   {
-    "title": "Sample Video 2",
-    "file": "sample.mp4"
+    "title": "M16 Assemble And Disassemble",
+    "file": "assemble_and_disassemble_m16.mp4"
+  },
+  {
+    "title": "Agap Ta 1",
+    "file": "agap_ta_1.mp4"
+  },
+  {
+    "title": "Agap Ta 2",
+    "file": "agap_ta_2.mp4"
+  },
+  {
+    "title": "Baba Ta",
+    "file": "baba_ta.mp4"
+  },
+  {
+    "title": "Dampot Sandata",
+    "file": "dampot_sandata.mp4"
+  },
+  {
+    "title": "Handa Rap",
+    "file": "handa_rap.mp4"
+  },
+  {
+    "title": "Kaliwang Balikat Ta",
+    "file": "kaliwang_balikat_ta.mp4"
+  },
+  {
+    "title": "Kanang Balikat Ta",
+    "file": "kanang_balikat_ta.mp4"
+  },
+  {
+    "title": "Lapag Sandata",
+    "file": "lapag_sandata.mp4"
+  },
+  {
+    "title": "Paluwag",
+    "file": "paluwag.mp4"
+  },
+  {
+    "title": "Pugay Kamay Na",
+    "file": "pugay_kamay_na.mp4"
+  },
+  {
+    "title": "Siyasat Ta",
+    "file": "siyasat_ta.mp4"
+  },
+  {
+    "title": "Tanghal Ta",
+    "file": "tanghal_ta.mp4"
+  },
+  {
+    "title": "Tikas Nga",
+    "file": "tikas_nga.mp4"
   }
 ]
